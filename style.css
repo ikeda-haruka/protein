@@ -369,6 +369,278 @@ a:hover .arw {
   background: linear-gradient(135deg, #FF6F93 0%, #C72852 100%);
 }
 
+.hd__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hd__burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 90, 130, 0.08);
+  border: 1px solid rgba(224, 62, 101, 0.25);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  transition: all .25s ease;
+  flex-shrink: 0;
+}
+
+.hd__burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--strawberry-dark);
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .25s ease;
+  transform-origin: center;
+}
+
+.hd__burger:hover,
+.hd__burger:active {
+  background: rgba(255, 90, 130, 0.16);
+  border-color: var(--strawberry-dark);
+}
+
+.hd__burger.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hd__burger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hd__burger.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============ MOBILE DRAWER MENU ============ */
+body.nav-open {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility .3s ease;
+}
+
+.mobile-drawer.is-open {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 24, 27, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.mobile-drawer.is-open .mobile-drawer__backdrop {
+  opacity: 1;
+}
+
+.mobile-drawer__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(340px, 86vw);
+  background: #FFF9FA;
+  box-shadow: -8px 0 32px rgba(44, 30, 35, 0.18);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 18px 32px;
+}
+
+.mobile-drawer.is-open .mobile-drawer__panel {
+  transform: translateX(0);
+}
+
+.mobile-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(44, 30, 35, 0.08);
+}
+
+.mobile-drawer__logo img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.mobile-drawer__close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(44, 30, 35, 0.06);
+  border: none;
+  font-size: 16px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+}
+
+.mobile-drawer__close:hover {
+  background: rgba(222, 60, 98, 0.12);
+  color: var(--strawberry-dark);
+}
+
+.mobile-drawer__cta-box {
+  background: linear-gradient(135deg, #FFF0F4 0%, #FFE5EC 100%);
+  border: 1px solid rgba(224, 62, 101, 0.25);
+  border-radius: 16px;
+  padding: 14px;
+  margin: 14px 0 16px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(222, 60, 98, 0.08);
+}
+
+.mobile-drawer__cta-badge {
+  display: inline-block;
+  background: var(--strawberry-dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: .05em;
+  margin-bottom: 4px;
+}
+
+.mobile-drawer__cta-text {
+  font-size: 11.5px;
+  color: var(--ink-mid);
+  margin: 4px 0 10px;
+  font-weight: 600;
+}
+
+.mobile-drawer__cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(135deg, #FF5B84 0%, #D82654 100%);
+  color: #fff !important;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 13.5px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(216, 38, 84, 0.35);
+  transition: all .2s ease;
+}
+
+.mobile-drawer__cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(216, 38, 84, 0.45);
+}
+
+.mobile-drawer__nav {
+  flex: 1;
+}
+
+.mobile-drawer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-drawer__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(44, 30, 35, 0.06);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13.5px;
+  transition: all .2s ease;
+}
+
+.mobile-drawer__link-icon {
+  font-size: 16px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.mobile-drawer__link-text {
+  flex: 1;
+  color: var(--ink);
+}
+
+.mobile-drawer__link-sub {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: var(--strawberry-dark);
+  letter-spacing: .08em;
+  font-family: var(--en);
+  flex-shrink: 0;
+}
+
+.mobile-drawer__link:hover,
+.mobile-drawer__link:active {
+  background: #FFF0F4;
+  border-color: rgba(224, 62, 101, 0.25);
+  color: var(--strawberry-dark);
+}
+
+.mobile-drawer__link:hover .mobile-drawer__link-text {
+  color: var(--strawberry-dark);
+}
+
+.mobile-drawer__footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(44, 30, 35, 0.08);
+  text-align: center;
+}
+
+.mobile-drawer__tagline {
+  font-size: 11px;
+  color: var(--ink-mid);
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+.mobile-drawer__copy {
+  font-size: 10px;
+  color: var(--ink-light);
+  margin: 0;
+}
+
 /* ---------- HERO-V2 (完全独自ラグジュアリー＆フェミニンリデザイン) ---------- */
 .hero-v2 {
   position: relative;
@@ -2847,7 +3119,20 @@ a:hover .arw {
   .hd__logo img {
     height: 26px;
   }
+  .hd__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .hd__burger {
+    display: flex;
+  }
   .hd__shop {
+    height: 38px;
+    padding: 0 12px;
+    font-size: 11.5px;
+    gap: 6px;
     background: var(--strawberry);
     color: #fff;
     border-color: var(--strawberry);

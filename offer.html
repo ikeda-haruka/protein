@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body class="subpage">
 
@@ -38,10 +38,113 @@
       <a href="quality.html">品質基準</a>
       <a href="index.html#faq">よくある質問</a>
     </nav>
-    <div class="hd__shop" style="background: rgba(255, 90, 130, 0.12); color: var(--strawberry-dark); border-color: rgba(255, 90, 130, 0.3); font-size: 11.5px; pointer-events: none; padding: 8px 14px; white-space: nowrap;">
-      🔒 SSL暗号化通信対応
+    <div class="hd__actions">
+      <div class="hd__shop" style="background: rgba(255, 90, 130, 0.12); color: var(--strawberry-dark); border-color: rgba(255, 90, 130, 0.3); font-size: 11.5px; pointer-events: none; padding: 8px 14px; white-space: nowrap;">
+        🔒 SSL暗号化通信対応
+      </div>
+      <button class="hd__burger" id="burgerBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- ============ MOBILE DRAWER MENU ============ -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="モバイルナビゲーションメニュー">
+      <div class="mobile-drawer__header">
+        <a class="mobile-drawer__logo" href="index.html#top" aria-label="BERRY MILK">
+          <img src="images/logo.svg" alt="BERRY MILK" width="140" height="35">
+        </a>
+        <button class="mobile-drawer__close" id="drawerCloseBtn" aria-label="メニューを閉じる">
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-drawer__cta-box">
+        <span class="mobile-drawer__cta-badge">WEB限定 特典付き</span>
+        <p class="mobile-drawer__cta-text">全額返金保証・定期縛りなし・送料無料</p>
+        <span class="mobile-drawer__cta-btn" style="background: var(--strawberry-dark); cursor: default;">
+          初回特別オファー ご注文中
+        </span>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-drawer__list">
+          <li>
+            <a href="index.html#top" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🏠</span>
+              <span class="mobile-drawer__link-text">トップページへ戻る</span>
+              <span class="mobile-drawer__link-sub">HOME</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#concern" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🌸</span>
+              <span class="mobile-drawer__link-text">こんなお悩み</span>
+              <span class="mobile-drawer__link-sub">CONCERN</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#why" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">👑</span>
+              <span class="mobile-drawer__link-text">選ばれる理由</span>
+              <span class="mobile-drawer__link-sub">WHY BERRY MILK</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#protein" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🍓</span>
+              <span class="mobile-drawer__link-text">美ボディプロテイン</span>
+              <span class="mobile-drawer__link-sub">PROTEIN 900g</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#slimtea" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🍵</span>
+              <span class="mobile-drawer__link-text">内臓脂肪ケアティー</span>
+              <span class="mobile-drawer__link-sub">SLIM TEA 30包</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#smoothie" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🥤</span>
+              <span class="mobile-drawer__link-text">生酵素ベリースムージー</span>
+              <span class="mobile-drawer__link-sub">SMOOTHIE 750g</span>
+            </a>
+          </li>
+          <li>
+            <a href="story.html" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">💡</span>
+              <span class="mobile-drawer__link-text">女性開発チームの秘話</span>
+              <span class="mobile-drawer__link-sub">STORY</span>
+            </a>
+          </li>
+          <li>
+            <a href="quality.html" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🌿</span>
+              <span class="mobile-drawer__link-text">品質基準・GMP工場</span>
+              <span class="mobile-drawer__link-sub">QUALITY</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#faq" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">❓</span>
+              <span class="mobile-drawer__link-text">よくある質問（Q&amp;A）</span>
+              <span class="mobile-drawer__link-sub">FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <p class="mobile-drawer__tagline">整える、満たす、愛せるわたしへ。<br>女性専用プレミアム・インナービューティー</p>
+        <p class="mobile-drawer__copy">&copy; BERRY MILK Inc. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ BREADCRUMB ============ -->
   <nav class="breadcrumb px" aria-label="パンくずリスト">
@@ -673,7 +776,7 @@
   </footer>
 
   <!-- ============ MAIN SCRIPT ============ -->
-  <script src="main.js?v=2"></script>
+  <script src="main.js?v=3"></script>
 
   <!-- ============ INTERACTIVE CHECKOUT SCRIPT ============ -->
   <script>
