@@ -506,63 +506,79 @@
       }, { threshold: 0.3 });
 
       hubObserver.observe(synergyHub);
+    }
   }
 
   // ========================================================
   // MOBILE HAMBURGER MENU & DRAWER NAVIGATION
   // ========================================================
-  const burger = document.getElementById('burgerBtn');
-  const drawer = document.getElementById('mobileDrawer');
-  const drawerBackdrop = document.getElementById('drawerBackdrop');
-  const drawerClose = document.getElementById('drawerCloseBtn');
+  const initDrawer = () => {
+    const burger = document.getElementById('burgerBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const drawerBackdrop = document.getElementById('drawerBackdrop');
+    const drawerClose = document.getElementById('drawerCloseBtn');
 
-  if (burger && drawer) {
-    const openDrawer = () => {
-      burger.classList.add('is-active');
-      burger.setAttribute('aria-expanded', 'true');
-      drawer.classList.add('is-open');
-      drawer.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('nav-open');
-    };
+    if (burger && drawer) {
+      const openDrawer = () => {
+        burger.classList.add('is-active');
+        burger.setAttribute('aria-expanded', 'true');
+        drawer.classList.add('is-open');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('nav-open');
+      };
 
-    const closeDrawer = () => {
-      burger.classList.remove('is-active');
-      burger.setAttribute('aria-expanded', 'false');
-      drawer.classList.remove('is-open');
-      drawer.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('nav-open');
-    };
+      const closeDrawer = () => {
+        burger.classList.remove('is-active');
+        burger.setAttribute('aria-expanded', 'false');
+        drawer.classList.remove('is-open');
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('nav-open');
+      };
 
-    burger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = drawer.classList.contains('is-open');
-      if (isOpen) {
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
-    });
-
-    if (drawerClose) {
-      drawerClose.addEventListener('click', closeDrawer);
-    }
-    if (drawerBackdrop) {
-      drawerBackdrop.addEventListener('click', closeDrawer);
-    }
-
-    // Close when clicking any link inside drawer
-    drawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        closeDrawer();
+      burger.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = drawer.classList.contains('is-open');
+        if (isOpen) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
       });
-    });
 
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
-        closeDrawer();
+      if (drawerClose) {
+        drawerClose.addEventListener('click', (e) => {
+          e.preventDefault();
+          closeDrawer();
+        });
       }
-    });
+      if (drawerBackdrop) {
+        drawerBackdrop.addEventListener('click', (e) => {
+          e.preventDefault();
+          closeDrawer();
+        });
+      }
+
+      // Close when clicking any link inside drawer
+      drawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          closeDrawer();
+        });
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer.classList.contains('is-open')) {
+          closeDrawer();
+        }
+      });
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDrawer);
+  } else {
+    initDrawer();
   }
 })();
 
