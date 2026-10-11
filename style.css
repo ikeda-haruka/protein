@@ -2479,3 +2479,717 @@ a:hover .arw {
     gap: 32px;
   }
 }
+
+/* ========================================================
+   AWARD BADGE (HERO)
+   ======================================================== */
+.hero__award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--strawberry-dark);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 4px 15px rgba(181, 33, 69, 0.2);
+  margin-bottom: 12px;
+}
+
+.award-star {
+  color: #E5A100;
+  font-size: 13px;
+}
+
+
+/* ========================================================
+   CONCERN SECTION (お悩み共感)
+   ======================================================== */
+.concern {
+  background: var(--paper);
+  color: var(--ink);
+  padding-top: clamp(80px, 10vw, 130px);
+  padding-bottom: clamp(80px, 10vw, 130px);
+}
+
+.concern__container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.concern__head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.concern__tag {
+  color: var(--strawberry-dark);
+}
+
+.concern__title {
+  margin-top: 10px;
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+
+.concern__lead {
+  margin-top: 14px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: var(--ink-mid);
+}
+
+.concern__grid {
+  margin-top: clamp(40px, 5vw, 60px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.concern__card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 26px 22px;
+  border: 1px solid var(--beige);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  transition: transform .3s var(--ease);
+}
+
+.concern__card:hover {
+  transform: translateY(-4px);
+}
+
+.concern__cross {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFF0F4;
+  color: var(--strawberry-dark);
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.concern__card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.concern__card p {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--ink-mid);
+}
+
+.concern__resolution {
+  margin-top: clamp(40px, 5vw, 64px);
+  background: linear-gradient(135deg, #FFF0F5 0%, #FDE6EC 100%);
+  border-radius: 24px;
+  padding: clamp(32px, 4vw, 48px);
+  text-align: center;
+  border: 2px solid var(--strawberry-light);
+  box-shadow: var(--shadow-card);
+}
+
+.concern__res-sub {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink-light);
+}
+
+.concern__res-main {
+  font-size: clamp(24px, 3.2vw, 36px);
+  font-weight: 900;
+  color: var(--ink);
+  margin-top: 6px;
+}
+
+.concern__res-main strong {
+  color: var(--strawberry-dark);
+}
+
+.concern__res-desc {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink-mid);
+}
+
+
+/* ========================================================
+   SUPERVISION SECTION (専門家・管理栄養士監修)
+   ======================================================== */
+.supervision {
+  background: #fff;
+  color: var(--ink);
+  padding-top: clamp(80px, 9vw, 130px);
+  padding-bottom: clamp(80px, 9vw, 130px);
+  border-top: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
+}
+
+.supervision__container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.supervision__badge {
+  text-align: center;
+}
+
+.supervision__badge span {
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: var(--beige);
+  color: var(--strawberry-dark);
+}
+
+.supervision__title {
+  text-align: center;
+  margin-top: 16px;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 900;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.supervision__grid {
+  margin-top: clamp(36px, 5vw, 60px);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(30px, 4vw, 56px);
+  align-items: center;
+  background: var(--paper);
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: 28px;
+  border: 1px solid var(--beige-dark);
+}
+
+.supervision__profile {
+  text-align: center;
+}
+
+.supervision__img-wrap {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(222, 60, 98, 0.15);
+  border: 4px solid #fff;
+}
+
+.supervision__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.supervision__meta {
+  margin-top: 16px;
+}
+
+.supervision__role {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--strawberry-dark);
+}
+
+.supervision__name {
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--ink);
+  margin-top: 4px;
+}
+
+.supervision__career {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+
+.supervision__comment h4 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--strawberry-dark);
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 14px;
+}
+
+.supervision__comment h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--strawberry-dark);
+}
+
+.supervision__comment p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--ink-mid);
+  margin-bottom: 12px;
+}
+
+.supervision__comment p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ========================================================
+   COMPARISON SECTION (他社比較表)
+   ======================================================== */
+.comparison {
+  background: var(--paper-soft);
+  color: var(--ink);
+  padding-top: clamp(90px, 11vw, 150px);
+  padding-bottom: clamp(90px, 11vw, 150px);
+}
+
+.comparison__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.comparison__head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.comparison__tag {
+  color: var(--strawberry-dark);
+}
+
+.comparison__title {
+  margin-top: 10px;
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.comparison__lead {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--ink-mid);
+}
+
+.comparison__table-wrap {
+  margin-top: clamp(40px, 5vw, 64px);
+  overflow-x: auto;
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+  background: #fff;
+}
+
+.comparison__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 680px;
+}
+
+.comparison__table th,
+.comparison__table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(44, 30, 35, 0.08);
+}
+
+.comparison__table thead th {
+  background: #FAF5F6;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  vertical-align: bottom;
+  padding: 24px 16px;
+}
+
+.th-criteria {
+  width: 24%;
+  text-align: left;
+  padding-left: 28px !important;
+}
+
+.th-main {
+  width: 36%;
+  background: linear-gradient(180deg, #FFEBF0 0%, #FFDFE7 100%) !important;
+  color: var(--strawberry-dark) !important;
+  font-size: 18px !important;
+  position: relative;
+  box-shadow: 0 -4px 15px rgba(222, 60, 98, 0.08);
+}
+
+.badge-recommend {
+  display: inline-block;
+  background: var(--strawberry-dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 8px rgba(222, 60, 98, 0.25);
+}
+
+.th-other {
+  width: 20%;
+  color: var(--ink-mid);
+}
+
+.td-criteria {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  padding-left: 28px !important;
+  background: #FAF8F9;
+}
+
+.td-main {
+  background: #FFF7F9;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.td-main strong {
+  display: block;
+  font-size: 14px;
+  color: var(--strawberry-dark);
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.td-main small {
+  display: block;
+  font-size: 11px;
+  color: var(--ink-light);
+  margin-top: 2px;
+}
+
+.td-other {
+  font-size: 12px;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+.grade {
+  display: block;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.grade--s {
+  color: var(--strawberry-dark);
+  font-size: 26px;
+}
+.grade--a {
+  color: #4CAF50;
+}
+.grade--b {
+  color: #FF9800;
+}
+.grade--c {
+  color: #9E9E9E;
+}
+
+
+/* ========================================================
+   REVIEWS SECTION (愛用者の声)
+   ======================================================== */
+.reviews {
+  background: var(--paper);
+  color: var(--ink);
+  padding-top: clamp(90px, 11vw, 150px);
+  padding-bottom: clamp(90px, 11vw, 150px);
+}
+
+.reviews__container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.reviews__head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.reviews__score-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  box-shadow: 0 4px 15px rgba(222, 60, 98, 0.1);
+  margin-bottom: 16px;
+}
+
+.reviews__score-badge .stars {
+  color: #FFB300;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.reviews__score-badge .score {
+  font-family: var(--cond);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.reviews__score-badge .count {
+  font-size: 12px;
+  color: var(--ink-light);
+}
+
+.reviews__tag {
+  color: var(--strawberry-dark);
+}
+
+.reviews__title {
+  margin-top: 10px;
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.reviews__grid {
+  margin-top: clamp(40px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px 24px;
+  border: 1px solid var(--beige);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  transition: transform .35s var(--ease);
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
+}
+
+.review-card__user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.review-card__user img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.review-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--cond);
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  flex: none;
+}
+
+.review-avatar--p {
+  background: linear-gradient(135deg, #FFAAA6, #FF6584);
+}
+.review-avatar--y {
+  background: linear-gradient(135deg, #DFB088, #C4804E);
+}
+
+.review-card__name {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.review-card__stars {
+  font-size: 12px;
+  color: #FFB300;
+  margin-top: 2px;
+}
+
+.review-card__stars span {
+  font-size: 11px;
+  color: var(--ink-light);
+  margin-left: 6px;
+}
+
+.review-card__heading {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--strawberry-dark);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.review-card__text {
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.8;
+  flex: 1;
+}
+
+.review-card__tag {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--beige);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--strawberry);
+}
+
+
+/* ========================================================
+   GUARANTEE SECTION (返金保証 & 3つの安心サポート)
+   ======================================================== */
+.guarantee {
+  background: var(--paper-soft);
+  color: var(--ink);
+  padding-top: clamp(80px, 9vw, 130px);
+  padding-bottom: clamp(80px, 9vw, 130px);
+}
+
+.guarantee__box {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 28px;
+  padding: clamp(32px, 5vw, 64px);
+  box-shadow: var(--shadow-card);
+  border: 2px solid var(--beige-dark);
+  text-align: center;
+}
+
+.guarantee__shield {
+  font-size: 40px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.guarantee__head h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.guarantee__head h2 span {
+  color: var(--strawberry-dark);
+}
+
+.guarantee__head p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--ink-mid);
+}
+
+.guarantee__cards {
+  margin-top: clamp(36px, 4vw, 52px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.g-card {
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 26px 22px;
+  border: 1px solid var(--beige);
+}
+
+.g-card__no {
+  font-family: var(--cond);
+  font-style: italic;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--strawberry);
+  line-height: 1;
+}
+
+.g-card h3 {
+  font-size: 17px;
+  font-weight: 900;
+  color: var(--ink);
+  margin-top: 8px;
+}
+
+.g-card p {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.75;
+}
+
+
+/* ========================================================
+   RESPONSIVE (追加コンポーネント)
+   ======================================================== */
+@media (max-width: 1024px) {
+  .concern__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reviews__grid {
+    grid-template-columns: 1fr;
+  }
+  .guarantee__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .supervision__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .supervision__comment h4::before {
+    display: none;
+  }
+  .supervision__comment h4 {
+    padding-left: 0;
+  }
+  .pc-only {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .concern__grid {
+    grid-template-columns: 1fr;
+  }
+}
