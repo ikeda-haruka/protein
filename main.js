@@ -306,5 +306,177 @@
       if (firstTrigger) firstTrigger.setAttribute('aria-expanded', 'true');
     }
   }
+
+  // ========================================================
+  // HERO: MOBILE PRODUCT SWITCHER & 3D PARALLAX TILT
+  // ========================================================
+  const switchBtns = document.querySelectorAll('.hero-v2__switch-btn');
+  const prodProtein = document.getElementById('heroProdProtein');
+  const prodTea = document.getElementById('heroProdTea');
+
+  if (switchBtns.length > 0 && prodProtein && prodTea) {
+    switchBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const prod = btn.getAttribute('data-hero-product');
+        switchBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+
+        if (prod === 'protein') {
+          prodProtein.style.transform = 'scale(1.08) translateY(-10px)';
+          prodProtein.style.zIndex = '5';
+          prodProtein.style.opacity = '1';
+          prodTea.style.transform = 'scale(0.88) translateY(10px)';
+          prodTea.style.zIndex = '2';
+          prodTea.style.opacity = '0.55';
+        } else if (prod === 'tea') {
+          prodTea.style.transform = 'scale(1.14) translateY(-12px)';
+          prodTea.style.zIndex = '5';
+          prodTea.style.opacity = '1';
+          prodProtein.style.transform = 'scale(0.86) translateY(10px)';
+          prodProtein.style.zIndex = '2';
+          prodProtein.style.opacity = '0.55';
+        } else {
+          // Both
+          prodProtein.style.transform = '';
+          prodProtein.style.zIndex = '';
+          prodProtein.style.opacity = '1';
+          prodTea.style.transform = '';
+          prodTea.style.zIndex = '';
+          prodTea.style.opacity = '1';
+        }
+      });
+    });
+  }
+
+  // 3D Parallax Tilt for Hero on scroll & mouse move
+  const heroStage = document.getElementById('heroVisualStage');
+  if (heroStage && !reduce) {
+    const parallaxItems = heroStage.querySelectorAll('[data-parallax]');
+
+    const applyParallax = (x, y) => {
+      parallaxItems.forEach(item => {
+        const depth = parseFloat(item.getAttribute('data-parallax') || '0.03');
+        const moveX = x * depth * 35;
+        const moveY = y * depth * 35;
+        item.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+      });
+    };
+
+    window.addEventListener('mousemove', (e) => {
+      if (window.scrollY > window.innerHeight) return;
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      applyParallax(x, y);
+    }, { passive: true });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight) return;
+      const factor = window.scrollY / window.innerHeight;
+      parallaxItems.forEach(item => {
+        const depth = parseFloat(item.getAttribute('data-parallax') || '0.03');
+        const moveY = factor * depth * 60;
+        item.style.transform = `translate3d(0, ${moveY}px, 0)`;
+      });
+    }, { passive: true });
+  }
+
+  // ========================================================
+  // 3-PILLAR SYNERGY: TABS, ACCORDION & 3D CARD TILT
+  // ========================================================
+  const synergyTabs = document.querySelectorAll('.synergy__tab');
+  const synergyCards = document.querySelectorAll('.synergy-card');
+  const synergyHub = document.getElementById('synergyHub');
+  const synergyHubPct = document.getElementById('synergyHubPct');
+
+  if (synergyCards.length > 0) {
+    // 1. Selector Tab Click
+    synergyTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetIdx = parseInt(tab.getAttribute('data-synergy-target') || '0', 10);
+
+        synergyTabs.forEach(t => {
+          const isActive = t === tab;
+          t.classList.toggle('is-active', isActive);
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        synergyCards.forEach((card, idx) => {
+          const isTarget = idx === targetIdx;
+          card.classList.toggle('is-active', isTarget);
+          if (isTarget && window.innerWidth <= 900) {
+            const offset = 80;
+            const top = card.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
+          }
+        });
+      });
+    });
+
+    // 2. Card click highlight
+    synergyCards.forEach((card, idx) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.synergy-card__more-btn')) return;
+        synergyCards.forEach(c => c.classList.toggle('is-active', c === card));
+        synergyTabs.forEach((t, tIdx) => {
+          t.classList.toggle('is-active', tIdx === idx);
+          t.setAttribute('aria-selected', tIdx === idx ? 'true' : 'false');
+        });
+      });
+
+      // 3. Accordion toggle for "詳しく見る"
+      const moreBtn = card.querySelector('.synergy-card__more-btn');
+      if (moreBtn) {
+        moreBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isExp = card.classList.contains('is-expanded');
+          card.classList.toggle('is-expanded', !isExp);
+          moreBtn.setAttribute('aria-expanded', !isExp ? 'true' : 'false');
+        });
+      }
+
+      // 4. 3D Card Tilt Effect on desktop
+      if (!reduce && window.matchMedia('(hover: hover)').matches) {
+        card.addEventListener('mousemove', (e) => {
+          const r = card.getBoundingClientRect();
+          const x = e.clientX - r.left - r.width / 2;
+          const y = e.clientY - r.top - r.height / 2;
+          const rotateX = -(y / r.height) * 8;
+          const rotateY = (x / r.width) * 8;
+          card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      }
+    });
+
+    // 5. Scroll synergy hub counter animation
+    if (synergyHub && synergyHubPct && 'IntersectionObserver' in window && !reduce) {
+      let animated = false;
+      const hubObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animated) {
+            animated = true;
+            let current = 0;
+            const target = 100;
+            const stepTime = 16;
+            const stepInc = 3;
+
+            const timer = setInterval(() => {
+              current = Math.min(target, current + stepInc);
+              synergyHubPct.textContent = `${current}%`;
+              if (current >= target) {
+                clearInterval(timer);
+                synergyHub.classList.add('is-charged');
+              }
+            }, stepTime);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      hubObserver.observe(synergyHub);
+    }
+  }
 })();
+
 

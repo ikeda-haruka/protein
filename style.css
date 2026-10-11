@@ -512,6 +512,79 @@ a:hover .arw {
   box-shadow: 0 14px 34px rgba(230, 40, 90, 0.48);
 }
 
+.hero-v2__btn--shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-v2__btn--shimmer::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -100%;
+  width: 50%;
+  height: 220%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: rotate(25deg);
+  animation: heroBtnShimmer 3.2s infinite;
+}
+
+@keyframes heroBtnShimmer {
+  0%, 25% { left: -100%; }
+  60%, 100% { left: 160%; }
+}
+
+.hero-v2__btn .btn__badge {
+  background: #FFF;
+  color: var(--strawberry-dark);
+  font-size: 11px;
+  font-weight: 900;
+  padding: 3px 8px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hero-v2__btn .btn__text {
+  font-size: 15px;
+}
+
+/* スマホ用 インタラクティブ・プロダクトスイッチャー */
+.hero-v2__mobile-switch {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 90, 130, 0.25);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(181, 33, 69, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.hero-v2__switch-btn {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ink-mid);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.hero-v2__switch-btn.is-active {
+  background: var(--strawberry);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255, 90, 130, 0.35);
+}
+
 .hero-v2__quick-nav {
   display: flex;
   align-items: center;
@@ -815,175 +888,395 @@ a:hover .arw {
   font-weight: 800;
 }
 
-/* ---------- TRI CARDS ---------- */
-.tri {
+/* ---------- 3-PILLAR SYNERGY FORMULA（本サイト独自リデザイン） ---------- */
+.synergy {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  background: var(--paper);
-}
-
-.tp {
-  position: relative;
+  background: linear-gradient(180deg, var(--paper) 0%, #FFF3F6 50%, var(--paper) 100%);
+  padding-top: clamp(80px, 9vw, 130px);
+  padding-bottom: clamp(90px, 10vw, 140px);
   overflow: hidden;
-  background: var(--bg);
-  color: #fff;
-  min-height: clamp(580px, 50vw, 750px);
-  padding: clamp(28px, 2.8vw, 44px) clamp(24px, 2.8vw, 44px) clamp(36px, 3.4vw, 52px);
-  display: flex;
-  flex-direction: column;
 }
 
-.tp__en {
-  position: absolute;
-  z-index: 0;
-  right: -.12em;
-  top: -.06em;
-  writing-mode: vertical-rl;
-  font-family: var(--cond);
-  font-style: italic;
-  font-weight: 900;
-  font-size: clamp(140px, 14vw, 240px);
-  line-height: .8;
-  letter-spacing: -.02em;
-  color: var(--dk);
-  pointer-events: none;
-  transition: transform 1.2s var(--ease);
+.synergy__head {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto;
 }
 
-.tp:hover .tp__en {
-  transform: translateY(4%);
-}
-
-.tp__no {
-  position: relative;
-  font-family: var(--cond);
-  font-style: italic;
+.synergy__badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(255, 90, 130, 0.12);
+  color: var(--strawberry-dark);
+  font-family: var(--en);
+  font-size: 11px;
   font-weight: 800;
-  font-size: clamp(60px, 5.5vw, 96px);
-  line-height: .8;
-  letter-spacing: -.01em;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
 }
 
-.tp__body {
-  position: relative;
-  margin-top: clamp(110px, 12vw, 190px);
+.synergy__title {
+  font-size: clamp(26px, 3.4vw, 42px);
+  font-weight: 900;
+  line-height: 1.35;
+  color: var(--ink);
 }
 
-.tp__tag {
+.synergy__title-em {
+  display: block;
+  font-size: clamp(20px, 2.8vw, 34px);
+  margin-top: 6px;
+  background: linear-gradient(120deg, var(--strawberry-dark) 0%, #D82654 60%, var(--strawberry) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.synergy__lead {
+  margin-top: 14px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.85;
+  color: var(--ink-mid);
+}
+
+/* インタラクティブ・ピラーセレクター */
+.synergy__selector {
+  display: inline-flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 6px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 90, 130, 0.2);
+  margin-top: 28px;
+  box-shadow: 0 8px 24px rgba(181, 33, 69, 0.06);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.synergy__tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-mid);
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .2em;
+  gap: 8px;
+  font-family: inherit;
 }
 
-.tp__tag::before {
-  content: "";
-  width: 28px;
-  height: 1.5px;
-  background: currentColor;
-}
-
-.tp__word {
-  margin-top: 14px;
-  font-size: clamp(40px, 4.2vw, 68px);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: .02em;
-}
-
-.tp__lead {
-  margin-top: 18px;
-  font-size: clamp(15px, 1.2vw, 17px);
-  font-weight: 800;
-  line-height: 1.6;
-}
-
-.tp__text {
-  margin-top: 10px;
-  font-size: 13px;
-  line-height: 1.95;
-  opacity: .92;
-  max-width: 400px;
-}
-
-.tp__nums {
-  margin-top: 26px;
-  border-top: 1px solid rgba(255, 255, 255, .5);
-}
-
-.tp__nums div {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, .25);
-}
-
-.tp__nums dt {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  opacity: .9;
-}
-
-.tp__nums dd {
+.synergy__tab-num {
   font-family: var(--cond);
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 1;
-}
-
-.tp__nums dd small {
-  font-family: var(--jp);
-  font-size: 11px;
-  font-weight: 700;
-  margin-left: 3px;
-}
-
-.tp__nums dd.jp {
-  font-family: var(--jp);
   font-size: 14px;
   font-weight: 800;
-  letter-spacing: .1em;
+  color: var(--strawberry);
 }
 
-.tri__x {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  width: 60px;
-  height: 60px;
-  margin: -30px 0 0 -30px;
-  border-radius: 50%;
-  background: var(--paper);
+.synergy__tab:hover {
   color: var(--strawberry-dark);
+}
+
+.synergy__tab.is-active {
+  background: linear-gradient(135deg, #FF5A82 0%, #E6285A 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(230, 40, 90, 0.3);
+}
+
+.synergy__tab.is-active .synergy__tab-num {
+  color: #fff;
+}
+
+/* 中央シナジーハブメーター */
+.synergy__hub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 32px;
+}
+
+.synergy__hub-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF0F4 0%, #FFE1E8 100%);
+  border: 2px solid var(--strawberry);
+  box-shadow: 0 0 24px rgba(255, 90, 130, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: transform 0.3s var(--ease);
+}
+
+.synergy__hub-circle:hover {
+  transform: scale(1.08);
+}
+
+.synergy__hub-pct {
+  font-family: var(--cond);
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--strawberry-dark);
+  line-height: 1;
+}
+
+.synergy__hub-label {
+  font-family: var(--en);
+  font-size: 8.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--ink-mid);
+  margin-top: 3px;
+}
+
+.synergy__hub-lines {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 90, 130, 0) 0%, rgba(255, 90, 130, 0.3) 30%, rgba(255, 90, 130, 0.3) 70%, rgba(255, 90, 130, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 3枚のラグジュアリーピラーカード */
+.synergy__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.5vw, 32px);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.synergy-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 90, 130, 0.18);
+  border-radius: 24px;
+  padding: clamp(24px, 2.5vw, 34px);
+  box-shadow: 0 10px 30px rgba(181, 33, 69, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.synergy-card:hover,
+.synergy-card.is-active {
+  border-color: rgba(255, 90, 130, 0.45);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(181, 33, 69, 0.12);
+}
+
+.synergy-card__aura {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.synergy-card__aura--body { background: #FF7597; }
+.synergy-card__aura--beauty { background: #F45D82; }
+.synergy-card__aura--recovery { background: #E84973; }
+
+.synergy-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.synergy-card__badge-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.synergy-card__no {
+  font-family: var(--cond);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--strawberry);
+}
+
+.synergy-card__tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ink);
+  background: #FFF0F4;
+  padding: 3px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.synergy-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #FFF5F7 0%, #FFE6ED 100%);
+  border: 1px solid rgba(255, 90, 130, 0.2);
   display: grid;
   place-items: center;
+  font-size: 24px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(181, 33, 69, 0.08);
+}
+
+.synergy-card__title {
+  margin-top: 18px;
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 900;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.synergy-card__title small {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--strawberry-dark);
+  margin-top: 4px;
+}
+
+.synergy-card__summary {
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  flex: 1;
+}
+
+/* 栄養・配合スペック */
+.synergy-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+  padding: 12px 10px;
+  background: #FFF8FA;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 90, 130, 0.12);
+  text-align: center;
+}
+
+.synergy-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.synergy-stat__val {
   font-family: var(--cond);
+  font-size: 18px;
   font-weight: 800;
-  font-size: 32px;
-  line-height: 1;
-  box-shadow: 0 10px 25px rgba(222, 60, 98, .18);
+  color: var(--strawberry-dark);
+  line-height: 1.1;
 }
 
-.tri__x:nth-of-type(1) {
-  left: 33.333%;
+.synergy-stat__val small {
+  font-family: var(--jp);
+  font-size: 10px;
+  margin-left: 2px;
 }
 
-.tri__x:nth-of-type(2) {
-  left: 66.666%;
+.synergy-stat__lbl {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink-light);
 }
 
-.tri .tp.rv:nth-child(3) {
-  transition-delay: .12s;
+/* 詳細アコーディオン */
+.synergy-card__more {
+  margin-top: 16px;
+  border-top: 1px dashed rgba(255, 90, 130, 0.18);
+  padding-top: 12px;
 }
 
-.tri .tp.rv:nth-child(5) {
-  transition-delay: .24s;
+.synergy-card__more-btn {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--strawberry-dark);
+  padding: 4px 0;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+
+.synergy-card__more-btn:hover {
+  opacity: 0.8;
+}
+
+.synergy-card__more-arrow {
+  font-size: 10px;
+  transition: transform 0.3s var(--ease);
+}
+
+.synergy-card.is-expanded .synergy-card__more-arrow {
+  transform: rotate(180deg);
+}
+
+.synergy-card__more-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.synergy-card.is-expanded .synergy-card__more-body {
+  max-height: 280px;
+}
+
+.synergy-card__points {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.synergy-card__points li {
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  position: relative;
+  padding-left: 12px;
+}
+
+.synergy-card__points li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--strawberry);
+  font-size: 8px;
+  top: 3px;
+}
+
+.synergy-card__points li strong {
+  color: var(--ink);
 }
 
 /* ---------- PRODUCT DETAIL ---------- */
@@ -2114,91 +2407,143 @@ a:hover .arw {
   .hd__logo img {
     height: 26px;
   }
-  /* hero-v2 mobile styles */
+  /* hero-v2 mobile high impact styles */
   .hero-v2 {
-    padding: 96px 0 64px;
+    padding: 80px 0 48px;
     min-height: auto;
   }
   .hero-v2__inner {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 20px;
+  }
+  /* スマホではビジュアルを最上部に配置して視覚的インパクトを最大化！ */
+  .hero-v2__visual-stage {
+    order: -1;
+    min-height: 340px;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  .hero-v2__mobile-switch {
+    display: inline-flex;
+    margin-bottom: 8px;
+  }
+  .hero-v2__product--protein {
+    margin-right: -15px;
+    transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
+  }
+  .hero-v2__img-main {
+    height: min(42vh, 320px);
+  }
+  .hero-v2__product--tea {
+    transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
+  }
+  .hero-v2__img-tea {
+    width: min(42vw, 190px);
+  }
+  .hero-v2__drink-accent {
+    left: 0;
+    bottom: 5px;
+  }
+  .hero-v2__img-drink {
+    width: 80px;
+  }
+  .hero-v2__floating-badge--protein {
+    left: -5px;
+    top: 2%;
+    transform: scale(0.85);
+  }
+  .hero-v2__floating-badge--tea {
+    right: -5px;
+    top: 5%;
+    transform: scale(0.85);
+  }
+  .hero-v2__floating-badge--review {
+    bottom: -15px;
+    left: 5px;
+    transform: scale(0.85);
   }
   .hero-v2__content {
     order: 1;
     text-align: center;
     align-items: center;
+    gap: 12px;
   }
   .hero-v2__tag-row {
     justify-content: center;
+    gap: 6px;
   }
-  .hero-v2__brand-sub {
-    justify-content: center;
+  .hero-v2__tag {
+    font-size: 10.5px;
+    padding: 3px 10px;
   }
   .hero-v2__headline {
-    font-size: clamp(24px, 6vw, 34px);
+    font-size: clamp(22px, 5.8vw, 30px);
+    line-height: 1.35;
   }
   .hero-v2__headline-em {
-    font-size: clamp(15px, 3.8vw, 19px);
+    font-size: clamp(14px, 3.6vw, 17px);
+    margin-top: 6px;
   }
   .hero-v2__desc {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 2px;
   }
   .hero-v2__pills {
     grid-template-columns: 1fr;
     width: 100%;
-    max-width: 440px;
+    max-width: 400px;
+    gap: 8px;
   }
   .hero-v2__pill {
-    text-align: left;
+    padding: 8px 12px;
   }
   .hero-v2__cta-box {
     width: 100%;
-    max-width: 440px;
+    max-width: 400px;
+    margin-top: 8px;
   }
   .hero-v2__btn {
     width: 100%;
-    height: 56px;
-    font-size: 15px;
-    padding: 0 20px;
+    height: 58px;
+    font-size: 14.5px;
+    padding: 0 16px;
   }
   .hero-v2__trust-row {
     justify-content: center;
+    gap: 10px;
+    font-size: 11px;
   }
-  .hero-v2__visual-stage {
-    order: 2;
-    min-height: 380px;
-    margin-top: 10px;
+  /* synergy mobile styles */
+  .synergy {
+    padding-top: 64px;
+    padding-bottom: 72px;
   }
-  .hero-v2__product--protein {
-    margin-right: -20px;
+  .synergy__selector {
+    width: 100%;
+    border-radius: 16px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px;
   }
-  .hero-v2__img-main {
-    height: min(44vh, 360px);
+  .synergy__tab {
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
   }
-  .hero-v2__img-tea {
-    width: min(45vw, 220px);
+  .synergy__hub {
+    margin: 24px auto 20px;
   }
-  .hero-v2__drink-accent {
-    left: -10px;
-    bottom: 10px;
+  .synergy__hub-circle {
+    width: 76px;
+    height: 76px;
   }
-  .hero-v2__img-drink {
-    width: 95px;
+  .synergy__hub-pct {
+    font-size: 20px;
   }
-  .hero-v2__floating-badge--protein {
-    left: -10px;
-    top: 5%;
-    transform: scale(0.9);
-  }
-  .hero-v2__floating-badge--tea {
-    right: -10px;
-    top: 10%;
-    transform: scale(0.9);
-  }
-  .hero-v2__floating-badge--review {
-    bottom: -15px;
-    left: 10px;
-    transform: scale(0.9);
+  .synergy__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .btn {
     gap: 14px;
@@ -2206,32 +2551,6 @@ a:hover .arw {
     font-size: 14px;
     letter-spacing: .03em;
     white-space: nowrap;
-  }
-  .tri {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .tp {
-    min-height: 0;
-    padding: 30px 24px 40px;
-  }
-  .tp__body {
-    margin-top: 56px;
-  }
-  .tp__en {
-    font-size: 150px;
-  }
-  .tp__text {
-    max-width: 85%;
-  }
-  .tri__x {
-    position: relative;
-    left: auto !important;
-    top: auto;
-    justify-self: center;
-    width: 50px;
-    height: 50px;
-    margin: -25px 0;
-    font-size: 26px;
   }
   .prod__inner {
     grid-template-columns: minmax(0, 1fr);
