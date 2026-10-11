@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+*.log
+.vercel
+package-lock.json
+setup_gh.js
+test_api.js
+check_cred.ps1
+process_images.js
+update_issue_*.js
+sync_issues.js
+manage_repo.js

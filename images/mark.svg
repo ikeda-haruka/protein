@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="none">
+  <!-- Elegant Strawberry Silhouette -->
+  <path d="M50 15 C30 15 15 32 15 56 C15 80 40 104 50 110 C60 104 85 80 85 56 C85 32 70 15 50 15 Z" fill="currentColor"/>
+  <!-- Calyx -->
+  <path d="M50 4 C45 10 32 13 25 11 C31 18 34 23 32 28 C39 23 48 23 50 27 C52 23 61 23 68 28 C66 23 69 18 75 11 C68 13 55 10 50 4 Z" fill="currentColor" opacity="0.8"/>
+</svg>
