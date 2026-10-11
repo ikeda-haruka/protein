@@ -1837,3 +1837,645 @@ a:hover .arw {
     font-size: clamp(26px, 7.4vw, 38px);
   }
 }
+
+/* ========================================================
+   SLIM TEA SECTION (内臓脂肪ケア スティック粉末ティー)
+   ======================================================== */
+.slimtea {
+  background: var(--paper-soft);
+  color: var(--ink);
+  padding-top: clamp(90px, 11vw, 150px);
+  padding-bottom: clamp(90px, 11vw, 150px);
+  border-top: 1px solid var(--beige-dark);
+  border-bottom: 1px solid var(--beige-dark);
+}
+
+.slimtea__header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.slimtea__tag {
+  color: var(--strawberry-dark);
+}
+
+.slimtea__title {
+  margin-top: 14px;
+  font-size: clamp(28px, 3.8vw, 48px);
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+
+.slimtea__title span {
+  color: var(--strawberry-dark);
+  position: relative;
+  display: inline-block;
+}
+
+.slimtea__title span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 8px;
+  background: rgba(255, 101, 132, 0.25);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.slimtea__lead {
+  margin-top: 18px;
+  font-size: clamp(14px, 1.3vw, 17px);
+  line-height: 1.85;
+  color: var(--ink-mid);
+}
+
+.slimtea__main-grid {
+  margin-top: clamp(48px, 6vw, 80px);
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(36px, 5vw, 80px);
+  align-items: start;
+}
+
+.slimtea__showcase {
+  position: sticky;
+  top: 90px;
+}
+
+.slimtea__img-wrap {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: #fff;
+}
+
+.slimtea__img-wrap img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform .7s var(--ease);
+}
+
+.slimtea__img-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.slimtea__features {
+  margin-top: 24px;
+  display: grid;
+  gap: 14px;
+}
+
+.slimtea__feat-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(222, 60, 98, 0.05);
+  border: 1px solid rgba(253, 230, 236, 0.8);
+}
+
+.slimtea__feat-pill .feat-icon {
+  font-size: 22px;
+  flex: none;
+  margin-top: 2px;
+}
+
+.slimtea__feat-pill strong {
+  display: block;
+  font-size: 14px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.slimtea__feat-pill p {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+.slimtea__flavors-title {
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.flavor-cards {
+  display: grid;
+  gap: 18px;
+}
+
+.flavor-card {
+  padding: 24px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(44, 30, 35, 0.06);
+  box-shadow: var(--shadow-soft);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.flavor-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+}
+
+.flavor-card--mocha::before {
+  background: #C49A70;
+}
+.flavor-card--peach::before {
+  background: #FFAAA6;
+}
+.flavor-card--berry::before {
+  background: #FF6584;
+}
+
+.flavor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(222, 60, 98, 0.12);
+}
+
+.flavor-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.flavor-card h4 {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.flavor-card h4 span {
+  font-family: var(--en);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-light);
+  margin-left: 8px;
+}
+
+.flavor-tag {
+  font-family: var(--en);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--beige);
+  color: var(--strawberry-dark);
+}
+
+.flavor-desc {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.75;
+}
+
+.flavor-meta {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-light);
+  flex-wrap: wrap;
+}
+
+.flavor-meta span {
+  padding: 3px 8px;
+  background: var(--paper);
+  border-radius: 6px;
+}
+
+.slimtea__buy-box {
+  margin-top: 32px;
+  padding: 28px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+  border: 2px solid var(--beige-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.slimtea__price-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-light);
+}
+
+.slimtea__price {
+  font-family: var(--cond);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.slimtea__price small {
+  font-family: var(--jp);
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 6px;
+  color: var(--ink-light);
+}
+
+.slimtea__badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--strawberry-dark);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.slimtea__buy-box .btn {
+  background: var(--strawberry-dark);
+  color: #fff;
+  min-width: 240px;
+}
+
+.slimtea__buy-box .btn:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+
+/* ========================================================
+   FLAVOR VOTE SECTION (新作フレーバーアンケート＆集計グラフ)
+   ======================================================== */
+.vote {
+  background: linear-gradient(180deg, var(--paper) 0%, #FFF0F4 50%, var(--paper) 100%);
+  color: var(--ink);
+  padding-top: clamp(100px, 12vw, 160px);
+  padding-bottom: clamp(100px, 12vw, 160px);
+}
+
+.vote__container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.vote__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.vote__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--strawberry-dark);
+  box-shadow: 0 4px 15px rgba(222, 60, 98, 0.1);
+  margin-bottom: 16px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E03E65;
+  box-shadow: 0 0 0 rgba(224, 62, 101, 0.6);
+  animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(224, 62, 101, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(224, 62, 101, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(224, 62, 101, 0); }
+}
+
+.vote__tag {
+  color: var(--strawberry-dark);
+}
+
+.vote__title {
+  margin-top: 10px;
+  font-size: clamp(28px, 3.8vw, 46px);
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+
+.vote__title span {
+  color: var(--strawberry-dark);
+}
+
+.vote__lead {
+  margin-top: 16px;
+  font-size: clamp(14px, 1.2vw, 16px);
+  color: var(--ink-mid);
+  line-height: 1.85;
+}
+
+.vote__grid {
+  margin-top: clamp(40px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+
+/* 投票フォームボックス */
+.vote__form-box {
+  background: #fff;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(253, 230, 236, 0.9);
+}
+
+.vote__box-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.vote__box-sub {
+  font-size: 12px;
+  color: var(--ink-light);
+  margin-top: 4px;
+}
+
+.vote__options {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.vote__option-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid var(--beige);
+  background: var(--paper);
+  cursor: pointer;
+  transition: all .25s var(--ease);
+}
+
+.vote__option-item:hover {
+  border-color: var(--strawberry-light);
+  background: #fff;
+}
+
+.vote__option-item input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--beige-dark);
+  outline: none;
+  margin-top: 2px;
+  flex: none;
+  cursor: pointer;
+  transition: all .2s;
+  display: grid;
+  place-items: center;
+}
+
+.vote__option-item input[type="radio"]:checked {
+  border-color: var(--strawberry-dark);
+  background: var(--strawberry-dark);
+}
+
+.vote__option-item input[type="radio"]:checked::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.vote__option-item:has(input[type="radio"]:checked) {
+  border-color: var(--strawberry-dark);
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(222, 60, 98, 0.08);
+}
+
+.vote__option-content {
+  flex: 1;
+}
+
+.vote__option-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.vote__option-name {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.vote__option-en {
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-light);
+}
+
+.vote__option-desc {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+.vote__submit-btn {
+  margin-top: 14px;
+  width: 100%;
+  justify-content: center;
+  height: 56px;
+}
+
+.vote__thanks {
+  margin-top: 20px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: #FFF0F4;
+  border: 1px solid var(--strawberry-light);
+  color: var(--strawberry-dark);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+  animation: fadeIn .4s ease;
+}
+
+.vote__thanks.is-hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* リアルタイム集計グラフボックス */
+.vote__graph-box {
+  background: #fff;
+  padding: clamp(24px, 3vw, 36px);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(253, 230, 236, 0.9);
+}
+
+.vote__graph-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vote__total {
+  font-family: var(--cond);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--strawberry-dark);
+  letter-spacing: .05em;
+}
+
+.vote__graph-sub {
+  font-size: 12px;
+  color: var(--ink-light);
+  margin-top: 4px;
+}
+
+.vote__bars {
+  margin-top: 24px;
+  display: grid;
+  gap: 20px;
+}
+
+.vote__bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vote__bar-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.vote__bar-title {
+  font-weight: 800;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vote__bar-rank {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 800;
+  background: #FEE89D;
+  color: #8C6A00;
+}
+
+.vote__bar-pct {
+  font-family: var(--cond);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--strawberry-dark);
+}
+
+.vote__bar-pct small {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-light);
+  margin-left: 6px;
+  font-family: var(--jp);
+}
+
+.vote__track {
+  width: 100%;
+  height: 18px;
+  background: var(--paper-soft);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(44, 30, 35, 0.05);
+}
+
+.vote__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #FFA2B6 0%, #FF6584 100%);
+  width: 0%;
+  transition: width 1s var(--ease);
+}
+
+.vote__fill--leader {
+  background: linear-gradient(90deg, #FF6584 0%, #DE3C62 100%);
+}
+
+.vote__notice {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--beige-dark);
+  font-size: 12px;
+  color: var(--ink-mid);
+  text-align: center;
+}
+
+/* レスポンシブ追加 */
+@media (max-width: 900px) {
+  .slimtea__main-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .slimtea__showcase {
+    position: static;
+  }
+  .slimtea__buy-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .slimtea__buy-box .btn {
+    width: 100%;
+    min-width: 0;
+  }
+  .vote__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
