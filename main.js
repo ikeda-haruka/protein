@@ -316,6 +316,7 @@
   const switchBtns = document.querySelectorAll('.hero-v2__switch-btn');
   const prodProtein = document.getElementById('heroProdProtein');
   const prodTea = document.getElementById('heroProdTea');
+  const prodSmoothie = document.getElementById('heroProdSmoothie');
 
   if (switchBtns.length > 0 && prodProtein && prodTea) {
     switchBtns.forEach(btn => {
@@ -325,26 +326,53 @@
 
         if (prod === 'protein') {
           prodProtein.style.transform = 'scale(1.08) translateY(-10px)';
-          prodProtein.style.zIndex = '5';
+          prodProtein.style.zIndex = '6';
           prodProtein.style.opacity = '1';
-          prodTea.style.transform = 'scale(0.88) translateY(10px)';
+          prodTea.style.transform = 'scale(0.86) translateY(10px)';
           prodTea.style.zIndex = '2';
-          prodTea.style.opacity = '0.55';
+          prodTea.style.opacity = '0.45';
+          if (prodSmoothie) {
+            prodSmoothie.style.transform = 'scale(0.86) translateY(10px)';
+            prodSmoothie.style.zIndex = '2';
+            prodSmoothie.style.opacity = '0.45';
+          }
         } else if (prod === 'tea') {
-          prodTea.style.transform = 'scale(1.14) translateY(-12px)';
-          prodTea.style.zIndex = '5';
+          prodTea.style.transform = 'scale(1.12) translateY(-10px)';
+          prodTea.style.zIndex = '6';
           prodTea.style.opacity = '1';
           prodProtein.style.transform = 'scale(0.86) translateY(10px)';
           prodProtein.style.zIndex = '2';
-          prodProtein.style.opacity = '0.55';
+          prodProtein.style.opacity = '0.45';
+          if (prodSmoothie) {
+            prodSmoothie.style.transform = 'scale(0.86) translateY(10px)';
+            prodSmoothie.style.zIndex = '2';
+            prodSmoothie.style.opacity = '0.45';
+          }
+        } else if (prod === 'smoothie') {
+          if (prodSmoothie) {
+            prodSmoothie.style.transform = 'scale(1.14) translateY(-10px)';
+            prodSmoothie.style.zIndex = '6';
+            prodSmoothie.style.opacity = '1';
+          }
+          prodProtein.style.transform = 'scale(0.86) translateY(10px)';
+          prodProtein.style.zIndex = '2';
+          prodProtein.style.opacity = '0.45';
+          prodTea.style.transform = 'scale(0.86) translateY(10px)';
+          prodTea.style.zIndex = '2';
+          prodTea.style.opacity = '0.45';
         } else {
-          // Both
+          // All
           prodProtein.style.transform = '';
           prodProtein.style.zIndex = '';
           prodProtein.style.opacity = '1';
           prodTea.style.transform = '';
           prodTea.style.zIndex = '';
           prodTea.style.opacity = '1';
+          if (prodSmoothie) {
+            prodSmoothie.style.transform = '';
+            prodSmoothie.style.zIndex = '';
+            prodSmoothie.style.opacity = '1';
+          }
         }
       });
     });

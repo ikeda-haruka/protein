@@ -488,6 +488,14 @@ a:hover .arw {
   border: 1px solid rgba(255, 90, 130, 0.2);
 }
 
+.hero-v2__tag--smoothie {
+  background: rgba(162, 107, 196, 0.15);
+  backdrop-filter: blur(8px);
+  color: #7B3E9E;
+  border: 1px solid rgba(162, 107, 196, 0.35);
+  font-weight: 800;
+}
+
 .hero-v2__brand-sub {
   display: flex;
   align-items: center;
@@ -799,12 +807,35 @@ a:hover .arw {
   100% { transform: translateY(-8px) rotate(-1deg); }
 }
 
+/* スムージー パッケージ（左手前） */
+.hero-v2__product--smoothie {
+  position: relative;
+  z-index: 5;
+  margin-right: -40px;
+  margin-bottom: 16px;
+  animation: heroFloatSub 6.5s 1.2s ease-in-out infinite alternate;
+  transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
+}
+
+.hero-v2__img-smoothie {
+  width: min(32vw, 230px);
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 20px 36px rgba(162, 107, 196, 0.25), 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.hero-v2__floating-badge--smoothie {
+  top: 12%;
+  left: -20px;
+  animation: badgeFloat 5.4s 1.2s ease-in-out infinite alternate;
+}
+
 /* ドリンクアクセント */
 .hero-v2__drink-accent {
   position: absolute;
   left: -20px;
-  bottom: 30px;
-  z-index: 5;
+  bottom: 20px;
+  z-index: 6;
   animation: heroFloatSub 5.5s 1s ease-in-out infinite alternate;
 }
 
@@ -2907,10 +2938,10 @@ a:hover .arw {
     transform: translateX(-50%);
     z-index: 25;
     width: auto;
-    max-width: calc(100vw - 32px);
+    max-width: calc(100vw - 20px);
     margin: 0;
-    gap: 4px;
-    padding: 4px;
+    gap: 3px;
+    padding: 3px;
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -2920,8 +2951,8 @@ a:hover .arw {
   }
   .hero-v2__switch-btn {
     white-space: nowrap;
-    padding: 6px 14px;
-    font-size: 12px;
+    padding: 5px 9px;
+    font-size: 11px;
     font-weight: 800;
     flex-shrink: 0;
   }
@@ -2930,30 +2961,47 @@ a:hover .arw {
     height: 54px;
     width: 90%;
   }
+  /* スムージー パッケージ（左） */
+  .hero-v2__product--smoothie {
+    position: relative;
+    z-index: 4;
+    margin-right: -10px;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+    transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
+  }
+  .hero-v2__img-smoothie {
+    width: min(27vw, 105px);
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  /* プロテイン パウチ（中央） */
   .hero-v2__product--protein {
     position: relative;
     z-index: 3;
-    margin-right: -4px;
+    margin: 0 -8px;
     margin-bottom: 0;
     flex-shrink: 0;
     transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
   }
   .hero-v2__img-main {
-    height: min(34vh, 220px);
+    height: min(32vh, 210px);
     width: auto;
-    max-width: 44vw;
+    max-width: 40vw;
     object-fit: contain;
   }
+  /* スリムティー パッケージ（右） */
   .hero-v2__product--tea {
     position: relative;
     z-index: 4;
-    margin-left: -4px;
+    margin-left: -10px;
     margin-bottom: 6px;
     flex-shrink: 0;
     transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
   }
   .hero-v2__img-tea {
-    width: min(30vw, 120px);
+    width: min(27vw, 105px);
     height: auto;
     object-fit: contain;
   }
@@ -2963,35 +3011,42 @@ a:hover .arw {
     z-index: 5;
   }
   .hero-v2__img-drink {
-    width: 48px;
+    width: 44px;
     height: auto;
   }
   /* スマホ画面内に綺麗に収め、文字やロゴを一切隠さないフローティングバッジ配置 */
   .hero-v2__floating-badge {
-    padding: 3px 8px;
-    gap: 5px;
+    padding: 3px 7px;
+    gap: 4px;
     box-shadow: 0 4px 14px rgba(181, 33, 69, 0.12);
     border-radius: 999px;
-    max-width: 170px;
+    max-width: 155px;
     box-sizing: border-box;
   }
   .hero-v2__floating-badge .badge-icon {
-    font-size: 13px;
+    font-size: 12px;
     flex-shrink: 0;
   }
   .hero-v2__floating-badge .badge-title {
-    font-size: 8.5px;
+    font-size: 8px;
     letter-spacing: 0.02em;
   }
   .hero-v2__floating-badge .badge-sub {
-    font-size: 9px;
+    font-size: 8.5px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  /* スムージーバッジ（左上肩） */
+  .hero-v2__floating-badge--smoothie {
+    left: -6px;
+    top: 8px;
+    transform: none;
+    animation: none;
+  }
   /* パウチのブランドロゴを隠さないよう左肩上部に逃がす */
   .hero-v2__floating-badge--protein {
-    left: -8px;
+    left: -6px;
     top: 8px;
     transform: none;
     animation: none;

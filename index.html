@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -68,6 +68,7 @@
             <span class="hero-v2__tag hero-v2__tag--new">NEW ARRIVAL</span>
             <span class="hero-v2__tag hero-v2__tag--award">🏆 楽天ランキング3冠達成※1</span>
             <span class="hero-v2__tag hero-v2__tag--magazine">美容誌 VOCE / ar 掲載</span>
+            <span class="hero-v2__tag hero-v2__tag--smoothie">生酵素スムージー新登場</span>
           </div>
 
           <p class="hero-v2__brand-sub">
@@ -77,36 +78,37 @@
 
           <h1 class="hero-v2__headline">
             毎朝が、愛おしくなる。<br>
-            <span class="hero-v2__headline-em">わたしを整える、贅沢あまおう苺ミルク ＆ 内臓脂肪ケアティー</span>
+            <span class="hero-v2__headline-em">わたしを整える、贅沢あまおう苺ミルク ＆ 内臓脂肪ケアティー ＆ 生酵素スムージー</span>
           </h1>
 
           <p class="hero-v2__desc">
-            しなやかな美ボディを育む「Wプロテイン×うるおい美容成分」と、<br class="pc-br">
-            お腹の脂肪をすっきり減らす「機能性スティックパウダーティー」。<br class="pc-br">
-            自分らしさを愛するすべての女性へ贈る、新感覚プレミアム・インナーケア習慣。
+            しなやかな美ボディを育む「Wプロテイン×うるおい美容成分」、<br class="pc-br">
+            お腹の脂肪をすっきり減らす「機能性スティックパウダーティー」、<br class="pc-br">
+            120種の生酵素×チアシードで満腹置き換え「ベリースムージー」。<br class="pc-br">
+            女性のキレイを24時間支える、新感覚プレミアム・インナーケア習慣。
           </p>
 
-          <!-- 3つの特徴ピル -->
+          <!-- 3つの特徴ピル（3大主役アイテム） -->
           <div class="hero-v2__pills">
             <div class="hero-v2__pill">
               <span class="hero-v2__pill-icon">🍓</span>
               <div>
-                <strong>完熟あまおう苺</strong>
+                <strong>完熟あまおう苺プロテイン</strong>
                 <small>高タンパク20g・美容液成分</small>
               </div>
             </div>
             <div class="hero-v2__pill">
               <span class="hero-v2__pill-icon">🍵</span>
               <div>
-                <strong>内臓脂肪レベル低下</strong>
-                <small>サッと溶ける スティックティー</small>
+                <strong>内臓脂肪レベル低下ティー</strong>
+                <small>ブラックジンジャー配合・機能性表示</small>
               </div>
             </div>
             <div class="hero-v2__pill">
-              <span class="hero-v2__pill-icon">🌿</span>
+              <span class="hero-v2__pill-icon">🫐</span>
               <div>
-                <strong>6つの無添加＆国内製造</strong>
-                <small>人工甘味料・白砂糖不使用</small>
+                <strong>生酵素置き換えスムージー</strong>
+                <small>120種の活きた生酵素×チアシード</small>
               </div>
             </div>
           </div>
@@ -137,12 +139,12 @@
           </div>
         </div>
 
-        <!-- 右側：デュアルプロダクト（プロテイン＆スリムティー）ステージ -->
+        <!-- 右側：トリプルプロダクト（プロテイン＆スリムティー＆スムージー）ステージ -->
         <div class="hero-v2__visual-stage" id="heroVisualStage">
           <!-- スマホ用 インタラクティブ・プロダクトスイッチャー -->
           <div class="hero-v2__mobile-switch" role="tablist" aria-label="商品切り替え">
             <button class="hero-v2__switch-btn is-active" data-hero-product="all">
-              👑 両方見る
+              👑 全部見る
             </button>
             <button class="hero-v2__switch-btn" data-hero-product="protein">
               🍓 プロテイン
@@ -150,11 +152,26 @@
             <button class="hero-v2__switch-btn" data-hero-product="tea">
               🍵 スリムティー
             </button>
+            <button class="hero-v2__switch-btn" data-hero-product="smoothie">
+              🫐 スムージー
+            </button>
           </div>
 
           <div class="hero-v2__stage-pedestal" aria-hidden="true"></div>
           
-          <!-- プロテイン パウチ -->
+          <!-- スムージー パッケージ ＆ グラス（左側） -->
+          <div class="hero-v2__product hero-v2__product--smoothie" id="heroProdSmoothie" data-parallax="0.05">
+            <img src="images/berry-smoothie-detail.webp" alt="BERRY SMOOTHIE 生酵素置き換えスムージー" width="380" height="285" class="hero-v2__img-smoothie">
+            <div class="hero-v2__floating-badge hero-v2__floating-badge--smoothie">
+              <span class="badge-icon">🫐</span>
+              <div class="badge-text">
+                <span class="badge-title">SMOOTHIE</span>
+                <span class="badge-sub">生酵素120種×チアシード満腹</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- プロテイン パウチ（中央） -->
           <div class="hero-v2__product hero-v2__product--protein" id="heroProdProtein" data-parallax="0.04">
             <img src="images/berry-protein-hero.webp?v=2" alt="BERRY MILK PROTEIN あまおう苺ミルク" width="520" height="693" class="hero-v2__img-main">
             <div class="hero-v2__floating-badge hero-v2__floating-badge--protein">
@@ -166,7 +183,7 @@
             </div>
           </div>
 
-          <!-- スリムティー パッケージ ＆ スティック -->
+          <!-- スリムティー パッケージ ＆ スティック（右側） -->
           <div class="hero-v2__product hero-v2__product--tea" id="heroProdTea" data-parallax="-0.03">
             <img src="images/lineup-slim-tea.webp" alt="BERRY SLIM TEA 内臓脂肪ケアティー" width="380" height="380" class="hero-v2__img-tea">
             <div class="hero-v2__floating-badge hero-v2__floating-badge--tea">
@@ -1878,6 +1895,6 @@
     </a>
   </div>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>
