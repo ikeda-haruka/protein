@@ -83,9 +83,12 @@
       if (!target) return;
 
       e.preventDefault();
+      const banner = document.getElementById('portfolioBanner');
+      const bannerHeight = banner ? banner.offsetHeight : 0;
       const headerHeight = hd ? hd.offsetHeight : 62;
+      const totalOffset = bannerHeight + headerHeight;
       const targetPos = target.getBoundingClientRect().top + window.scrollY;
-      const offsetPos = Math.max(0, targetPos - headerHeight);
+      const offsetPos = Math.max(0, targetPos - totalOffset);
 
       window.scrollTo({
         top: offsetPos,
