@@ -2855,12 +2855,15 @@ a:hover .arw {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-height: 380px;
+    min-height: 330px;
     width: 100%;
-    max-width: 390px;
+    max-width: 350px;
     margin: 0 auto;
-    padding-top: 52px;
+    padding-top: 50px;
     padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
     overflow: visible;
   }
   /* スイッチャーをステージ上部中央に独立配置（flexアイテム同士の衝突・文字潰れを根本解消） */
@@ -2892,75 +2895,88 @@ a:hover .arw {
   }
   .hero-v2__stage-pedestal {
     bottom: 8px;
-    height: 60px;
-    width: 92%;
+    height: 54px;
+    width: 90%;
   }
   .hero-v2__product--protein {
     position: relative;
     z-index: 3;
-    margin-right: -10px;
+    margin-right: -4px;
     margin-bottom: 0;
+    flex-shrink: 0;
     transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
   }
   .hero-v2__img-main {
-    height: min(44vh, 290px);
+    height: min(34vh, 220px);
     width: auto;
-    max-width: 58vw;
+    max-width: 44vw;
     object-fit: contain;
   }
   .hero-v2__product--tea {
     position: relative;
     z-index: 4;
-    margin-left: -15px;
-    margin-bottom: 16px;
+    margin-left: -4px;
+    margin-bottom: 6px;
+    flex-shrink: 0;
     transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
   }
   .hero-v2__img-tea {
-    width: min(36vw, 150px);
+    width: min(30vw, 120px);
     height: auto;
     object-fit: contain;
   }
   .hero-v2__drink-accent {
-    left: 4px;
-    bottom: 6px;
+    left: -4px;
+    bottom: 2px;
     z-index: 5;
   }
   .hero-v2__img-drink {
-    width: 68px;
+    width: 48px;
     height: auto;
   }
-  /* スマホ画面内に綺麗に収めるフローティングバッジ最適化 */
+  /* スマホ画面内に綺麗に収め、文字やロゴを一切隠さないフローティングバッジ配置 */
   .hero-v2__floating-badge {
-    padding: 4px 10px;
-    gap: 6px;
-    box-shadow: 0 6px 16px rgba(181, 33, 69, 0.12);
+    padding: 3px 8px;
+    gap: 5px;
+    box-shadow: 0 4px 14px rgba(181, 33, 69, 0.12);
+    border-radius: 999px;
+    max-width: 170px;
+    box-sizing: border-box;
   }
   .hero-v2__floating-badge .badge-icon {
-    font-size: 14px;
+    font-size: 13px;
+    flex-shrink: 0;
   }
   .hero-v2__floating-badge .badge-title {
-    font-size: 9px;
+    font-size: 8.5px;
+    letter-spacing: 0.02em;
   }
   .hero-v2__floating-badge .badge-sub {
-    font-size: 10.5px;
+    font-size: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+  /* パウチのブランドロゴを隠さないよう左肩上部に逃がす */
   .hero-v2__floating-badge--protein {
-    left: 4px;
-    top: 54px;
+    left: -8px;
+    top: 8px;
     transform: none;
     animation: none;
   }
+  /* スリムティーのパッケージを隠さず右端も見切れないよう右上肩に逃がす */
   .hero-v2__floating-badge--tea {
-    right: 4px;
-    top: 58px;
+    right: -4px;
+    top: 8px;
     transform: none;
     animation: none;
   }
+  /* ドリンクの下にコンパクトに配置 */
   .hero-v2__floating-badge--review {
     bottom: -6px;
-    left: 14px;
-    padding: 3px 8px;
-    font-size: 10.5px;
+    left: 0;
+    padding: 2px 7px;
+    font-size: 9px;
     transform: none;
     animation: none;
   }
@@ -4612,6 +4628,183 @@ a:hover .arw {
 }
 .grade--c {
   color: #9E9E9E;
+}
+
+/* スマホ専用比較カード（PCでは非表示） */
+.comparison__sp-list {
+  display: none;
+}
+
+.cmp-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px 16px;
+  box-shadow: 0 6px 20px rgba(181, 33, 69, 0.07);
+  border: 1px solid rgba(255, 90, 130, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cmp-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cmp-card__num {
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 900;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--strawberry) 0%, var(--strawberry-dark) 100%);
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(222, 60, 98, 0.3);
+}
+
+.cmp-card__title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* 主役BERRY MILKブロック */
+.cmp-card__main {
+  background: linear-gradient(135deg, #FFF0F4 0%, #FFE6EC 100%);
+  border: 1.5px solid rgba(255, 90, 130, 0.4);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 12px rgba(222, 60, 98, 0.08);
+}
+
+.cmp-card__badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.cmp-card__badge {
+  font-size: 12.5px;
+  font-weight: 900;
+  color: var(--strawberry-dark);
+  letter-spacing: 0.02em;
+}
+
+.cmp-card__sub-badge {
+  font-size: 10px;
+  font-weight: 800;
+  background: var(--strawberry-dark);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(222, 60, 98, 0.25);
+  white-space: nowrap;
+}
+
+.cmp-card__main-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cmp-card__main-body .grade--s {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+  color: var(--strawberry-dark);
+  margin-top: 1px;
+}
+
+.cmp-card__main-text {
+  flex: 1;
+}
+
+.cmp-card__main-text strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.cmp-card__main-text p {
+  font-size: 11.5px;
+  color: var(--ink-mid);
+  margin-top: 4px;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* 他社製品比較2分割グリッド */
+.cmp-card__sub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.cmp-card__sub-item {
+  background: #F9F9FA;
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 1px solid rgba(44, 30, 35, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cmp-card__sub-label {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--ink-light);
+  text-align: center;
+  border-bottom: 1px dashed rgba(44, 30, 35, 0.1);
+  padding-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cmp-card__sub-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.cmp-card__sub-body .grade {
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cmp-card__sub-body p {
+  font-size: 10.5px;
+  color: var(--ink-mid);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* スマホ表示時の切り替え */
+@media (max-width: 768px) {
+  .comparison__table-wrap {
+    display: none;
+  }
+  .comparison__sp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 28px;
+  }
 }
 
 
