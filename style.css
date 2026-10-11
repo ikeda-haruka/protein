@@ -3092,6 +3092,347 @@ a:hover .arw {
   color: #fff;
 }
 
+/* ---------- BERRY SMOOTHIE SECTION ---------- */
+.smoothie {
+  padding-top: clamp(80px, 10vw, 130px);
+  padding-bottom: clamp(80px, 10vw, 130px);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5FA 50%, #FFF0F6 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.smoothie__header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.smoothie__tag {
+  color: #C23B6B;
+}
+
+.smoothie__title {
+  margin-top: 14px;
+  font-size: clamp(28px, 3.8vw, 48px);
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+
+.smoothie__title span {
+  color: #C23B6B;
+  position: relative;
+  display: inline-block;
+}
+
+.smoothie__title span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 8px;
+  background: rgba(194, 59, 107, 0.2);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.smoothie__lead {
+  margin-top: 18px;
+  font-size: clamp(14px, 1.3vw, 17px);
+  line-height: 1.85;
+  color: var(--ink-mid);
+}
+
+.smoothie__main-grid {
+  margin-top: clamp(48px, 6vw, 80px);
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(36px, 5vw, 80px);
+  align-items: start;
+}
+
+.smoothie__showcase {
+  position: sticky;
+  top: 100px;
+}
+
+.smoothie__img-wrap {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(194, 59, 107, 0.16);
+  background: #fff;
+  border: 1px solid rgba(194, 59, 107, 0.15);
+}
+
+.smoothie__img-wrap img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: transform .7s var(--ease);
+}
+
+.smoothie__img-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.smoothie__features {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.smoothie__feat-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(194, 59, 107, 0.1);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.smoothie__feat-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(194, 59, 107, 0.12);
+}
+
+.smoothie__feat-pill .feat-icon {
+  font-size: 24px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.smoothie__feat-pill strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.smoothie__feat-pill p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+.smoothie__info {
+  background: #fff;
+  border-radius: 32px;
+  padding: clamp(28px, 4vw, 48px);
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(194, 59, 107, 0.12);
+}
+
+.smoothie__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.smoothie__name {
+  margin-top: 14px;
+  font-family: var(--cond);
+  font-style: italic;
+  font-size: clamp(34px, 4.5vw, 56px);
+  font-weight: 900;
+  color: #C23B6B;
+  letter-spacing: .02em;
+  line-height: 1;
+}
+
+.smoothie__subname {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-light);
+  letter-spacing: .08em;
+}
+
+.smoothie__text {
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ink-mid);
+}
+
+/* Recipes */
+.smoothie__recipes {
+  margin-top: 28px;
+}
+
+.smoothie__recipes .recipe-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
+.smoothie__recipes .recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.smoothie__recipes .recipe-card {
+  padding: 16px 14px;
+  background: var(--paper);
+  border-radius: 14px;
+  border: 1px solid rgba(194, 59, 107, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.smoothie__recipes .recipe-badge {
+  font-size: 10px;
+  font-weight: 800;
+  color: #C23B6B;
+  background: rgba(194, 59, 107, 0.1);
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+.smoothie__recipes .recipe-card strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+.smoothie__recipes .recipe-card p {
+  margin-top: 6px;
+  font-size: 11.5px;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+/* Specs */
+.smoothie__spec {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 20px;
+  background: linear-gradient(135deg, #FFF5FA 0%, #FFF0F6 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(194, 59, 107, 0.18);
+  text-align: center;
+}
+
+.smoothie__spec dt {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-mid);
+  letter-spacing: .04em;
+}
+
+.smoothie__spec dd {
+  margin-top: 6px;
+  font-family: var(--cond);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 900;
+  color: #C23B6B;
+  line-height: 1;
+}
+
+.smoothie__spec dd small {
+  font-family: var(--base);
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+/* Buy Box */
+.smoothie__buy-box {
+  margin-top: 32px;
+  padding: 28px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+  border: 2px solid rgba(194, 59, 107, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.smoothie__price-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-light);
+}
+
+.smoothie__price {
+  font-family: var(--cond);
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+.smoothie__price small {
+  font-family: var(--base);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-light);
+  margin-left: 6px;
+}
+
+.smoothie__badge {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  background: #C23B6B;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.smoothie__buy-box .btn {
+  background: #C23B6B;
+  color: #fff;
+  min-width: 240px;
+}
+
+.smoothie__buy-box .btn:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .smoothie__main-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .smoothie__showcase {
+    position: static;
+  }
+  .smoothie__recipes .recipe-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .smoothie__spec {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .smoothie__buy-box .btn {
+    width: 100%;
+  }
+}
+
 
 /* ========================================================
    FLAVOR VOTE SECTION (新作フレーバーアンケート＆集計グラフ)
