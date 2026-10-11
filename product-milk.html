@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BERRY MILK PROTEIN（ベリーミルク プロテイン）商品詳細｜BERRY MILK</title>
+  <meta name="description" content="福岡県産あまおう苺果汁使用。水で溶かすだけでカフェ風本格いちごオレの味になる、女性のためのプレミアムWプロテイン「BERRY MILK PROTEIN」。タンパク質20g、コラーゲン1,500mg、乳酸菌1,000億個配合。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=16">
+</head>
+<body class="subpage">
+
+  <!-- ============ PORTFOLIO NOTICE BANNER（画面最上部常時固定） ============ -->
+  <aside class="portfolio-banner" id="portfolioBanner" role="complementary" aria-label="ポートフォリオ実績サイトの免責事項">
+    <div class="portfolio-banner__inner">
+      <span class="portfolio-banner__badge">PORTFOLIO DEMO</span>
+      <p class="portfolio-banner__text">
+        本サイトはWeb制作ポートフォリオ実績用の<strong>架空のブランドサイト（デモ）</strong>です。実在する製品・サービスの販売やご注文受付は行っておりません。
+      </p>
+    </div>
+  </aside>
+
+  <!-- ============ HEADER ============ -->
+  <header class="hd px" id="hd">
+    <a class="hd__logo" href="index.html#top" aria-label="BERRY MILK">
+      <img src="images/logo-white.svg" alt="BERRY MILK オンラインショップ" width="200" height="50">
+      <img src="images/logo.svg" alt="" width="200" height="50">
+    </a>
+    <nav class="hd__nav">
+      <a href="index.html#concern">こんなお悩み</a>
+      <a href="index.html#why">選ばれる理由</a>
+      <a href="product-milk.html" class="is-active" style="color: var(--strawberry);">プロテイン</a>
+      <a href="product-tea.html">内臓脂肪ケアティー</a>
+      <a href="product-smoothie.html">生酵素スムージー</a>
+      <a href="product-night.html">睡眠プロテイン</a>
+      <a href="story.html">開発秘話</a>
+      <a href="quality.html">品質基準</a>
+      <a href="index.html#faq">Q&amp;A</a>
+    </nav>
+    <div class="hd__actions">
+      <a class="hd__shop js-shop" href="offer.html">
+        初回特別オファー <span class="arw"></span>
+      </a>
+      <button class="hd__burger" id="burgerBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE DRAWER MENU ============ -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="モバイルナビゲーションメニュー">
+      <div class="mobile-drawer__header">
+        <a class="mobile-drawer__logo" href="index.html#top" aria-label="BERRY MILK">
+          <img src="images/logo.svg" alt="BERRY MILK" width="140" height="35">
+        </a>
+        <button class="mobile-drawer__close" id="drawerCloseBtn" aria-label="メニューを閉じる">
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-drawer__cta-box">
+        <span class="mobile-drawer__cta-badge">WEB限定 特典付き</span>
+        <p class="mobile-drawer__cta-text">全額返金保証・定期縛りなし・送料無料</p>
+        <a class="mobile-drawer__cta-btn js-shop" href="offer.html">
+          初回特別オファーを見る <span class="arw"></span>
+        </a>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-drawer__list">
+          <li>
+            <a href="index.html#top" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🏠</span>
+              <span class="mobile-drawer__link-text">トップページ</span>
+              <span class="mobile-drawer__link-sub">HOME</span>
+            </a>
+          </li>
+          <li>
+            <a href="product-milk.html" class="mobile-drawer__link" style="background: #FFF0F4; border-color: rgba(224, 62, 101, 0.25); color: var(--strawberry-dark);">
+              <span class="mobile-drawer__link-icon">🍓</span>
+              <span class="mobile-drawer__link-text">美ボディプロテイン（閲覧中）</span>
+              <span class="mobile-drawer__link-sub">BERRY MILK 900g</span>
+            </a>
+          </li>
+          <li>
+            <a href="product-tea.html" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🍵</span>
+              <span class="mobile-drawer__link-text">内臓脂肪ケアティー</span>
+              <span class="mobile-drawer__link-sub">SLIM TEA 30包</span>
+            </a>
+          </li>
+          <li>
+            <a href="product-smoothie.html" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🥤</span>
+              <span class="mobile-drawer__link-text">生酵素ベリースムージー</span>
+              <span class="mobile-drawer__link-sub">SMOOTHIE 450g</span>
+            </a>
+          </li>
+          <li>
+            <a href="product-night.html" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🌙</span>
+              <span class="mobile-drawer__link-text">睡眠リカバリープロテイン</span>
+              <span class="mobile-drawer__link-sub">BERRY NIGHT 600g</span>
+            </a>
+          </li>
+          <li>
+            <a href="story.html" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">💡</span>
+              <span class="mobile-drawer__link-text">女性開発チームの秘話</span>
+              <span class="mobile-drawer__link-sub">STORY</span>
+            </a>
+          </li>
+          <li>
+            <a href="quality.html" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">🌿</span>
+              <span class="mobile-drawer__link-text">品質基準・GMP工場</span>
+              <span class="mobile-drawer__link-sub">QUALITY</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#faq" class="mobile-drawer__link">
+              <span class="mobile-drawer__link-icon">❓</span>
+              <span class="mobile-drawer__link-text">よくある質問（Q&amp;A）</span>
+              <span class="mobile-drawer__link-sub">FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <p class="mobile-drawer__tagline">整える、満たす、愛せるわたしへ。<br>女性専用プレミアム・インナービューティー</p>
+        <p class="mobile-drawer__copy">&copy; BERRY MILK Inc. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <nav class="breadcrumb px" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="index.html">ホーム</a></li>
+      <li class="breadcrumb__separator" aria-hidden="true">/</li>
+      <li class="breadcrumb__item"><a href="index.html#lineup">製品ラインナップ</a></li>
+      <li class="breadcrumb__separator" aria-hidden="true">/</li>
+      <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">BERRY MILK PROTEIN</li>
+    </ol>
+  </nav>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="pdp-main px">
+    <div class="pdp-container">
+
+      <!-- ============ PDP HERO: 2-COLUMN SHOWCASE ============ -->
+      <div class="pdp-hero-grid">
+
+        <!-- 左カラム：商品画像・ビジュアル -->
+        <div class="pdp-visual">
+          <div class="pdp-visual__card">
+            <div class="pdp-visual__glow" aria-hidden="true"></div>
+            <img src="images/berry-protein-lifestyle.webp?v=2" alt="BERRY MILK PROTEIN パッケージ" width="600" height="750" class="pdp-visual__img-main" id="pdpMainImage">
+            
+            <div class="pdp-visual__floating-badge">
+              <span>🍓 福岡県産あまおう苺果汁使用</span>
+            </div>
+          </div>
+
+          <div class="pdp-visual__pills">
+            <span class="award-pill"><i class="award-icon">🏆</i> 楽天ランキング3冠</span>
+            <span class="award-pill"><i class="award-icon">🌿</i> 6つの無添加</span>
+            <span class="award-pill"><i class="award-icon">🇯🇵</i> 国内GMP認定工場</span>
+          </div>
+        </div>
+
+        <!-- 右カラム：商品情報・価格・CTA -->
+        <div class="pdp-info">
+          <span class="pdp-info__category">FLAGSHIP BEAUTY PROTEIN ／ 美ボディ＆美肌処方</span>
+          <h1 class="pdp-info__title">BERRY MILK PROTEIN</h1>
+          <p class="pdp-info__kana">ベリーミルク プロテイン｜完熟とろける苺ミルク味（900g / 約30食分）</p>
+
+          <div class="pdp-info__rating">
+            <span class="pdp-info__stars">★★★★★</span>
+            <strong>4.8</strong>
+            <span>（1,280件のカスタマーレビュー）</span>
+          </div>
+
+          <p class="pdp-info__lead">
+            水で割るだけで、まるでカフェの贅沢いちごオレ。<br>
+            「プロテイン＝我慢」を過去にする、至福のプレミアムWプロテイン。
+          </p>
+
+          <p class="pdp-info__desc">
+            福岡県産完熟あまおう苺のフリーズドライ果汁パウダーを贅沢にブレンド。吸収の早い「ホエイ」と腹持ちの良い「ソイ」を女性に最適な黄金比で配合しました。さらに低分子フィッシュコラーゲン1,500mg、生きて腸まで届く植物性乳酸菌1,000億個、ビタミン14種を凝縮。1食わずか98kcal・糖質1.8gのギルトフリー設計です。
+          </p>
+
+          <!-- 4大スペックピル -->
+          <div class="pdp-specs-grid">
+            <div class="pdp-spec-box">
+              <span class="pdp-spec-box__label">タンパク質</span>
+              <span class="pdp-spec-box__val">20<small>g</small></span>
+            </div>
+            <div class="pdp-spec-box">
+              <span class="pdp-spec-box__label">コラーゲン</span>
+              <span class="pdp-spec-box__val">1,500<small>mg</small></span>
+            </div>
+            <div class="pdp-spec-box">
+              <span class="pdp-spec-box__label">植物性乳酸菌</span>
+              <span class="pdp-spec-box__val">1,000<small>億個</small></span>
+            </div>
+            <div class="pdp-spec-box">
+              <span class="pdp-spec-box__label">1食カロリー</span>
+              <span class="pdp-spec-box__val">98<small>kcal</small></span>
+            </div>
+          </div>
+
+          <!-- 購入ボックス -->
+          <div class="pdp-purchase-card">
+            <div class="pdp-price-row">
+              <div class="pdp-price-regular">
+                通常価格: <strong>¥4,980</strong>（税込）
+              </div>
+              <div class="pdp-price-offer">
+                定期初回 20%OFF: <strong>¥3,980</strong>（税込・送料無料）
+              </div>
+            </div>
+
+            <a href="offer.html" class="pdp-cta-btn js-shop">
+              <span>初回特別オファーで注文する（¥3,980）</span>
+              <span class="arw"></span>
+            </a>
+
+            <div class="pdp-assurances">
+              <span>✓ 30日間全額返金保証</span>
+              <span>✓ 定期縛りなし・いつでも休止OK</span>
+              <span>✓ 全国どこでも送料無料</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ============ SECTION 1: このような方におすすめ ============ -->
+      <section class="pdp-section-card rv">
+        <div class="pdp-section-card__head">
+          <span class="pdp-section-card__tag">TARGET &amp; LIFESTYLE</span>
+          <h2 class="pdp-section-card__title">このようなお悩み・ご希望をお持ちの方へ</h2>
+        </div>
+        <div class="pdp-check-grid">
+          <div class="pdp-check-item">
+            <span class="pdp-check-item__icon">✓</span>
+            <span>市販プロテインの粉っぽさや人工的な甘味料の後味が苦手</span>
+          </div>
+          <div class="pdp-check-item">
+            <span class="pdp-check-item__icon">✓</span>
+            <span>朝食を抜きがちで、午前中のエネルギー不足や集中力低下を感じる</span>
+          </div>
+          <div class="pdp-check-item">
+            <span class="pdp-check-item__icon">✓</span>
+            <span>筋肉をつけるだけでなく、肌のうるおい・髪や爪のツヤも同時にケアしたい</span>
+          </div>
+          <div class="pdp-check-item">
+            <span class="pdp-check-item__icon">✓</span>
+            <span>牛乳や豆乳がなくても、水だけで美味しく飲める手軽さを求めている</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 2: 3大こだわり ============ -->
+      <section class="pdp-section-card rv">
+        <div class="pdp-section-card__head">
+          <span class="pdp-section-card__tag">FEATURES</span>
+          <h2 class="pdp-section-card__title">BERRY MILK PROTEINが選ばれる3つの理由</h2>
+        </div>
+        <div class="pdp-features-grid">
+          <div class="pdp-feature-box">
+            <div class="pdp-feature-box__icon">🍓</div>
+            <h3 class="pdp-feature-box__title">福岡県産あまおう苺果汁贅沢配合</h3>
+            <p class="pdp-feature-box__desc">
+              香料だけに頼らず、本物のフリーズドライ苺果汁パウダーを微粒子化してブレンド。水で溶かすだけで、もぎたて苺の甘酸っぱさと濃厚ミルクがとろけ合います。
+            </p>
+          </div>
+          <div class="pdp-feature-box">
+            <div class="pdp-feature-box__icon">✨</div>
+            <h3 class="pdp-feature-box__title">ホエイ＆ソイのWプロテイン黄金比</h3>
+            <p class="pdp-feature-box__desc">
+              吸収が素早い「ホエイ」としなやかで腹持ちの良い「ソイ」を女性にベストな比率で配合。1食で高純度タンパク質20gをしっかりと補給できます。
+            </p>
+          </div>
+          <div class="pdp-feature-box">
+            <div class="pdp-feature-box__icon">🌿</div>
+            <h3 class="pdp-feature-box__title">飲む美容液処方＆6つの無添加</h3>
+            <p class="pdp-feature-box__desc">
+              低分子コラーゲン1,500mg、植物性乳酸菌1,000億個、ビタミン14種を凝縮。人工甘味料・合成着色料・保存料・白砂糖・酸化防止剤・遺伝子組換え原料は一切不使用。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 3: 原材料・栄養成分表示 ============ -->
+      <section class="pdp-section-card rv">
+        <div class="pdp-section-card__head">
+          <span class="pdp-section-card__tag">SPECIFICATIONS</span>
+          <h2 class="pdp-section-card__title">原材料名・栄養成分表示・商品仕様</h2>
+        </div>
+        <table class="pdp-table">
+          <tbody>
+            <tr>
+              <th>商品名</th>
+              <td>BERRY MILK PROTEIN（ベリーミルク プロテイン）</td>
+            </tr>
+            <tr>
+              <th>名称</th>
+              <td>プロテインパウダー（粉末たんぱく加工食品）</td>
+            </tr>
+            <tr>
+              <th>内容量</th>
+              <td>900g（約30食分／付属計量スプーン付き）</td>
+            </tr>
+            <tr>
+              <th>栄養成分表示<br><small>（1食30gあたり）</small></th>
+              <td>
+                エネルギー: 98kcal / たんぱく質: 20.2g / 脂質: 1.1g / 炭水化物: 2.1g（糖質: 1.8g / 食物繊維: 0.3g）/ 食塩相当量: 0.15g / 低分子コラーゲンペプチド: 1,500mg / 植物性乳酸菌（殺菌）: 1,000億個
+              </td>
+            </tr>
+            <tr>
+              <th>原材料名</th>
+              <td>
+                乳清たんぱく分離物（国内製造・WPI）、脱脂大豆たんぱく（非遺伝子組換え）、あまおう苺果汁微粉末、魚由来コラーゲンペプチド、植物性乳酸菌粉末（殺菌）、ステビア抽出物、ビタミンプレミックス（V.A, V.B1, V.B2, V.B6, V.B12, V.C, V.D, V.E, 葉酸, ナイアシン, パントテン酸Ca）
+              </td>
+            </tr>
+            <tr>
+              <th>製造国・基準</th>
+              <td>日本国内製造（医薬品レベルの基準を満たす国内GMP認定工場にて徹底管理）</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ SECTION 4: 召し上がり方・おすすめレシピ ============ -->
+      <section class="pdp-section-card rv">
+        <div class="pdp-section-card__head">
+          <span class="pdp-section-card__tag">HOW TO ENJOY</span>
+          <h2 class="pdp-section-card__title">美味しいお召し上がり方＆おすすめアレンジ</h2>
+        </div>
+        <div class="pdp-steps-grid">
+          <div class="pdp-step-card">
+            <div class="pdp-step-card__num">STEP 01</div>
+            <h3 class="pdp-step-card__title">王道の「水割り」</h3>
+            <p class="pdp-step-card__text">
+              シェイカーに水150〜200mlを注ぎ、付属スプーンすりきり2杯（約30g）を入れて10秒シェイク。水だけで濃厚な苺オレが完成します。
+            </p>
+          </div>
+          <div class="pdp-step-card">
+            <div class="pdp-step-card__num">STEP 02</div>
+            <h3 class="pdp-step-card__title">濃厚「アーモンドミルク割り」</h3>
+            <p class="pdp-step-card__text">
+              無糖アーモンドミルクや豆乳で割ると、ナッツの香ばしさと苺の酸味が重なり、まるで高級パティスリーの苺スイーツのような極上感に。
+            </p>
+          </div>
+          <div class="pdp-step-card">
+            <div class="pdp-step-card__num">STEP 03</div>
+            <h3 class="pdp-step-card__title">朝の「ギリシャヨーグルトがけ」</h3>
+            <p class="pdp-step-card__text">
+              無糖ヨーグルトにパウダーをスプーン1杯振りかけて混ぜるだけ。もっちり濃厚なベリーチーズケーキ風デザートとして楽しめます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 5: レビュー ============ -->
+      <section class="pdp-section-card rv">
+        <div class="pdp-section-card__head">
+          <span class="pdp-section-card__tag">CUSTOMER REVIEWS</span>
+          <h2 class="pdp-section-card__title">実際にご愛用いただいているお客様の声</h2>
+        </div>
+        <div class="pdp-review-grid">
+          <div class="pdp-review-card">
+            <div class="pdp-review-card__header">
+              <span class="pdp-review-card__user">20代後半・会社員（愛用歴3ヶ月）</span>
+              <span class="pdp-review-card__rating">★★★★★ 5.0</span>
+            </div>
+            <h3 class="pdp-review-card__title">「プロテイン嫌いだった私が毎朝楽しみに！」</h3>
+            <p class="pdp-review-card__body">
+              今まで何種類も粉っぽくて挫折してきましたが、BERRY MILKは本当に水だけでカフェのいちごオレ。美味しくて肌の調子も良く、手放せません。
+            </p>
+          </div>
+          <div class="pdp-review-card">
+            <div class="pdp-review-card__header">
+              <span class="pdp-review-card__user">30代前半・ヨガインストラクター</span>
+              <span class="pdp-review-card__rating">★★★★★ 5.0</span>
+            </div>
+            <h3 class="pdp-review-card__title">「コラーゲンと乳酸菌入りで一石三鳥」</h3>
+            <p class="pdp-review-card__body">
+              朝のレッスン前にサッと飲んでいます。甘すぎず後味がすっきりしていて、人工甘味料不使用なのが生徒さんたちにも自信を持っておすすめできます。
+            </p>
+          </div>
+          <div class="pdp-review-card">
+            <div class="pdp-review-card__header">
+              <span class="pdp-review-card__user">40代前半・主婦（愛用歴6ヶ月）</span>
+              <span class="pdp-review-card__rating">★★★★★ 4.8</span>
+            </div>
+            <h3 class="pdp-review-card__title">「パッケージもおしゃれでキッチンに馴染む」</h3>
+            <p class="pdp-review-card__body">
+              男性向けのゴツいプロテインと違って、インテリアに馴染む淡いピンクが素敵。娘と一緒に毎朝美味しく飲んでいます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 6: FAQ ============ -->
+      <section class="pdp-section-card rv">
+        <div class="pdp-section-card__head">
+          <span class="pdp-section-card__tag">FAQ</span>
+          <h2 class="pdp-section-card__title">よくあるご質問</h2>
+        </div>
+        <div class="pdp-faq-list">
+          <div class="pdp-faq-item">
+            <div class="pdp-faq-q"><span>Q</span> 飲むタイミングはいつがおすすめですか？</div>
+            <div class="pdp-faq-a"><span>A</span> 朝食時（パンやヨーグルトと一緒に、または置き換えとして）や、運動後45分以内のゴールデンタイム、小腹が空いたおやつの時間帯におすすめです。</div>
+          </div>
+          <div class="pdp-faq-item">
+            <div class="pdp-faq-q"><span>Q</span> シェイカーがなくても混ざりますか？</div>
+            <div class="pdp-faq-a"><span>A</span> 独自の微粒子パウダー加工を施しているため、グラスに水を入れてスプーンやマドラーでかき混ぜるだけでもサッと溶けます。</div>
+          </div>
+          <div class="pdp-faq-item">
+            <div class="pdp-faq-q"><span>Q</span> 妊娠中や授乳中でも飲めますか？</div>
+            <div class="pdp-faq-a"><span>A</span> 食品ですので基本的に問題ございませんが、デリケートな時期ですので念のためかかりつけのお医者様にご相談の上お召し上がりください。</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 7: 他のラインナップ ============ -->
+      <section class="pdp-section-card rv">
+        <div class="pdp-section-card__head">
+          <span class="pdp-section-card__tag">OTHER PRODUCTS</span>
+          <h2 class="pdp-section-card__title">ベリーシリーズの他ラインナップを見る</h2>
+        </div>
+        <div class="pdp-lineup-grid">
+          <!-- Tea -->
+          <a class="card" href="product-tea.html" style="--c:#FFF2E8;--k:#DE3C62">
+            <div class="card__tile card__tile--cover">
+              <img src="images/slim-tea-box.jpg" alt="SLIM TEA" width="400" height="533">
+            </div>
+            <div class="card__body">
+              <p class="card__when">お食事中・リフレッシュ時に</p>
+              <h3 class="card__name">SLIM TEA</h3>
+              <p class="card__text">内臓脂肪レベルを下げる、水・お湯即溶けスティック粉末ティー。</p>
+              <div class="card__foot">
+                <p class="card__price">¥3,480<small>税込</small></p>
+                <span class="card__more"><span class="card__lbl">詳細を見る</span> <span class="arw"></span></span>
+              </div>
+            </div>
+          </a>
+          <!-- Smoothie -->
+          <a class="card" href="product-smoothie.html" style="--c:#FFF3EE;--k:#FF7D6B">
+            <div class="card__tile card__tile--cover">
+              <img src="images/berry-smoothie-detail.webp" alt="BERRY SMOOTHIE" width="400" height="533">
+            </div>
+            <div class="card__body">
+              <p class="card__when">忙しい朝の置き換えに</p>
+              <h3 class="card__name">BERRY SMOOTHIE</h3>
+              <p class="card__text">チアシードと生酵素で満足感たっぷり。お腹すっきりスムージー。</p>
+              <div class="card__foot">
+                <p class="card__price">¥4,480<small>税込</small></p>
+                <span class="card__more"><span class="card__lbl">詳細を見る</span> <span class="arw"></span></span>
+              </div>
+            </div>
+          </a>
+          <!-- Night -->
+          <a class="card" href="product-night.html" style="--c:#F9F0FF;--k:#A26BC4">
+            <div class="card__tile card__tile--cover">
+              <img src="images/lineup-night.webp" alt="BERRY NIGHT" width="400" height="533">
+            </div>
+            <div class="card__body">
+              <p class="card__when">おやすみ前のリラックスに</p>
+              <h3 class="card__name">BERRY NIGHT</h3>
+              <p class="card__text">GABA＆カモミール配合。質の高い睡眠と夜間リカバリーをサポート。</p>
+              <div class="card__foot">
+                <p class="card__price">¥4,780<small>税込</small></p>
+                <span class="card__more"><span class="card__lbl">詳細を見る</span> <span class="arw"></span></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ BOTTOM CTA BANNER ============ -->
+      <section class="pdp-bottom-cta rv">
+        <span class="pdp-bottom-cta__badge">WEB LIMITED SPECIAL OFFER</span>
+        <h2 class="pdp-bottom-cta__title">
+          毎朝のご褒美習慣を、特別価格でスタート。
+        </h2>
+        <p class="pdp-bottom-cta__lead">
+          通常価格 ¥4,980 のところ、WEB限定の定期初回特別価格 <strong>¥3,980（20%OFF・送料無料）</strong>でお試しいただけます。30日間全額返金保証・定期縛りなし。
+        </p>
+        <a href="offer.html" class="pdp-bottom-cta__btn js-shop">
+          <span>初回特別オファーで注文する（¥3,980）</span>
+          <span class="arw"></span>
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="ft px" id="ft">
+    <div class="ft__inner">
+      <div class="ft__brand">
+        <img src="images/logo-white.svg" alt="BERRY MILK" width="160" height="40" class="ft__logo">
+        <p class="ft__tagline">整える、満たす、愛せるわたしへ。<br>女性専用プレミアム・インナービューティー</p>
+      </div>
+      <nav class="ft__links">
+        <a href="index.html#top">ホーム</a>
+        <a href="product-milk.html">BERRY MILK プロテイン</a>
+        <a href="product-tea.html">SLIM TEA</a>
+        <a href="product-smoothie.html">BERRY SMOOTHIE</a>
+        <a href="product-night.html">BERRY NIGHT</a>
+        <a href="story.html">開発・ストーリー</a>
+        <a href="quality.html">品質基準・安心への約束</a>
+        <a href="offer.html">初回特別オファー</a>
+        <a href="index.html#faq">よくある質問</a>
+      </nav>
+    </div>
+    <div class="ft__bottom">
+      <p class="ft__copy">&copy; BERRY MILK Inc. All Rights Reserved. ※本サイトは架空のポートフォリオ実績用デモサイトです。</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
