@@ -496,49 +496,157 @@
     </section>
 
     <!-- ============ PRODUCT DETAIL (PROTEIN) ============ -->
-    <section class="prod grain" id="protein">
-      <p class="prod__word" aria-hidden="true">BERRY MILK</p>
-      <div class="prod__inner px">
-        <div class="prod__media rv">
-          <div class="prod__media-bg"></div>
-          <img src="images/berry-protein-lifestyle.webp?v=2" alt="BERRY MILK PROTEIN パッケージ" loading="lazy" width="600" height="800">
+    <section class="protein-detail px grain" id="protein">
+      <div class="protein-detail__container">
+        
+        <!-- セクションヘッダー：ブランドのプレミアムな位置づけを提示 -->
+        <div class="protein-detail__header rv">
+          <div class="protein-detail__tag">
+            <span class="protein-detail__tag-dot"></span>
+            <span>FLAGSHIP BEAUTY PROTEIN</span>
+          </div>
+          <h2 class="protein-detail__heading">
+            毎朝のご褒美になる、美ボディ習慣。<br>
+            <span class="protein-detail__heading-gradient">Wプロテイン × 飲む美容液処方</span>
+          </h2>
+          <p class="protein-detail__lead">
+            しなやかな筋肉をつくる「ホエイ＆ソイ」の黄金比ブレンドと、肌・髪・巡りを整える贅沢な美容成分。<br class="pc-only">
+            福岡県産あまおう苺果汁を贅沢に使い、水で溶かすだけで極上のカフェ風いちごオレが完成します。
+          </p>
         </div>
-        <div class="prod__body rv">
-          <p class="prod__meta cap">
-            <span>BERRY MILK／女性専用ビューティープロテイン</span>
-            <span>粉末タイプ</span>
-          </p>
-          <h2 class="prod__name">BERRY MILK PROTEIN</h2>
-          <p class="prod__kana">ベリーミルク プロテイン｜完熟とろける苺ミルク味</p>
-          <p class="prod__catch">水で割るだけで、まるでカフェの贅沢いちごオレ。</p>
-          <p class="prod__text">
-            福岡県産あまおう苺果汁パウダーを贅沢に使用。従来のプロテインにありがちな「粉っぽさ」「人工的な甘さ」を徹底的になくし、ジューシーな甘酸っぱさと濃厚なミルクのコクを両立しました。朝の置き換えにも、運動後のご褒美にも、毎日飲みたくなる美味しさです。
-          </p>
-          <ul class="prod__pts">
-            <li>福岡県産あまおう苺使用。水で溶かすだけで本格苺ミルクの満足感</li>
-            <li>人工甘味料・合成着色料・保存料・白砂糖すべて不使用のナチュラル処方</li>
-            <li>1食あたりわずか98kcal・糖質1.8g。ダイエット中も安心のギルトフリー</li>
-          </ul>
-          <dl class="spec">
-            <div><dt>タンパク質</dt><dd>20<small>g</small></dd></div>
-            <div><dt>コラーゲン</dt><dd>1,500<small>mg</small></dd></div>
-            <div><dt>植物性乳酸菌</dt><dd>1,000<small>億個</small></dd></div>
-            <div><dt>ビタミン＆ミネラル</dt><dd>14<small>種</small></dd></div>
-          </dl>
-          <dl class="howto">
-            <dt>内容量</dt><dd>900g（約30食分／付属専用スプーン付き）</dd>
-            <dt>召し上がり方</dt><dd>付属スプーンすり切り2杯（約30g）を、水または牛乳・植物性ミルク150〜200mlによく混ぜてお召し上がりください。</dd>
-          </dl>
-          <div class="buy">
-            <div>
-              <p class="buy__price">¥4,980<small>税込（通常価格）</small></p>
-              <p class="buy__meta">定期初回特別価格：¥3,980（20%OFF・送料無料）</p>
+
+        <div class="protein-detail__grid">
+          <!-- 左カラム：プレミアム・ビジュアルステージ -->
+          <div class="protein-detail__stage rv">
+            <div class="protein-detail__stage-glow" aria-hidden="true"></div>
+            <div class="protein-detail__stage-card">
+              <img src="images/berry-protein-lifestyle.webp?v=2" alt="BERRY MILK PROTEIN パッケージ" loading="lazy" width="600" height="800" class="protein-detail__image">
+              
+              <!-- フローティングバッジ群（上品なガラスモーフィズム） -->
+              <div class="protein-detail__floating-badge protein-detail__floating-badge--top">
+                <span class="floating-badge__icon">🍓</span>
+                <div class="floating-badge__text">
+                  <strong>福岡県産あまおう苺</strong>
+                  <small>本物の果汁パウダー贅沢使用</small>
+                </div>
+              </div>
+
+              <div class="protein-detail__floating-badge protein-detail__floating-badge--bottom">
+                <span class="floating-badge__icon">✨</span>
+                <div class="floating-badge__text">
+                  <strong>低糖質・低カロリー</strong>
+                  <small>1食わずか 98kcal / 糖質1.8g</small>
+                </div>
+              </div>
             </div>
-            <a class="btn js-shop" href="#final">
-              初回特別オファーで注文する <span class="arw"></span>
-            </a>
+
+            <!-- アピールピルタグ -->
+            <div class="protein-detail__awards">
+              <span class="award-pill"><i class="award-icon">🏆</i> 楽天ランキング3冠達成</span>
+              <span class="award-pill"><i class="award-icon">🌿</i> 6つの無添加処方</span>
+              <span class="award-pill"><i class="award-icon">🇯🇵</i> 国内GMP認定工場生産</span>
+            </div>
+          </div>
+
+          <!-- 右カラム：商品詳細・スペック・オファー -->
+          <div class="protein-detail__content rv">
+            <div class="protein-detail__meta cap">
+              <span class="protein-detail__category">BERRY MILK ／ 女性専用ビューティープロテイン</span>
+              <span class="protein-detail__type">粉末タイプ</span>
+            </div>
+
+            <h3 class="protein-detail__title">BERRY MILK PROTEIN</h3>
+            <p class="protein-detail__kana">ベリーミルク プロテイン｜完熟とろける苺ミルク味</p>
+
+            <p class="protein-detail__catch">水で割るだけで、まるでカフェの贅沢いちごオレ。</p>
+
+            <p class="protein-detail__desc">
+              福岡県産あまおう苺果汁パウダーを贅沢に使用。従来のプロテインにありがちな「粉っぽさ」「人工的な甘さ」を徹底的になくし、ジューシーな甘酸っぱさと濃厚なミルクのコクを両立しました。朝の置き換えにも、運動後のご褒美にも、毎日飲みたくなる美味しさです。
+            </p>
+
+            <!-- 3大ベネフィット（ピラーカード） -->
+            <div class="protein-detail__features">
+              <div class="feature-item">
+                <div class="feature-item__icon">🍓</div>
+                <div class="feature-item__content">
+                  <strong>福岡県産あまおう苺使用</strong>
+                  <p>水で溶かすだけで本格苺ミルクの満足感</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-item__icon">🌿</div>
+                <div class="feature-item__content">
+                  <strong>ナチュラル安心設計</strong>
+                  <p>人工甘味料・合成着色料・保存料・白砂糖すべて不使用のナチュラル処方</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-item__icon">✨</div>
+                <div class="feature-item__content">
+                  <strong>安心のギルトフリー</strong>
+                  <p>1食あたりわずか98kcal・糖質1.8g。ダイエット中も安心のギルトフリー</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ニュートリショングリッド（4大スペック） -->
+            <div class="protein-detail__specs">
+              <div class="spec-card">
+                <span class="spec-card__label">タンパク質</span>
+                <span class="spec-card__val">20<small>g</small></span>
+              </div>
+              <div class="spec-card">
+                <span class="spec-card__label">コラーゲン</span>
+                <span class="spec-card__val">1,500<small>mg</small></span>
+              </div>
+              <div class="spec-card">
+                <span class="spec-card__label">植物性乳酸菌</span>
+                <span class="spec-card__val">1,000<small>億個</small></span>
+              </div>
+              <div class="spec-card">
+                <span class="spec-card__label">ビタミン＆ミネラル</span>
+                <span class="spec-card__val">14<small>種</small></span>
+              </div>
+            </div>
+
+            <!-- ガイド（内容量・召し上がり方） -->
+            <div class="protein-detail__guide">
+              <div class="guide-row">
+                <span class="guide-label">内容量</span>
+                <span class="guide-val">900g（約30食分／付属専用スプーン付き）</span>
+              </div>
+              <div class="guide-row">
+                <span class="guide-label">召し上がり方</span>
+                <span class="guide-val">付属スプーンすり切り2杯（約30g）を、水または牛乳・植物性ミルク150〜200mlによく混ぜてお召し上がりください。</span>
+              </div>
+            </div>
+
+            <!-- 価格・オファーボックス -->
+            <div class="protein-detail__offer">
+              <div class="protein-detail__offer-head">
+                <div class="offer-price-row">
+                  <span class="offer-price-main">¥4,980</span>
+                  <span class="offer-price-note">税込（通常価格）</span>
+                </div>
+                <div class="offer-meta-badge">
+                  定期初回特別価格：<strong class="highlight">¥3,980</strong>（20%OFF・送料無料）
+                </div>
+              </div>
+              <div class="protein-detail__cta-area">
+                <a class="btn js-shop protein-detail__btn" href="#final">
+                  初回特別オファーで注文する <span class="arw"></span>
+                </a>
+                <div class="offer-assurances">
+                  <span>✓ 30日間返金保証</span>
+                  <span>✓ 送料無料</span>
+                  <span>✓ いつでも休止・解約可能</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
     </section>
 
@@ -790,6 +898,9 @@
         </div>
       </div>
     </section>
+
+    <!-- ============ COMPARISON SECTION（徹底比較） ============ -->
+    <section class="comparison px" id="comparison">
       <div class="comparison__container rv">
         <div class="comparison__head">
           <p class="cap comparison__tag">THOROUGH COMPARISON</p>
