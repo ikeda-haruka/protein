@@ -35,7 +35,7 @@ html {
 body {
   font-family: var(--jp);
   background: var(--paper);
-  color: #fff;
+  color: var(--ink);
   line-height: 1.85;
   letter-spacing: .04em;
   overflow-x: hidden;
@@ -3075,6 +3075,8 @@ body.nav-open {
     max-width: 520px;
     margin: 0 auto;
   }
+}
+
 @media (max-width: 1200px) and (min-width: 901px) {
   .hd {
     gap: 12px;
