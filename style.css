@@ -1102,20 +1102,9 @@ body.nav-open {
   animation: badgeFloat 5.4s 1.2s ease-in-out infinite alternate;
 }
 
-/* ドリンクアクセント */
+/* ドリンクアクセント（スムージーと重複するため非表示） */
 .hero-v2__drink-accent {
-  position: absolute;
-  left: -20px;
-  bottom: 20px;
-  z-index: 6;
-  animation: heroFloatSub 5.5s 1s ease-in-out infinite alternate;
-}
-
-.hero-v2__img-drink {
-  width: 130px;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 16px 28px rgba(181, 33, 69, 0.22);
+  display: none !important;
 }
 
 /* フローティングバッジ群 */
@@ -1147,11 +1136,7 @@ body.nav-open {
 }
 
 .hero-v2__floating-badge--review {
-  bottom: -10px;
-  left: 20px;
-  background: linear-gradient(135deg, #FFF9EB 0%, #FFF 100%);
-  border-color: #FFE6A8;
-  padding: 6px 12px;
+  display: none !important;
 }
 
 @keyframes badgeFloat {
@@ -3269,13 +3254,7 @@ body.nav-open {
     object-fit: contain;
   }
   .hero-v2__drink-accent {
-    left: -4px;
-    bottom: 2px;
-    z-index: 5;
-  }
-  .hero-v2__img-drink {
-    width: 44px;
-    height: auto;
+    display: none !important;
   }
   /* スマホ画面内に綺麗に収め、文字やロゴを一切隠さないフローティングバッジ配置 */
   .hero-v2__floating-badge {
@@ -3321,14 +3300,8 @@ body.nav-open {
     transform: none;
     animation: none;
   }
-  /* ドリンクの下にコンパクトに配置 */
   .hero-v2__floating-badge--review {
-    bottom: -6px;
-    left: 0;
-    padding: 2px 7px;
-    font-size: 9px;
-    transform: none;
-    animation: none;
+    display: none !important;
   }
   .hero-v2__content {
     order: 1;
