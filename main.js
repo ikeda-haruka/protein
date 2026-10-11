@@ -252,4 +252,59 @@
       }
     });
   }
+
+  // ========================================================
+  // FAQ-V2 CATEGORY TABS & ACCORDION CONTROL
+  // ========================================================
+  const faqTabs = document.querySelectorAll('.faq-v2__tab');
+  const faqCards = document.querySelectorAll('.faq-card');
+
+  if (faqTabs.length > 0 && faqCards.length > 0) {
+    // 1. Tab Filtering
+    faqTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const cat = tab.getAttribute('data-faq-cat');
+
+        faqTabs.forEach(t => {
+          const isActive = t === tab;
+          t.classList.toggle('is-active', isActive);
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        faqCards.forEach(card => {
+          const cardCats = (card.getAttribute('data-cat') || '').split(' ');
+          const matches = cat === 'all' || cardCats.includes(cat);
+
+          if (matches) {
+            card.classList.remove('is-hidden');
+          } else {
+            card.classList.add('is-hidden');
+            card.classList.remove('is-open');
+            const trigger = card.querySelector('.faq-card__trigger');
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+
+    // 2. Smooth Accordion Toggle
+    faqCards.forEach(card => {
+      const trigger = card.querySelector('.faq-card__trigger');
+      if (!trigger) return;
+
+      trigger.addEventListener('click', () => {
+        const isOpen = card.classList.contains('is-open');
+        card.classList.toggle('is-open', !isOpen);
+        trigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+      });
+    });
+
+    // Open first card by default for delightful user experience
+    if (faqCards[0]) {
+      faqCards[0].classList.add('is-open');
+      const firstTrigger = faqCards[0].querySelector('.faq-card__trigger');
+      if (firstTrigger) firstTrigger.setAttribute('aria-expanded', 'true');
+    }
+  }
 })();
+

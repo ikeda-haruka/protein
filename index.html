@@ -42,48 +42,125 @@
 
   <main id="top">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero grain" id="hero">
-      <span class="hero__word" aria-hidden="true">BERRY MILK</span>
-      <div class="hero__img-wrap">
-        <img class="hero__img" src="images/berry-protein-hero.webp" alt="BERRY MILK PROTEIN パッケージ" width="700" height="933">
-      </div>
-      <div class="hero__copy">
-        <div class="hero__award-badge">
-          <span class="award-star">★</span>
-          <span>楽天デイリーランキング 3冠達成※1 / 美容誌掲載</span>
+    <!-- ============ HERO（完全独自リデザイン版） ============ -->
+    <section class="hero-v2" id="hero">
+      <div class="hero-v2__bg-glow hero-v2__bg-glow--1" aria-hidden="true"></div>
+      <div class="hero-v2__bg-glow hero-v2__bg-glow--2" aria-hidden="true"></div>
+      <div class="hero-v2__sparkle hero-v2__sparkle--1" aria-hidden="true">✦</div>
+      <div class="hero-v2__sparkle hero-v2__sparkle--2" aria-hidden="true">✧</div>
+      <div class="hero-v2__sparkle hero-v2__sparkle--3" aria-hidden="true">✦</div>
+
+      <div class="hero-v2__inner">
+        <!-- 左側：キャッチコピー・ブランド紹介・CTA -->
+        <div class="hero-v2__content">
+          <div class="hero-v2__tag-row">
+            <span class="hero-v2__tag hero-v2__tag--new">NEW ARRIVAL</span>
+            <span class="hero-v2__tag hero-v2__tag--award">🏆 楽天ランキング3冠達成※1</span>
+            <span class="hero-v2__tag hero-v2__tag--magazine">美容誌 VOCE / ar 掲載</span>
+          </div>
+
+          <p class="hero-v2__brand-sub">
+            <img src="images/logo-white.svg" alt="BERRY MILK" width="130" height="32" class="hero-v2__logo">
+            <span>OFFICIAL BEAUTY STORE</span>
+          </p>
+
+          <h1 class="hero-v2__headline">
+            毎朝が、愛おしくなる。<br>
+            <span class="hero-v2__headline-em">わたしを整える、贅沢あまおう苺ミルク ＆ 内臓脂肪ケアティー</span>
+          </h1>
+
+          <p class="hero-v2__desc">
+            しなやかな美ボディを育む「Wプロテイン×うるおい美容成分」と、<br class="pc-br">
+            お腹の脂肪をすっきり減らす「機能性スティックパウダーティー」。<br class="pc-br">
+            自分らしさを愛するすべての女性へ贈る、新感覚プレミアム・インナーケア習慣。
+          </p>
+
+          <!-- 3つの特徴ピル -->
+          <div class="hero-v2__pills">
+            <div class="hero-v2__pill">
+              <span class="hero-v2__pill-icon">🍓</span>
+              <div>
+                <strong>完熟あまおう苺</strong>
+                <small>高タンパク20g・美容液成分</small>
+              </div>
+            </div>
+            <div class="hero-v2__pill">
+              <span class="hero-v2__pill-icon">🍵</span>
+              <div>
+                <strong>内臓脂肪レベル低下</strong>
+                <small>サッと溶ける スティックティー</small>
+              </div>
+            </div>
+            <div class="hero-v2__pill">
+              <span class="hero-v2__pill-icon">🌿</span>
+              <div>
+                <strong>6つの無添加＆国内製造</strong>
+                <small>人工甘味料・白砂糖不使用</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAエリア -->
+          <div class="hero-v2__cta-box">
+            <a class="btn hero-v2__btn js-shop" href="#protein">
+              <span>【初回特別割引 64%OFF】特別セットを試す</span>
+              <span class="arw"></span>
+            </a>
+            <div class="hero-v2__quick-nav">
+              <a href="#protein" class="hero-v2__nav-link">🍓 プロテインを見る</a>
+              <span class="hero-v2__nav-sep">/</span>
+              <a href="#slimtea" class="hero-v2__nav-link">🍵 スリムティーを見る</a>
+              <span class="hero-v2__nav-sep">/</span>
+              <a href="#flavorPoll" class="hero-v2__nav-link">🗳️ 新作フレーバー投票</a>
+            </div>
+          </div>
+
+          <!-- 安心バッジ群 -->
+          <div class="hero-v2__trust-row">
+            <span class="hero-v2__trust-item">✨ 30日間全額返金保証</span>
+            <span class="hero-v2__trust-item">🚚 全国どこでも送料無料</span>
+            <span class="hero-v2__trust-item">🔒 定期縛り・違約金一切なし</span>
+          </div>
         </div>
-        <p class="hero__label">
-          <img src="images/logo-white.svg" alt="" width="140" height="35">
-          <span>OFFICIAL ONLINE STORE</span>
-        </p>
-        <h1 class="hero__title">
-          <span class="nw">まだ、“ただ鍛える</span><span class="nw">だけ”の</span><br>
-          <span class="nw">プロテインを</span><span class="nw">飲んでるの？</span>
-        </h1>
-        <p class="hero__lead">女性に必要なのは、しなやかさ × うるおい × 軽やかさ。</p>
-        <p class="hero__note">毎朝が楽しみに変わる、完熟あまおう苺ミルクの贅沢な新常識。</p>
-        <a class="btn js-shop" href="#protein">
-          初回特別割引で今すぐ試す（送料無料） <span class="arw"></span>
-        </a>
+
+        <!-- 右側：デュアルプロダクト（プロテイン＆スリムティー）ステージ -->
+        <div class="hero-v2__visual-stage">
+          <div class="hero-v2__stage-pedestal" aria-hidden="true"></div>
+          
+          <!-- プロテイン パウチ -->
+          <div class="hero-v2__product hero-v2__product--protein">
+            <img src="images/berry-protein-hero.webp" alt="BERRY MILK PROTEIN あまおう苺ミルク" width="520" height="693" class="hero-v2__img-main">
+            <div class="hero-v2__floating-badge hero-v2__floating-badge--protein">
+              <span class="badge-icon">🍓</span>
+              <div class="badge-text">
+                <span class="badge-title">PROTEIN</span>
+                <span class="badge-sub">Wプロテイン20g＋美容液成分</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- スリムティー パッケージ ＆ スティック -->
+          <div class="hero-v2__product hero-v2__product--tea">
+            <img src="images/lineup-slim-tea.webp" alt="BERRY SLIM TEA 内臓脂肪ケアティー" width="380" height="380" class="hero-v2__img-tea">
+            <div class="hero-v2__floating-badge hero-v2__floating-badge--tea">
+              <span class="badge-icon">🍵</span>
+              <div class="badge-text">
+                <span class="badge-title">FUNCTIONAL TEA</span>
+                <span class="badge-sub">お腹の内臓脂肪を減らす新習慣</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- スイーツ/ドリンク アクセント -->
+          <div class="hero-v2__drink-accent">
+            <img src="images/berry-drink.webp" alt="贅沢あまおう苺ミルクスムージー" width="180" height="240" class="hero-v2__img-drink">
+            <div class="hero-v2__floating-badge hero-v2__floating-badge--review">
+              <span class="badge-star">★ 4.8</span>
+              <span class="badge-review">「まるでカフェスイーツ！」</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="hero__vert">わたしを満たす、ご褒美プロテイン</p>
-      <ul class="pillars">
-        <li>
-          <b>BODY 引き締め</b>
-          <small>Wプロテイン20g（ソイ×ホエイ）</small>
-        </li>
-        <li class="x" aria-hidden="true">×</li>
-        <li>
-          <b>BEAUTY 美容ケア</b>
-          <small>コラーゲン・ヒアルロン酸・ビタミンC</small>
-        </li>
-        <li class="x" aria-hidden="true">×</li>
-        <li>
-          <b>RECOVERY 腸活</b>
-          <small>植物性乳酸菌1,000億個・食物繊維</small>
-        </li>
-      </ul>
     </section>
 
     <!-- ============ MARQUEE BAND ============ -->
@@ -894,37 +971,272 @@
       </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
-    <section class="faq px" id="faq">
+    <!-- ============ FAQ（カテゴリタブ＆カード型リデザイン版） ============ -->
+    <section class="faq-v2 px" id="faq">
       <div class="ttl rv">
-        <h2 class="ttl__en">よくある質問</h2>
-        <p class="ttl__jp">Q&amp;A</p>
+        <span class="ttl__badge">FAQ &amp; SUPPORT</span>
+        <h2 class="ttl__en">よくあるご質問</h2>
+        <p class="ttl__jp">お客様から多くいただくご質問にお答えします</p>
       </div>
-      <div class="faq__list rv">
-        <details>
-          <summary><b>Q.</b>プロテインとスリムティーは併用して飲んでもいいですか？<i></i></summary>
-          <p class="faq__a">はい、もちろん併用いただけます。朝食やおやつ代わりに「BERRY MILK PROTEIN」でタンパク質とうるおい美容成分を補給し、日中のお食事中や水分補給、夜のリラックス時に「SLIM TEA」をお飲みいただくことで、無駄のない理想的なトータルビューティーケアが叶います。</p>
-        </details>
-        <details>
-          <summary><b>Q.</b>定期コースの解約方法を教えてください。違約金はありますか？<i></i></summary>
-          <p class="faq__a">定期コースには回数の縛りや違約金は一切ございません。次回お届け予定日の7日前までに、マイページまたは公式LINE・お電話にていつでも簡単に休止・解約・お届けサイクルの変更が可能です。</p>
-        </details>
-        <details>
-          <summary><b>Q.</b>30日間全額返金保証はどう利用すればいいですか？<i></i></summary>
-          <p class="faq__a">商品発送日から30日以内に、公式サポートまでご連絡ください。万が一お口に合わなかった場合、初回お届け分の商品代金を全額返金いたします。1袋飲み切った後でも対象となりますので、安心してお試しください。</p>
-        </details>
-        <details>
-          <summary><b>Q.</b>スリムティーは本当にお湯や冷水に溶けますか？<i></i></summary>
-          <p class="faq__a">はい、独自の微粒子パウダー加工により、氷の入った冷水でも熱いお湯でも、スプーンやマドラーで数回かき混ぜるだけでサッと1秒で溶けます。シェイカーを洗う手間もありません。</p>
-        </details>
-        <details>
-          <summary><b>Q.</b>飲むタイミングはいつがおすすめですか？<i></i></summary>
-          <p class="faq__a">プロテインは朝食時（パンやシリアルと一緒に）、または運動後30分以内が特におすすめです。スリムティーは食事の直前や食事中、または仕事中のリフレッシュ時にお飲みいただくと、内臓脂肪ケア効果を効率よく発揮します。</p>
-        </details>
-        <details>
-          <summary><b>Q.</b>妊娠中や授乳中でも飲むことはできますか？<i></i></summary>
-          <p class="faq__a">健康食品ですので基本的にはお召し上がりいただけますが、体質がデリケートな時期でもありますので、念のためかかりつけのお医者様にご相談の上ご利用ください。スリムティーのピーチルイボス味はノンカフェインですのでリラックス用として好評です。</p>
-        </details>
+
+      <div class="faq-v2__container rv">
+        <!-- カテゴリ切り替えタブ -->
+        <div class="faq-v2__tabs" role="tablist" aria-label="よくある質問カテゴリー">
+          <button class="faq-v2__tab is-active" data-faq-cat="all" role="tab" aria-selected="true">
+            すべて表示 <span class="faq-v2__tab-count">10</span>
+          </button>
+          <button class="faq-v2__tab" data-faq-cat="protein" role="tab" aria-selected="false">
+            🍓 プロテインについて
+          </button>
+          <button class="faq-v2__tab" data-faq-cat="slimtea" role="tab" aria-selected="false">
+            🍵 スリムティーについて
+          </button>
+          <button class="faq-v2__tab" data-faq-cat="timing" role="tab" aria-selected="false">
+            ⏰ 飲み方・アレンジ
+          </button>
+          <button class="faq-v2__tab" data-faq-cat="order" role="tab" aria-selected="false">
+            📦 定期便・解約・返金保証
+          </button>
+        </div>
+
+        <!-- FAQカードリスト -->
+        <div class="faq-v2__grid" id="faqCardGrid">
+          <!-- Item 1: プロテイン & スリムティー併用 -->
+          <article class="faq-card" data-cat="protein slimtea">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">プロテインとスリムティーは併用して飲んでも大丈夫ですか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>はい、ぜひ併用をおすすめしております。</strong></p>
+                  <p>朝食や間食代わりに「BERRY MILK PROTEIN」をお飲みいただくことで、1日に必要なタンパク質20gと美容液成分（コラーゲン・ヒアルロン酸・乳酸菌）をしっかり補給できます。そして、日中のお食事中や水分補給、就寝前には「SLIM TEA」を飲むことで、糖や脂質の吸収・内臓脂肪の蓄積にアプローチし、無駄のない理想的なトータルインナーケアが叶います。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: プロテインの味・粉っぽさ -->
+          <article class="faq-card" data-cat="protein">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">プロテイン独特の粉っぽさや、人工甘味料の後味はありませんか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>粉っぽさは極限まで抑え、本物のあまおう苺果汁で上品な甘さに仕上げています。</strong></p>
+                  <p>従来のプロテインにありがちな「ドロッとした重さ」や「人工甘味料特有のツンとした後味」を徹底排除しました。福岡県産あまおう苺のフリーズドライ果汁パウダーを贅沢にブレンドし、まるで高級カフェのストロベリーシェイクのようなすっきりとした喉ごしと豊かな香りをお楽しみいただけます。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: 運動しない日 -->
+          <article class="faq-card" data-cat="protein">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">激しい運動や筋トレをしない日でも、プロテインを飲むメリットはありますか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>もちろん大いにございます。女性の毎日の美しさの土台になります。</strong></p>
+                  <p>タンパク質は筋肉だけでなく、髪のツヤ、肌のハリ、爪の強さを保つための必須栄養素です。一般的な食事では不足しがちなタンパク質を手軽に補えるだけでなく、11種のビタミンや乳酸菌・コラーゲンも同時に摂取できるため、休息日の「飲む美容液」としても最適です。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: スリムティーの内臓脂肪効果 -->
+          <article class="faq-card" data-cat="slimtea">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">スリムティーの「内臓脂肪レベルを下げる」効果はどのくらいで実感できますか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>臨床試験データでは、8週間〜12週間の継続摂取で有意な内臓脂肪面積の減少が確認されています。</strong></p>
+                  <p>配合されている機能性関与成分（茶カテキン・没食子酸）は、毎日継続してお飲みいただくことで徐々に効果を発揮します。まずは日々の水分補給の代わりに、1日1〜2本を毎日の食事と一緒に続けていただくことをおすすめしております。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: スリムティーの溶けやすさ -->
+          <article class="faq-card" data-cat="slimtea">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">スリムティーは本当に氷水やお湯にすぐ溶けますか？シェイカーは不要ですか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>シェイカーは不要です！グラスに注いでマドラーで数回混ぜるだけでサッと1秒で溶けます。</strong></p>
+                  <p>最新の微粒子インスタント顆粒加工を採用しているため、氷の入った冷水でも、熱いお湯でもダマにならず一瞬で透明感のあるティーに仕上がります。個包装スティックなので持ち運びも便利で、外出先やオフィスでも手軽に飲めます。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: スリムティー3つの味とカフェイン -->
+          <article class="faq-card" data-cat="slimtea">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">スリムティーの3つの味（バニラモカ、ピーチルイボス、ベリー）のカフェインはどうなっていますか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>シーンに合わせて選べる3つのフレーバーをご用意しています。</strong></p>
+                  <ul class="faq-card__list">
+                    <li><strong>🍑 ピーチルイボス：</strong>カフェインゼロ（ノンカフェイン）。就寝前やリラックスタイム、カフェインを控えたい方に大人気です。</li>
+                    <li><strong>☕ バニラモカ：</strong>ほんのりビターなコーヒー風味（微量カフェイン配合）。朝の目覚めや仕事中の集中したい時にぴったりです。</li>
+                    <li><strong>🍓 フルーティーベリー：</strong>すっきり甘酸っぱい紅茶ブレンド。食事中や脂っこい料理の後味をさっぱりリセットしたい時におすすめです。</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: 飲み方・アレンジ -->
+          <article class="faq-card" data-cat="timing">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">一番おすすめの飲むタイミングや美味しいアレンジレシピはありますか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>【プロテイン】</strong>水や牛乳はもちろん、無調整豆乳やアーモンドミルクで割ると、カフェ風の濃厚イチゴミルクになり絶品です。また、プレーンヨーグルトにパウダーをスプーン1杯混ぜて苺ヨーグルトボウルにするのもスタッフ一押しです。</p>
+                  <p><strong>【スリムティー】</strong>昼食や夕食の食事中に1杯お飲みいただくと、脂肪燃焼と吸収抑制を最も効果的にサポートします。夏は炭酸水で割ったスパークリングティー、冬はホットティーがおすすめです。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: 定期便の縛り・解約 -->
+          <article class="faq-card" data-cat="order">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">定期コースに「○回以上購入」といった継続縛りや解約違約金はありますか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>回数の縛りや違約金は一切ございません。1回だけのお試しでも解約・休止が可能です。</strong></p>
+                  <p>次回お届け予定日の7日前までに、会員専用マイページ、公式LINE、またはお電話（フリーダイヤル）からワンクリックでスキップ・お届け周期の変更・解約手続きを行っていただけます。無理な引き止め等は一切ございませんのでご安心ください。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: 返金保証 -->
+          <article class="faq-card" data-cat="order">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">30日間全額返金保証の適用条件を教えてください。すべて飲み切った後でも使えますか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>はい、1袋（1箱）すべて飲み切った後でも返金対象となります。</strong></p>
+                  <p>商品発送日から30日以内に、専用サポート窓口（LINEまたはメール・電話）へご連絡ください。万が一お口に合わなかったり、体質に合わないと感じられた場合、初回お届け分の商品代金を全額ご指定の口座へご返金いたします。味に絶対の自信があるからこそのお約束です。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 10: 妊娠・授乳中・安心安全 -->
+          <article class="faq-card" data-cat="protein slimtea">
+            <button class="faq-card__trigger" aria-expanded="false">
+              <div class="faq-card__q-box">
+                <span class="faq-card__badge faq-card__badge--q">Q</span>
+                <span class="faq-card__question">妊娠中・授乳中やお薬を服用中でも飲むことはできますか？</span>
+              </div>
+              <span class="faq-card__toggle-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </span>
+            </button>
+            <div class="faq-card__answer">
+              <div class="faq-card__a-inner">
+                <span class="faq-card__badge faq-card__badge--a">A</span>
+                <div class="faq-card__a-text">
+                  <p><strong>健康食品ですので基本的にはお召し上がりいただけますが、デリケートな時期はお医者様にご相談ください。</strong></p>
+                  <p>合成着色料・保存料・人工甘味料は一切不使用で、国内GMP認定工場にて最高水準の衛生管理のもと製造しております。特にスリムティーの「ピーチルイボス味」はカフェインフリーですので、妊娠中・授乳中のママのリラックスティーとしても多く選ばれております。</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- FAQ直下のLINEコンシェルジュ相談バナー -->
+        <div class="faq-v2__concierge">
+          <div class="faq-v2__concierge-icon">💬</div>
+          <div class="faq-v2__concierge-text">
+            <strong>他にご不明な点や、飲み方のご相談はございますか？</strong>
+            <p>管理栄養士・専任女性コンシェルジュが、公式LINEにて24時間ご質問を承っております。</p>
+          </div>
+          <a href="#protein" class="faq-v2__concierge-btn">
+            公式LINEで気軽に相談する
+          </a>
+        </div>
       </div>
     </section>
 
