@@ -2860,17 +2860,25 @@ a:hover .arw {
   .portfolio-banner__text {
     white-space: normal;
   }
+  .pc-br {
+    display: none;
+  }
   /* hero-v2 mobile high impact styles */
   .hero-v2 {
     padding: calc(var(--banner-h) + 68px) 16px 44px;
     min-height: auto;
     overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
   .hero-v2__inner {
     grid-template-columns: 1fr;
     gap: 20px;
+    width: 100%;
     max-width: 100%;
     padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   /* スマホではビジュアルを最上部に配置して視覚的インパクトを最大化！ */
   .hero-v2__visual-stage {
@@ -3009,10 +3017,16 @@ a:hover .arw {
     text-align: center;
     align-items: center;
     gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0;
   }
   .hero-v2__tag-row {
     justify-content: center;
     gap: 6px;
+    flex-wrap: wrap;
+    width: 100%;
   }
   .hero-v2__tag {
     font-size: 10.5px;
@@ -3021,40 +3035,104 @@ a:hover .arw {
   .hero-v2__headline {
     font-size: clamp(22px, 5.8vw, 30px);
     line-height: 1.35;
+    width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
   }
   .hero-v2__headline-em {
     font-size: clamp(14px, 3.6vw, 17px);
     margin-top: 6px;
+    word-break: break-word;
   }
   .hero-v2__desc {
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.75;
     margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding: 0 4px;
   }
   .hero-v2__pills {
     grid-template-columns: 1fr;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     gap: 8px;
+    box-sizing: border-box;
   }
   .hero-v2__pill {
-    padding: 8px 12px;
+    padding: 10px 14px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .hero-v2__cta-box {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     margin-top: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
   .hero-v2__btn {
     width: 100%;
-    height: 58px;
-    font-size: 14.5px;
-    padding: 0 16px;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 56px;
+    font-size: 14px;
+    padding: 0 14px;
+    gap: 8px;
+  }
+  .hero-v2__btn .btn__badge {
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+  .hero-v2__btn .btn__text {
+    font-size: 13.5px;
+    letter-spacing: 0;
+  }
+  /* スマホ版クイックナビ（4つのリンクを画面幅内に2x2の美しいピル型チップとして折り返し配置・見切れ完全解消） */
+  .hero-v2__quick-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2px;
+  }
+  .hero-v2__nav-sep {
+    display: none;
+  }
+  .hero-v2__nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 999px;
+    border: 1px solid rgba(255, 90, 130, 0.25);
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(181, 33, 69, 0.06);
   }
   .hero-v2__trust-row {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 6px 12px;
     font-size: 11px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero-v2__trust-item {
+    white-space: nowrap;
   }
   /* synergy mobile styles */
   .synergy {
