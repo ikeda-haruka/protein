@@ -2500,6 +2500,10 @@ a:hover .arw {
   .hd {
     height: 60px;
     gap: 16px;
+    background: rgba(255, 255, 255, 0.94);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 2px 14px rgba(181, 33, 69, 0.08);
   }
   .hd.is-solid {
     height: 56px;
@@ -2507,8 +2511,21 @@ a:hover .arw {
   .hd__nav {
     display: none;
   }
+  .hd__logo img:first-child {
+    opacity: 0;
+  }
+  .hd__logo img:last-child {
+    opacity: 1;
+    position: static;
+  }
   .hd__logo img {
     height: 26px;
+  }
+  .hd__shop {
+    background: var(--strawberry);
+    color: #fff;
+    border-color: var(--strawberry);
+    box-shadow: 0 3px 10px rgba(255, 90, 130, 0.28);
   }
   :root {
     --banner-h: 44px;
@@ -2526,58 +2543,131 @@ a:hover .arw {
   }
   /* hero-v2 mobile high impact styles */
   .hero-v2 {
-    padding: 92px 0 48px;
+    padding: calc(var(--banner-h) + 68px) 16px 44px;
     min-height: auto;
+    overflow: hidden;
   }
   .hero-v2__inner {
     grid-template-columns: 1fr;
     gap: 20px;
+    max-width: 100%;
+    padding: 0;
   }
   /* スマホではビジュアルを最上部に配置して視覚的インパクトを最大化！ */
   .hero-v2__visual-stage {
     order: -1;
-    min-height: 340px;
-    margin-top: 0;
-    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 380px;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    padding-top: 52px;
+    padding-bottom: 12px;
+    overflow: visible;
   }
+  /* スイッチャーをステージ上部中央に独立配置（flexアイテム同士の衝突・文字潰れを根本解消） */
   .hero-v2__mobile-switch {
     display: inline-flex;
-    margin-bottom: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 25;
+    width: auto;
+    max-width: calc(100vw - 32px);
+    margin: 0;
+    gap: 4px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 999px;
+    border: 1px solid rgba(255, 90, 130, 0.35);
+    box-shadow: 0 4px 18px rgba(181, 33, 69, 0.14);
+  }
+  .hero-v2__switch-btn {
+    white-space: nowrap;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+  .hero-v2__stage-pedestal {
+    bottom: 8px;
+    height: 60px;
+    width: 92%;
   }
   .hero-v2__product--protein {
-    margin-right: -15px;
+    position: relative;
+    z-index: 3;
+    margin-right: -10px;
+    margin-bottom: 0;
     transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
   }
   .hero-v2__img-main {
-    height: min(42vh, 320px);
+    height: min(44vh, 290px);
+    width: auto;
+    max-width: 58vw;
+    object-fit: contain;
   }
   .hero-v2__product--tea {
+    position: relative;
+    z-index: 4;
+    margin-left: -15px;
+    margin-bottom: 16px;
     transition: transform 0.35s var(--ease), opacity 0.35s var(--ease);
   }
   .hero-v2__img-tea {
-    width: min(42vw, 190px);
+    width: min(36vw, 150px);
+    height: auto;
+    object-fit: contain;
   }
   .hero-v2__drink-accent {
-    left: 0;
-    bottom: 5px;
+    left: 4px;
+    bottom: 6px;
+    z-index: 5;
   }
   .hero-v2__img-drink {
-    width: 80px;
+    width: 68px;
+    height: auto;
+  }
+  /* スマホ画面内に綺麗に収めるフローティングバッジ最適化 */
+  .hero-v2__floating-badge {
+    padding: 4px 10px;
+    gap: 6px;
+    box-shadow: 0 6px 16px rgba(181, 33, 69, 0.12);
+  }
+  .hero-v2__floating-badge .badge-icon {
+    font-size: 14px;
+  }
+  .hero-v2__floating-badge .badge-title {
+    font-size: 9px;
+  }
+  .hero-v2__floating-badge .badge-sub {
+    font-size: 10.5px;
   }
   .hero-v2__floating-badge--protein {
-    left: -5px;
-    top: 2%;
-    transform: scale(0.85);
+    left: 4px;
+    top: 54px;
+    transform: none;
+    animation: none;
   }
   .hero-v2__floating-badge--tea {
-    right: -5px;
-    top: 5%;
-    transform: scale(0.85);
+    right: 4px;
+    top: 58px;
+    transform: none;
+    animation: none;
   }
   .hero-v2__floating-badge--review {
-    bottom: -15px;
-    left: 5px;
-    transform: scale(0.85);
+    bottom: -6px;
+    left: 14px;
+    padding: 3px 8px;
+    font-size: 10.5px;
+    transform: none;
+    animation: none;
   }
   .hero-v2__content {
     order: 1;
