@@ -2746,33 +2746,9 @@ a:hover .arw {
   color: var(--ink-light);
 }
 
-/* ---------- STICKY CTA (SP) ---------- */
+/* ---------- STICKY CTA (SP) - ヘッダー固定に一本化のため非表示 ---------- */
 .stick {
-  position: fixed;
-  left: 16px;
-  right: 16px;
-  bottom: 16px;
-  z-index: 70;
-  display: none;
-  transform: translateY(140%);
-  transition: transform .45s var(--ease);
-}
-
-.stick.is-show {
-  transform: none;
-}
-
-.stick .btn {
-  width: 100%;
-  height: 56px;
-  background: var(--strawberry-dark);
-  color: #fff;
-  box-shadow: 0 10px 25px rgba(222, 60, 98, .35);
-  justify-content: center;
-}
-
-.stick .btn .arw {
-  margin-left: 14px;
+  display: none !important;
 }
 
 /* ---------- REVEAL ANIMATIONS ---------- */
@@ -3330,10 +3306,7 @@ a:hover .arw {
     text-align: left;
   }
   .stick {
-    display: block;
-  }
-  .ft {
-    padding-bottom: 100px;
+    display: none !important;
   }
 }
 
