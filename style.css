@@ -1136,7 +1136,22 @@ body.nav-open {
 }
 
 .hero-v2__floating-badge--review {
-  display: none !important;
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFFFFF 100%) !important;
+  border: 1px solid #FFE08A !important;
+  padding: 6px 14px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.16), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  max-width: none !important;
+  width: auto !important;
+  white-space: nowrap !important;
+  z-index: 10;
+  animation: badgeFloat 5.2s 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes badgeFloat {
@@ -3301,7 +3316,34 @@ body.nav-open {
     animation: none;
   }
   .hero-v2__floating-badge--review {
-    display: none !important;
+    display: inline-flex !important;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none !important;
+    width: max-content !important;
+    padding: 3px 10px !important;
+    gap: 4px;
+    background: linear-gradient(135deg, #FFFDF5 0%, #FFFFFF 100%) !important;
+    border: 1px solid #FFE08A !important;
+    border-radius: 999px !important;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.16) !important;
+    white-space: nowrap !important;
+    z-index: 10;
+    animation: none !important;
+  }
+  .hero-v2__floating-badge--review .badge-star {
+    font-size: 10px !important;
+    color: #F59E0B;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .hero-v2__floating-badge--review .badge-review {
+    font-size: 9px !important;
+    font-weight: 800;
+    color: var(--ink);
+    white-space: nowrap !important;
   }
   .hero-v2__content {
     order: 1;
