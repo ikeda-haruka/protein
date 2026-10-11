@@ -244,18 +244,22 @@ a:hover .arw {
   height: 72px;
   display: flex;
   align-items: center;
-  gap: 36px;
-  color: #fff;
-  transition: background .4s, height .4s, color .4s, box-shadow .4s, top .4s;
+  gap: 32px;
+  color: var(--ink);
+  background: rgba(255, 250, 252, 0.88);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(224, 62, 101, 0.1);
+  box-shadow: 0 2px 16px rgba(222, 60, 98, 0.05);
+  transition: background .35s var(--ease), height .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease), top .35s var(--ease);
 }
 
 .hd.is-solid {
   color: var(--ink);
-  background: rgba(255, 247, 249, .92);
-  box-shadow: 0 2px 20px rgba(222, 60, 98, .08);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  height: 62px;
+  background: rgba(255, 247, 249, 0.96);
+  box-shadow: 0 4px 24px rgba(222, 60, 98, 0.1);
+  border-bottom: 1px solid rgba(224, 62, 101, 0.14);
+  height: 64px;
 }
 
 .hd__logo {
@@ -268,71 +272,94 @@ a:hover .arw {
 .hd__logo img {
   height: 32px;
   width: auto;
-  transition: opacity .3s;
+  transition: opacity .3s, transform .2s;
+}
+
+/* 白飛びするホワイトロゴは非表示にし、常にカラーブランドロゴを表示 */
+.hd__logo img:first-child {
+  display: none;
 }
 
 .hd__logo img + img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-
-.hd.is-solid .hd__logo img:first-child {
-  opacity: 0;
-}
-
-.hd.is-solid .hd__logo img + img {
+  position: static;
   opacity: 1;
+}
+
+.hd__logo:hover img {
+  transform: scale(1.02);
 }
 
 .hd__nav {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 24px;
 }
 
 .hd__nav a {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: .1em;
-  opacity: .9;
-  transition: opacity .2s, color .2s;
+  position: relative;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: #382429;
+  opacity: 1;
+  padding: 6px 4px;
+  transition: color .25s ease;
+  white-space: nowrap;
+}
+
+/* ナビリンクのアンダーラインアニメーション */
+.hd__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #FF6584, #E03E65);
+  border-radius: 2px;
+  transition: width .25s var(--ease);
 }
 
 .hd__nav a:hover {
-  opacity: 1;
-  color: var(--strawberry-dark);
+  color: #E03E65;
+}
+
+.hd__nav a:hover::after {
+  width: 100%;
 }
 
 .hd__shop {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  height: 40px;
+  gap: 10px;
+  height: 42px;
   padding: 0 20px;
-  border: 1px solid currentColor;
+  background: linear-gradient(135deg, #FF6584 0%, #E03E65 100%);
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 999px;
   font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  transition: background .3s, color .3s, border-color .3s;
+  font-weight: 800;
+  letter-spacing: .08em;
+  box-shadow: 0 4px 14px rgba(224, 62, 101, 0.28);
+  white-space: nowrap;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
 .hd__shop:hover {
-  background: #fff;
-  color: var(--strawberry-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(224, 62, 101, 0.42);
+  background: linear-gradient(135deg, #FF7B98 0%, #C72852 100%);
+  color: #fff !important;
 }
 
 .hd.is-solid .hd__shop {
-  background: var(--strawberry-dark);
-  border-color: var(--strawberry-dark);
-  color: #fff;
+  background: linear-gradient(135deg, #FF5B84 0%, #E03E65 100%);
+  box-shadow: 0 4px 16px rgba(224, 62, 101, 0.32);
 }
 
 .hd.is-solid .hd__shop:hover {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: #fff;
+  background: linear-gradient(135deg, #FF6F93 0%, #C72852 100%);
 }
 
 /* ---------- HERO-V2 (完全独自ラグジュアリー＆フェミニンリデザイン) ---------- */
