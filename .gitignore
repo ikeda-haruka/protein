@@ -10,3 +10,5 @@ process_images.js
 update_issue_*.js
 sync_issues.js
 manage_repo.js
+
+.vercel
