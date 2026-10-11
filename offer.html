@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初回特別オファー・ご注文手続き｜BERRY MILK</title>
+  <meta name="description" content="BERRY MILK（ベリーミルク）初回特別オファーのご注文ページです。定期初回特別価格¥3,980（20%OFF・送料無料・30日間全額返金保証・定期縛りなし）。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body class="subpage">
+
+  <!-- ============ PORTFOLIO NOTICE BANNER（画面最上部常時固定） ============ -->
+  <aside class="portfolio-banner" id="portfolioBanner" role="complementary" aria-label="ポートフォリオ実績サイトの免責事項">
+    <div class="portfolio-banner__inner">
+      <span class="portfolio-banner__badge">PORTFOLIO DEMO</span>
+      <p class="portfolio-banner__text">
+        本サイトはWeb制作ポートフォリオ実績用の<strong>架空のブランドサイト（デモ）</strong>です。実在する製品・サービスの販売やご注文受付は行っておりません。
+      </p>
+    </div>
+  </aside>
+
+  <!-- ============ CHECKOUT HEADER ============ -->
+  <header class="hd px checkout-header" id="hd">
+    <a class="hd__logo" href="index.html#top" aria-label="BERRY MILK">
+      <img src="images/logo-white.svg" alt="BERRY MILK オンラインショップ" width="200" height="50">
+      <img src="images/logo.svg" alt="" width="200" height="50">
+    </a>
+    <nav class="hd__nav">
+      <a href="index.html#concern">こんなお悩み</a>
+      <a href="index.html#why">選ばれる理由</a>
+      <a href="index.html#protein">プロテイン</a>
+      <a href="index.html#slimtea">内臓脂肪ケアティー</a>
+      <a href="index.html#smoothie">生酵素スムージー</a>
+      <a href="story.html">開発秘話</a>
+      <a href="quality.html">品質基準</a>
+      <a href="index.html#faq">よくある質問</a>
+    </nav>
+    <div class="hd__shop" style="background: rgba(255, 90, 130, 0.12); color: var(--strawberry-dark); border-color: rgba(255, 90, 130, 0.3); font-size: 11.5px; pointer-events: none;">
+      🔒 SSL暗号化通信対応
+    </div>
+  </header>
+
+  <!-- ============ BREADCRUMB ============ -->
+  <nav class="breadcrumb px" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li class="breadcrumb__item"><a href="index.html">ホーム</a></li>
+      <li class="breadcrumb__separator" aria-hidden="true">/</li>
+      <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">初回特別オファー・ご注文</li>
+    </ol>
+  </nav>
+
+  <main>
+    <!-- ============ SUBPAGE HERO ============ -->
+    <section class="subpage-hero px" style="padding-bottom: 20px;">
+      <div class="subpage-hero__glow" aria-hidden="true"></div>
+      <div class="subpage-hero__inner rv">
+        <span class="subpage-hero__badge">WEB LIMITED SPECIAL OFFER</span>
+        <h1 class="subpage-hero__title">
+          <span>毎日のわたしを好きになる、至福のあまおう苺ミルク習慣。</span><br>
+          <span style="font-size: clamp(20px, 2.8vw, 32px); color: var(--ink); -webkit-text-fill-color: initial;">定期初回特別価格 <strong>¥3,980</strong>（20%OFF・送料無料）</span>
+        </h1>
+        <p class="subpage-hero__lead">
+          水で割るだけで本格カフェの贅沢苺ミルク。高タンパク20gと飲む美容液処方を、一番お得なWEB限定特別オファーでお届けします。
+        </p>
+
+        <!-- 安心の4大特典バッジ -->
+        <div class="offer-trust-badges">
+          <span class="offer-trust-badge">🚚 全国どこでも送料無料</span>
+          <span class="offer-trust-badge">✨ 30日間全額返金保証</span>
+          <span class="offer-trust-badge">🔒 定期縛り・違約金一切なし</span>
+          <span class="offer-trust-badge">🎁 専用計量スプーンプレゼント</span>
+        </div>
+
+        <!-- ご注文ステップ -->
+        <div class="checkout-steps" aria-label="注文ステップ">
+          <div class="checkout-step is-active">
+            <span class="checkout-step__num">1</span>
+            <span>コース選択</span>
+          </div>
+          <span class="checkout-step__arrow">▶</span>
+          <div class="checkout-step is-active">
+            <span class="checkout-step__num">2</span>
+            <span>ご注文情報入力</span>
+          </div>
+          <span class="checkout-step__arrow">▶</span>
+          <div class="checkout-step">
+            <span class="checkout-step__num">3</span>
+            <span>完了</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ORDER & CHECKOUT SECTION ============ -->
+    <section class="subpage-content px" style="padding-top: 20px;">
+      <div class="subpage-container" style="max-width: 1040px;">
+
+        <!-- STEP 1: コース選択 -->
+        <div class="subpage-article rv" style="padding: clamp(24px, 4vw, 36px); margin-bottom: 30px;">
+          <header class="subpage-article__header" style="margin-bottom: 16px;">
+            <span class="subpage-article__chapter">STEP 01</span>
+            <h2 class="subpage-article__title" style="font-size: clamp(20px, 2.4vw, 24px);">ご希望のお届けコースをお選びください</h2>
+          </header>
+
+          <div class="offer-plans" id="offerPlansGroup">
+            <!-- プラン1：美ボディ定期コース（推奨・デフォルト） -->
+            <label class="offer-plan-card is-popular" id="planCardProtein">
+              <input type="radio" name="orderPlan" value="protein" checked>
+              <div class="offer-plan-card__inner">
+                <div class="offer-plan-card__badge-row">
+                  <span class="offer-plan-card__badge">👑 一番人気</span>
+                  <span class="offer-plan-card__sub-badge">定期初回20%OFF</span>
+                  <span class="offer-plan-card__sub-badge">送料無料</span>
+                </div>
+                <h3 class="offer-plan-card__title">【毎月1袋お届け】美ボディ定期コース（BERRY MILK PROTEIN 900g）</h3>
+                <p class="offer-plan-card__desc">完熟とろける苺ミルク味 900g（約30食分）／専用計量スプーン付属</p>
+                <div class="offer-plan-card__price-row">
+                  <span class="offer-plan-card__original-price">通常価格 ¥4,980</span>
+                  <span class="offer-plan-card__special-price">¥3,980<small>税込</small></span>
+                  <span style="font-size: 12px; color: var(--ink-mid);">（2回目以降もずっと10%OFF ¥4,482）</span>
+                </div>
+                <div class="offer-plan-card__benefit">
+                  ✨ 特典：いつでも休止・解約OK／30日間全額返金保証対象
+                </div>
+              </div>
+            </label>
+
+            <!-- プラン2：贅沢Wセット定期コース -->
+            <label class="offer-plan-card" id="planCardSet">
+              <input type="radio" name="orderPlan" value="set">
+              <div class="offer-plan-card__inner">
+                <div class="offer-plan-card__badge-row">
+                  <span class="offer-plan-card__badge" style="background: #DE3C62;">🔥 徹底Wケア</span>
+                  <span class="offer-plan-card__sub-badge">定期初回44%OFF</span>
+                  <span class="offer-plan-card__sub-badge">送料無料</span>
+                </div>
+                <h3 class="offer-plan-card__title">【内臓脂肪×美ボディWケア】贅沢定期セット（プロテイン900g ＋ スリムティー30包）</h3>
+                <p class="offer-plan-card__desc">朝のプロテイン＋日中の内臓脂肪ケアティーで理想のすっきり美ボディへ。</p>
+                <div class="offer-plan-card__price-row">
+                  <span class="offer-plan-card__original-price">通常合計 ¥8,960</span>
+                  <span class="offer-plan-card__special-price">¥4,980<small>税込</small></span>
+                  <span style="font-size: 12px; color: var(--ink-mid);">（初回¥3,980引き・送料無料）</span>
+                </div>
+                <div class="offer-plan-card__benefit">
+                  🎁 特典：オリジナル耐熱ロゴシェイカー＋計量スプーンをWプレゼント！
+                </div>
+              </div>
+            </label>
+
+            <!-- プラン3：単品購入（都度） -->
+            <label class="offer-plan-card" id="planCardSingle">
+              <input type="radio" name="orderPlan" value="single">
+              <div class="offer-plan-card__inner">
+                <div class="offer-plan-card__badge-row">
+                  <span class="offer-plan-card__sub-badge" style="color: var(--ink-mid); border-color: rgba(44,30,35,0.2);">都度購入（1回のみ）</span>
+                </div>
+                <h3 class="offer-plan-card__title">【今回のみのお届け】BERRY MILK PROTEIN 900g 単品購入</h3>
+                <p class="offer-plan-card__desc">定期購入ではなく、1回のみ通常価格で試したい方はこちら</p>
+                <div class="offer-plan-card__price-row">
+                  <span class="offer-plan-card__special-price" style="color: var(--ink);">¥4,980<small>税込</small></span>
+                  <span style="font-size: 12px; color: var(--ink-light);">（＋送料 ¥660）</span>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- STEP 2: 2カラム レイアウト（入力フォーム ＆ 注文サマリー） -->
+        <div class="checkout-layout">
+
+          <!-- 左側：ご注文情報入力フォーム -->
+          <div class="checkout-form-box rv">
+            <header class="checkout-sec-title">
+              <span class="checkout-sec-title__icon">📝</span>
+              <span>STEP 02：ご注文者様・お届け先情報</span>
+            </header>
+
+            <form id="checkoutForm" onsubmit="return false;">
+              <div class="checkout-form-grid">
+                <!-- お名前 -->
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="userNameSei">
+                      お名前（姓） <span class="form-req">必須</span>
+                    </label>
+                    <input type="text" id="userNameSei" class="form-input" placeholder="山田" value="山田" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="userNameMei">
+                      お名前（名） <span class="form-req">必須</span>
+                    </label>
+                    <input type="text" id="userNameMei" class="form-input" placeholder="花子" value="花子" required>
+                  </div>
+                </div>
+
+                <!-- フリガナ -->
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="userKanaSei">
+                      フリガナ（セイ） <span class="form-req">必須</span>
+                    </label>
+                    <input type="text" id="userKanaSei" class="form-input" placeholder="ヤマダ" value="ヤマダ" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="userKanaMei">
+                      フリガナ（メイ） <span class="form-req">必須</span>
+                    </label>
+                    <input type="text" id="userKanaMei" class="form-input" placeholder="ハナコ" value="ハナコ" required>
+                  </div>
+                </div>
+
+                <!-- メールアドレス -->
+                <div class="form-group">
+                  <label class="form-label" for="userEmail">
+                    メールアドレス <span class="form-req">必須</span>
+                  </label>
+                  <input type="email" id="userEmail" class="form-input" placeholder="example@berrymilk.jp" value="demo-customer@example.com" required>
+                  <small style="color: var(--ink-light); font-size: 11px;">※注文完了メールやお届け予定通知が届きます。</small>
+                </div>
+
+                <!-- 電話番号 -->
+                <div class="form-group">
+                  <label class="form-label" for="userTel">
+                    お電話番号 <span class="form-req">必須</span>
+                  </label>
+                  <input type="tel" id="userTel" class="form-input" placeholder="090-1234-5678" value="090-1234-5678" required>
+                </div>
+
+                <!-- 郵便番号 -->
+                <div class="form-group">
+                  <label class="form-label" for="userZip">
+                    郵便番号 <span class="form-req">必須</span>
+                  </label>
+                  <div class="form-zip-group">
+                    <input type="text" id="userZip" class="form-input" placeholder="1500001" value="150-0001" maxlength="8" required>
+                    <button type="button" class="form-zip-btn" id="btnZipSearch">住所自動入力</button>
+                  </div>
+                </div>
+
+                <!-- 都道府県・市区町村 -->
+                <div class="form-group">
+                  <label class="form-label" for="userAddress1">
+                    都道府県・市区町村 <span class="form-req">必須</span>
+                  </label>
+                  <input type="text" id="userAddress1" class="form-input" placeholder="東京都渋谷区神宮前" value="東京都渋谷区神宮前" required>
+                </div>
+
+                <!-- 番地・建物名 -->
+                <div class="form-group">
+                  <label class="form-label" for="userAddress2">
+                    丁目・番地・マンション名・部屋番号 <span class="form-req">必須</span>
+                  </label>
+                  <input type="text" id="userAddress2" class="form-input" placeholder="1-2-3 ベリーヒルズ 402号室" value="1-2-3 ベリーヒルズ 402号室" required>
+                </div>
+
+                <!-- お届け希望日・時間帯 -->
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label" for="deliveryDate">
+                      初回お届け希望日 <span class="form-opt">任意</span>
+                    </label>
+                    <select id="deliveryDate" class="form-select">
+                      <option value="asap">最短でお届け（注文後2〜3日）</option>
+                      <option value="3days">3日後にお届け</option>
+                      <option value="5days">5日後にお届け</option>
+                      <option value="weekend">今週末にお届け</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="deliveryTime">
+                      お届け時間帯 <span class="form-opt">任意</span>
+                    </label>
+                    <select id="deliveryTime" class="form-select">
+                      <option value="none">希望なし（最速）</option>
+                      <option value="morning">午前中（8:00〜12:00）</option>
+                      <option value="1416">14:00〜16:00</option>
+                      <option value="1618">16:00〜18:00</option>
+                      <option value="1820">18:00〜20:00</option>
+                      <option value="1921">19:00〜21:00</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- 定期お届けサイクル -->
+                <div class="form-group" id="cycleGroup">
+                  <label class="form-label" for="deliveryCycle">
+                    2回目以降のお届けサイクル <span class="form-req">必須</span>
+                  </label>
+                  <select id="deliveryCycle" class="form-select">
+                    <option value="30">30日ごとにお届け（おすすめ）</option>
+                    <option value="45">45日ごとにお届け</option>
+                    <option value="60">60日ごとにお届け</option>
+                  </select>
+                  <small style="color: var(--ink-light); font-size: 11px;">※いつでもマイページからご自由に変更可能です。</small>
+                </div>
+
+                <!-- お支払い方法 -->
+                <div class="form-group" style="margin-top: 10px;">
+                  <label class="form-label">
+                    お支払い方法 <span class="form-req">必須</span>
+                  </label>
+                  <div class="payment-methods">
+                    <label class="payment-method-card is-selected">
+                      <input type="radio" name="paymentMethod" value="credit" checked>
+                      <span class="payment-method-card__title">💳 クレジットカード（手数料無料）</span>
+                    </label>
+                    <label class="payment-method-card">
+                      <input type="radio" name="paymentMethod" value="amazon">
+                      <span class="payment-method-card__title">🛒 Amazon Pay（Amazonアカウントでお支払い）</span>
+                    </label>
+                    <label class="payment-method-card">
+                      <input type="radio" name="paymentMethod" value="paidy">
+                      <span class="payment-method-card__title">📱 あと払い（ペイディ / コンビニ・銀行振込）</span>
+                    </label>
+                    <label class="payment-method-card">
+                      <input type="radio" name="paymentMethod" value="cod">
+                      <span class="payment-method-card__title">📦 代金引換（手数料330円）</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- クレジットカード入力枠（デモ用） -->
+                <div id="creditCardFields" style="background: #FAF8F9; border-radius: 14px; padding: 14px; border: 1px solid rgba(44,30,35,0.08); display: grid; gap: 10px;">
+                  <div class="form-group">
+                    <label class="form-label" style="font-size: 12px;" for="cardNumber">カード番号（デモ入力）</label>
+                    <input type="text" id="cardNumber" class="form-input" placeholder="4242 •••• •••• 4242" value="4242 4242 4242 4242" style="background: #fff;">
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 12px;" for="cardExp">有効期限（月/年）</label>
+                      <input type="text" id="cardExp" class="form-input" placeholder="MM/YY" value="12/28" style="background: #fff;">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" style="font-size: 12px;" for="cardCvc">セキュリティコード</label>
+                      <input type="text" id="cardCvc" class="form-input" placeholder="CVC" value="123" style="background: #fff;">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 規約同意 -->
+                <div style="margin-top: 12px; background: #FFF5F7; padding: 14px; border-radius: 12px; border: 1px solid rgba(224, 62, 101, 0.2);">
+                  <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 12.5px; color: var(--ink); line-height: 1.5;">
+                    <input type="checkbox" id="agreeTerms" checked style="margin-top: 3px; accent-color: var(--strawberry-dark);">
+                    <span>
+                      <a href="#" style="color: var(--strawberry-dark); text-decoration: underline;" onclick="alert('利用規約（デモ）：定期コースは回数縛りなしでいつでも解約・休止が可能です。'); return false;">利用規約</a>
+                      および
+                      <a href="#" style="color: var(--strawberry-dark); text-decoration: underline;" onclick="alert('プライバシーポリシー（デモ）：お客様の個人情報は適切に保護・管理されます。'); return false;">プライバシーポリシー</a>
+                      に同意して注文します。
+                    </span>
+                  </label>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+          <!-- 右側：ご注文内容サマリー（Sticky） -->
+          <aside class="order-summary-box rv">
+            <div class="order-summary__head">
+              <h3 class="order-summary__title">ご注文内容の確認</h3>
+            </div>
+
+            <!-- 選択商品サマリー -->
+            <div class="order-summary__item">
+              <img src="images/berry-protein-hero.webp?v=2" alt="BERRY MILK PROTEIN" class="order-summary__img" id="summaryImg">
+              <div class="order-summary__item-info">
+                <h4 id="summaryPlanTitle">【毎月1袋お届け】美ボディ定期コース</h4>
+                <p id="summaryPlanDesc">BERRY MILK PROTEIN 完熟苺ミルク味 900g</p>
+                <span style="font-size: 11px; color: var(--strawberry-dark); font-weight: 700;" id="summaryBenefitTag">🎁 専用計量スプーンプレゼント</span>
+              </div>
+            </div>
+
+            <!-- 金額内訳 -->
+            <div class="order-summary__rows">
+              <div class="order-summary__row">
+                <span>商品小計（税込）</span>
+                <span id="summarySubtotal">¥4,980</span>
+              </div>
+              <div class="order-summary__row is-discount" id="summaryDiscountRow">
+                <span>定期初回特別割引</span>
+                <span id="summaryDiscount">-¥1,000</span>
+              </div>
+              <div class="order-summary__row">
+                <span>送料</span>
+                <span id="summaryShipping" style="color: #00875A; font-weight: 700;">無料（全国一律）</span>
+              </div>
+              <div class="order-summary__row">
+                <span>獲得予定ポイント</span>
+                <span id="summaryPoints">39 pt</span>
+              </div>
+            </div>
+
+            <!-- 合計金額 -->
+            <div class="order-summary__total">
+              <span class="order-summary__total-label">初回お支払い合計（税込）</span>
+              <span class="order-summary__total-price" id="summaryTotal">
+                ¥3,980<small>税込</small>
+              </span>
+            </div>
+
+            <!-- 注文確定ボタン -->
+            <button type="button" class="order-submit-btn" id="btnSubmitOrder">
+              <span>この内容で注文を確定する（デモ）</span>
+              <span class="arw" style="margin-left: 4px;"></span>
+            </button>
+
+            <!-- 安心の保証案内 -->
+            <div class="order-summary__assurances">
+              <span>🔒 <strong>継続回数の約束・縛りなし</strong>（次回お届け7日前まで解約OK）</span>
+              <span>✨ <strong>30日間全額返金保証</strong>（お体に合わない場合も安心）</span>
+              <span>🚚 <strong>全国どこでも送料無料</strong>でお届け</span>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- FAQ セクション -->
+        <div class="subpage-article rv" style="margin-top: 40px; padding: clamp(24px, 4vw, 40px);">
+          <header class="subpage-article__header" style="margin-bottom: 20px;">
+            <span class="subpage-article__chapter">FAQ</span>
+            <h2 class="subpage-article__title" style="font-size: 20px;">定期初回オファーに関するよくあるご質問</h2>
+          </header>
+          <div class="subpage-article__body">
+            <div class="subpage-checklist">
+              <div class="subpage-checklist__item">
+                <span class="subpage-checklist__check">Q</span>
+                <div class="subpage-checklist__content">
+                  <strong>本当に1回だけで解約することは可能ですか？</strong>
+                  <p>はい、可能です。BERRY MILKでは購入回数の約束（定期縛り）を一切設けておりません。万が一お体に合わない場合やお味のお好みに合わない場合は、次回発送予定日の7日前までにお電話またはマイページからいつでも解約・休止いただけます。</p>
+                </div>
+              </div>
+              <div class="subpage-checklist__item">
+                <span class="subpage-checklist__check">Q</span>
+                <div class="subpage-checklist__content">
+                  <strong>30日間全額返金保証はどのように利用できますか？</strong>
+                  <p>初めてご注文いただいたお客様を対象に、商品到着後30日以内であれば、すべてお飲みいただいた後でも初回商品代金を全額返金いたします。商品パッケージと納品書をお手元にご用意の上、サポート窓口までご連絡ください。</p>
+                </div>
+              </div>
+              <div class="subpage-checklist__item">
+                <span class="subpage-checklist__check">Q</span>
+                <div class="subpage-checklist__content">
+                  <strong>注文後、商品はいつ届きますか？</strong>
+                  <p>ご注文完了後、通常2〜3営業日以内に国内GMP認定工場提携の配送センターより丁寧に発送いたします。全国どこでも送料無料でお届けいたします。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBPAGE BOTTOM ACTIONS -->
+        <div class="subpage-cta rv" style="margin-top: 40px;">
+          <h2 class="subpage-cta__title">製品や開発ストーリーをもっと詳しく見る</h2>
+          <p class="subpage-cta__text">
+            BERRY MILKのこだわりや女性開発チームの想いについて、専用ページでご紹介しています。
+          </p>
+          <div class="subpage-cta__actions">
+            <a href="index.html" class="subpage-cta__btn-back">
+              ← トップページへ戻る
+            </a>
+            <a href="story.html" class="subpage-cta__btn-back" style="background: #fff;">
+              開発秘話を読む
+            </a>
+            <a href="quality.html" class="subpage-cta__btn-back" style="background: #fff;">
+              品質基準について
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ DEMO ORDER COMPLETE MODAL ============ -->
+  <div class="demo-modal-overlay" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="demo-modal">
+      <div class="demo-modal__icon">🎉</div>
+      <h3 class="demo-modal__title" id="modalTitle">ご注文ありがとうございました！</h3>
+      <p style="font-size: 13.5px; color: var(--ink-mid); margin: 0 0 10px;">
+        ご注文内容を正常に受け付けました（デモ完了）。
+      </p>
+
+      <div class="demo-modal__notice">
+        <strong>【ポートフォリオ実績用デモ画面】</strong><br>
+        本サイトはWeb制作ポートフォリオ用の架空サイトです。実際のご請求や商品の発送は行われませんのでご安心ください。
+      </div>
+
+      <div class="demo-modal__details">
+        <div><strong>注文番号：</strong><span id="modalOrderNum">#BM-20261011-8492</span></div>
+        <div><strong>ご注文コース：</strong><span id="modalPlanName">【毎月1袋お届け】美ボディ定期コース</span></div>
+        <div><strong>初回お支払い金額：</strong><span id="modalAmount" style="color: var(--strawberry-dark); font-weight: 800;">¥3,980（税込・送料無料）</span></div>
+        <div><strong>お届け先：</strong><span id="modalAddress">東京都渋谷区神宮前 1-2-3</span></div>
+        <div><strong>お届け予定：</strong><span>ご注文から2〜3日後</span></div>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <button type="button" class="demo-modal__btn" style="background: #EFEBEA; color: var(--ink);" id="modalCloseBtn">
+          閉じる
+        </button>
+        <a href="index.html" class="demo-modal__btn">
+          トップページへ戻る
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="ft px" id="footer">
+    <div class="ft__in">
+      <div class="ft__brand">
+        <img src="images/logo.svg" alt="BERRY MILK" width="180" height="45">
+        <p class="ft__tagline">整える、満たす、愛せるわたしへ。<br>女性専用プレミアム・インナービューティー</p>
+      </div>
+      <ul class="ft__notes">
+        <li>※ 本サイトはWeb制作ポートフォリオ実績用の架空ブランドデモサイトです。実在する製品の販売は行っておりません。</li>
+        <li>※ BERRY MILK PROTEIN および BERRY SLIM TEA は健康食品・機能性表示食品です。医薬品ではありません。</li>
+      </ul>
+      <nav class="ft__links">
+        <a href="index.html">トップページ</a>
+        <a href="offer.html" style="color: var(--strawberry); font-weight: 700;">初回特別オファー</a>
+        <a href="story.html">開発秘話</a>
+        <a href="quality.html">品質基準について</a>
+        <a href="index.html#protein">製品詳細</a>
+        <a href="index.html#faq">よくある質問</a>
+      </nav>
+    </div>
+    <p class="ft__copy">&copy; BERRY MILK Inc. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ============ INTERACTIVE CHECKOUT SCRIPT ============ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const planCards = {
+        protein: document.getElementById('planCardProtein'),
+        set: document.getElementById('planCardSet'),
+        single: document.getElementById('planCardSingle')
+      };
+
+      const summaryImg = document.getElementById('summaryImg');
+      const summaryPlanTitle = document.getElementById('summaryPlanTitle');
+      const summaryPlanDesc = document.getElementById('summaryPlanDesc');
+      const summaryBenefitTag = document.getElementById('summaryBenefitTag');
+      const summarySubtotal = document.getElementById('summarySubtotal');
+      const summaryDiscountRow = document.getElementById('summaryDiscountRow');
+      const summaryDiscount = document.getElementById('summaryDiscount');
+      const summaryShipping = document.getElementById('summaryShipping');
+      const summaryPoints = document.getElementById('summaryPoints');
+      const summaryTotal = document.getElementById('summaryTotal');
+      const cycleGroup = document.getElementById('cycleGroup');
+
+      const planData = {
+        protein: {
+          title: '【毎月1袋お届け】美ボディ定期コース',
+          desc: 'BERRY MILK PROTEIN 完熟苺ミルク味 900g',
+          img: 'images/berry-protein-hero.webp?v=2',
+          benefit: '🎁 専用計量スプーンプレゼント',
+          subtotal: '¥4,980',
+          discount: '-¥1,000',
+          shipping: '無料（全国一律）',
+          shippingColor: '#00875A',
+          points: '39 pt',
+          total: '¥3,980',
+          hasDiscount: true,
+          hasCycle: true
+        },
+        set: {
+          title: '【内臓脂肪×美ボディWケア】贅沢定期セット',
+          desc: 'プロテイン900g ＋ スリムティー30包 Wセット',
+          img: 'images/lineup-slim-tea.webp',
+          benefit: '🎁 特製耐熱シェイカー＋計量スプーンWプレゼント',
+          subtotal: '¥8,960',
+          discount: '-¥3,980',
+          shipping: '無料（全国一律）',
+          shippingColor: '#00875A',
+          points: '49 pt',
+          total: '¥4,980',
+          hasDiscount: true,
+          hasCycle: true
+        },
+        single: {
+          title: '【都度購入】BERRY MILK PROTEIN 900g',
+          desc: '1回のみのお届け（都度購入）',
+          img: 'images/berry-protein-hero.webp?v=2',
+          benefit: '※定期特典・プレゼントは対象外となります',
+          subtotal: '¥4,980',
+          discount: '¥0',
+          shipping: '¥660（全国一律）',
+          shippingColor: 'var(--ink)',
+          points: '49 pt',
+          total: '¥5,640',
+          hasDiscount: false,
+          hasCycle: false
+        }
+      };
+
+      // プラン変更ラジオボタンの監視
+      const planInputs = document.querySelectorAll('input[name="orderPlan"]');
+      let currentPlan = 'protein';
+
+      planInputs.forEach(input => {
+        input.addEventListener('change', (e) => {
+          const val = e.target.value;
+          currentPlan = val;
+
+          // カードのスタイル更新
+          Object.keys(planCards).forEach(key => {
+            if (planCards[key]) {
+              planCards[key].classList.toggle('is-popular', key === val);
+            }
+          });
+
+          // サマリー更新
+          const d = planData[val];
+          if (d) {
+            summaryImg.src = d.img;
+            summaryPlanTitle.textContent = d.title;
+            summaryPlanDesc.textContent = d.desc;
+            summaryBenefitTag.textContent = d.benefit;
+            summarySubtotal.textContent = d.subtotal;
+            summaryDiscount.textContent = d.discount;
+            summaryDiscountRow.style.display = d.hasDiscount ? 'flex' : 'none';
+            summaryShipping.textContent = d.shipping;
+            summaryShipping.style.color = d.shippingColor;
+            summaryPoints.textContent = d.points;
+            summaryTotal.innerHTML = `${d.total}<small>税込</small>`;
+            cycleGroup.style.display = d.hasCycle ? 'flex' : 'none';
+          }
+        });
+      });
+
+      // 住所自動入力デモ
+      const btnZip = document.getElementById('btnZipSearch');
+      if (btnZip) {
+        btnZip.addEventListener('click', () => {
+          const zip = document.getElementById('userZip').value.replace(/[^0-9]/g, '');
+          if (zip.length >= 7) {
+            document.getElementById('userAddress1').value = '東京都渋谷区神宮前';
+            document.getElementById('userAddress2').value = '1-2-3 ベリーヒルズ 402号室';
+            alert('郵便番号から住所を自動入力しました（デモ機能）');
+          } else {
+            alert('7桁の郵便番号を入力してください（例: 1500001）');
+          }
+        });
+      }
+
+      // お支払い方法の選択スタイル
+      const paymentCards = document.querySelectorAll('.payment-method-card');
+      const creditFields = document.getElementById('creditCardFields');
+
+      paymentCards.forEach(card => {
+        const radio = card.querySelector('input[type="radio"]');
+        if (radio) {
+          radio.addEventListener('change', () => {
+            paymentCards.forEach(c => c.classList.remove('is-selected'));
+            card.classList.add('is-selected');
+
+            if (creditFields) {
+              creditFields.style.display = radio.value === 'credit' ? 'grid' : 'none';
+            }
+          });
+        }
+      });
+
+      // 注文確定ボタン → モーダル表示
+      const btnSubmit = document.getElementById('btnSubmitOrder');
+      const modal = document.getElementById('demoModal');
+      const modalClose = document.getElementById('modalCloseBtn');
+
+      if (btnSubmit && modal) {
+        btnSubmit.addEventListener('click', () => {
+          const agree = document.getElementById('agreeTerms');
+          if (agree && !agree.checked) {
+            alert('利用規約およびプライバシーポリシーへの同意をお願いいたします。');
+            return;
+          }
+
+          // モーダル情報を更新
+          const d = planData[currentPlan];
+          const randomNum = Math.floor(1000 + Math.random() * 9000);
+          const dateStr = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+          document.getElementById('modalOrderNum').textContent = `#BM-${dateStr}-${randomNum}`;
+          document.getElementById('modalPlanName').textContent = d.title;
+          document.getElementById('modalAmount').textContent = `${d.total}（税込）`;
+
+          const addr1 = document.getElementById('userAddress1').value || '東京都渋谷区神宮前';
+          const addr2 = document.getElementById('userAddress2').value || '1-2-3';
+          document.getElementById('modalAddress').textContent = `${addr1} ${addr2}`;
+
+          // モーダルを開く
+          modal.classList.add('is-open');
+        });
+      }
+
+      if (modalClose && modal) {
+        modalClose.addEventListener('click', () => {
+          modal.classList.remove('is-open');
+        });
+
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('is-open');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
