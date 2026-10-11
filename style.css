@@ -182,7 +182,7 @@ a:hover .arw {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 10000;
   height: var(--banner-h);
   background: linear-gradient(90deg, #1C1317 0%, #2E1B24 50%, #1C1317 100%);
   color: #fff;
@@ -1379,16 +1379,20 @@ a:hover .arw {
 
 .prod__media {
   position: relative;
-  display: grid;
-  place-items: center;
-  height: min(80vh, 700px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  min-height: 380px;
 }
 
 .prod__media-bg {
   position: absolute;
-  width: 82%;
-  height: 82%;
-  border-radius: 40px;
+  width: 90%;
+  height: 90%;
+  border-radius: 36px;
   background: rgba(255, 255, 255, .15);
   transform: rotate(-3deg);
   -webkit-backdrop-filter: blur(10px);
@@ -1397,11 +1401,15 @@ a:hover .arw {
 
 .prod__media img {
   position: relative;
-  height: 86%;
-  width: auto;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-width: 440px;
+  max-height: 520px;
+  object-fit: contain;
   border-radius: 20px;
-  transform: rotate(-4deg);
-  box-shadow: 0 35px 50px rgba(181, 33, 69, .4), 0 10px 15px rgba(44, 30, 35, .2);
+  transform: rotate(-3deg);
+  box-shadow: 0 30px 48px rgba(181, 33, 69, .4), 0 10px 15px rgba(44, 30, 35, .2);
   transition: transform .6s var(--ease);
 }
 
@@ -1878,21 +1886,50 @@ a:hover .arw {
   aspect-ratio: 4/5;
   overflow: hidden;
   background: var(--c);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card__tile img {
-  height: 80%;
-  width: auto;
-  max-width: none;
-  transform: rotate(-4deg);
-  filter: drop-shadow(0 20px 20px rgba(44, 30, 35, .15));
-  transition: transform .7s var(--ease);
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 14px 22px rgba(44, 30, 35, .14));
+  transition: transform .5s var(--ease);
+}
+
+.card__tile--blend img {
+  mix-blend-mode: multiply;
+}
+
+.card__tile--cover {
+  padding: 0;
+}
+
+.card__tile--cover img,
+.card__tile img.card__tile-img--cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  filter: none;
+  transform: none;
+  mix-blend-mode: normal;
 }
 
 .card:hover .card__tile img {
-  transform: rotate(-1deg) translateY(-8px) scale(1.05);
+  transform: translateY(-6px) scale(1.04);
+}
+
+.card:hover .card__tile--cover img,
+.card:hover .card__tile img.card__tile-img--cover {
+  transform: scale(1.04);
 }
 
 .card__body {
@@ -2632,12 +2669,19 @@ a:hover .arw {
   }
   .prod__inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
-    padding-top: 80px;
-    padding-bottom: 84px;
+    gap: 36px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .prod__media {
-    height: min(90vw, 420px);
+    min-height: 260px;
+    height: auto;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .prod__media img {
+    max-width: 320px;
+    max-height: 380px;
   }
   .prod__word {
     bottom: auto;
