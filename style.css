@@ -1914,6 +1914,7 @@ a:hover .arw {
 .card__tile--cover img,
 .card__tile img.card__tile-img--cover {
   object-fit: cover;
+  object-position: center;
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -1921,6 +1922,7 @@ a:hover .arw {
   filter: none;
   transform: none;
   mix-blend-mode: normal;
+  display: block;
 }
 
 .card:hover .card__tile img {
