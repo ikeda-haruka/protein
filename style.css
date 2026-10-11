@@ -244,7 +244,7 @@ a:hover .arw {
   height: 72px;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: clamp(14px, 2vw, 28px);
   color: var(--ink);
   background: rgba(255, 250, 252, 0.88);
   -webkit-backdrop-filter: blur(16px);
@@ -267,11 +267,17 @@ a:hover .arw {
   margin-right: auto;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  min-width: 150px;
 }
 
 .hd__logo img {
-  height: 32px;
+  height: 38px;
   width: auto;
+  min-width: 140px;
+  max-width: 180px;
+  object-fit: contain;
+  flex-shrink: 0;
   transition: opacity .3s, transform .2s;
 }
 
@@ -292,17 +298,18 @@ a:hover .arw {
 .hd__nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: clamp(10px, 1.4vw, 22px);
+  flex-shrink: 1;
 }
 
 .hd__nav a {
   position: relative;
-  font-size: 13.5px;
+  font-size: clamp(12px, 0.95vw, 13.5px);
   font-weight: 700;
-  letter-spacing: .06em;
+  letter-spacing: .04em;
   color: #382429;
   opacity: 1;
-  padding: 6px 4px;
+  padding: 6px 3px;
   transition: color .25s ease;
   white-space: nowrap;
 }
@@ -2788,6 +2795,23 @@ a:hover .arw {
   .story__media {
     max-width: 520px;
     margin: 0 auto;
+  }
+@media (max-width: 1200px) and (min-width: 901px) {
+  .hd {
+    gap: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hd__nav {
+    gap: 10px;
+  }
+  .hd__nav a {
+    font-size: 12px;
+    padding: 4px 2px;
+  }
+  .hd__shop {
+    padding: 0 16px;
+    font-size: 13px;
   }
 }
 
