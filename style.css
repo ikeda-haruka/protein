@@ -3839,7 +3839,7 @@ a:hover .arw {
 
 .vote__header {
   text-align: center;
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -3878,10 +3878,15 @@ a:hover .arw {
 
 .vote__title {
   margin-top: 10px;
-  font-size: clamp(28px, 3.8vw, 46px);
+  font-size: clamp(26px, 3.2vw, 40px);
   font-weight: 900;
-  line-height: 1.35;
-  letter-spacing: .02em;
+  line-height: 1.4;
+  letter-spacing: .01em;
+}
+
+.vote__title .nw,
+.vote__title span {
+  display: inline-block;
 }
 
 .vote__title span {
@@ -4895,7 +4900,10 @@ a:hover .arw {
   .concern__grid {
     grid-template-columns: 1fr;
   }
-  .reviews__title .nw {
+  .reviews__title .nw,
+  .vote__title .nw,
+  .subpage-hero__title .nw,
+  .subpage-hero__lead .nw {
     white-space: normal;
   }
 }
@@ -4971,7 +4979,7 @@ a:hover .arw {
 .subpage-hero__inner {
   position: relative;
   z-index: 1;
-  max-width: 860px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -4993,14 +5001,19 @@ a:hover .arw {
 }
 
 .subpage-hero__title {
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: clamp(24px, 3.2vw, 38px);
   font-weight: 800;
-  line-height: 1.45;
+  line-height: 1.48;
   color: #24181B;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+}
+
+.subpage-hero__title .nw {
+  display: inline-block;
 }
 
 .subpage-hero__title span {
+  display: inline-block;
   background: linear-gradient(135deg, #FF5B84 0%, #B82348 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5008,11 +5021,15 @@ a:hover .arw {
 
 .subpage-hero__lead {
   margin-top: 22px;
-  font-size: clamp(14.5px, 1.8vw, 16px);
-  line-height: 1.95;
+  font-size: clamp(14px, 1.6vw, 15.5px);
+  line-height: 2;
   color: #5E4A50;
-  max-width: 720px;
+  max-width: 880px;
   margin-inline: auto;
+}
+
+.subpage-hero__lead .nw {
+  display: inline-block;
 }
 
 /* Subpage Content Container */
