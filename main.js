@@ -472,7 +472,10 @@
           const y = e.clientY - r.top - r.height / 2;
           const rotateX = -(y / r.height) * 8;
           const rotateY = (x / r.width) * 8;
-          card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+          const isAct = card.classList.contains('is-active');
+          const liftY = isAct ? -12 : -6;
+          const scale = isAct ? 1.02 : 1;
+          card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(${liftY}px) scale(${scale})`;
         });
 
         card.addEventListener('mouseleave', () => {
