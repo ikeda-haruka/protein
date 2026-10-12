@@ -1590,6 +1590,185 @@ body.nav-open {
   box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
+/* Media & Celebrity Proof Showcase in #why */
+.state__media-proof {
+  margin-top: clamp(40px, 5.5vw, 64px);
+  background: #FFFFFF;
+  border: 1.5px solid rgba(255, 90, 130, 0.22);
+  border-radius: 24px;
+  padding: clamp(26px, 4vw, 42px);
+  box-shadow: 0 16px 40px rgba(181, 33, 69, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+.state__media-proof::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #FF6584 0%, #E03E65 50%, #D8224F 100%);
+}
+
+.state__media-head {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 32px;
+}
+
+.state__media-badge {
+  display: inline-block;
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #E6285A;
+  background: #FFF0F4;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.state__media-title {
+  font-size: clamp(20px, 2.8vw, 30px);
+  font-weight: 900;
+  color: #2C1E23;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.state__media-subtitle {
+  font-size: 13.5px;
+  color: #6E5B62;
+  margin-top: 8px;
+  line-height: 1.7;
+}
+
+.state__media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.state__media-card {
+  background: #FFF9FA;
+  border: 1.5px solid rgba(255, 90, 130, 0.18);
+  border-radius: 20px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.state__media-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(230, 40, 90, 0.35);
+  box-shadow: 0 10px 24px rgba(230, 40, 90, 0.1);
+}
+
+.state__media-card--celeb {
+  background: linear-gradient(135deg, #FFF9FA 0%, #FFF2F6 100%);
+}
+
+.state__media-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.state__media-card-tag {
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+.state__media-card-tag--tv {
+  background: linear-gradient(135deg, #FF6584 0%, #E03E65 100%);
+}
+
+.state__media-card-tag--celeb {
+  background: linear-gradient(135deg, #7C5295 0%, #5C3275 100%);
+}
+
+.state__media-card-status {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #E6285A;
+}
+
+.state__media-card-heading {
+  font-size: 17px;
+  font-weight: 800;
+  color: #2C1E23;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.state__media-card-desc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #55444A;
+  margin-bottom: 16px;
+}
+
+.state__media-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.state__media-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.25);
+  color: #3D2D32;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.state__celeb-quote {
+  margin-top: auto;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.2);
+  border-left: 3px solid #E6285A;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.state__celeb-quote-text {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #3D2D32;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.state__celeb-quote-author {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8C6A75;
+}
+
+@media (max-width: 900px) {
+  .state__media-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
 /* ---------- 3-PILLAR SYNERGY FORMULA（本サイト独自リデザイン） ---------- */
 .synergy {
   position: relative;
