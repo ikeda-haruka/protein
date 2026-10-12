@@ -87,8 +87,18 @@
 - **Script**: Vanilla JavaScript（IntersectionObserver, Scroll Event, Live Poll Engine, LocalStorage）
 - **Asset**: WebP / 高解像度AI画像 / SVGベクターロゴ
 - **Deploy**: Vercel
-- **Task Management**: GitHub Issues
+- **Task Management**: [GitHub Issues (自動タスク連携)](https://github.com/ikeda-haruka/protein/issues)
 
 ---
 
-© BERRY MILK Inc. All Rights Reserved.
+## 📋 タスク管理 & 自動連携
+
+本プロジェクトの課題・新機能追加・UI改善は、すべて [GitHub Issues](https://github.com/ikeda-haruka/protein/issues) にて自動起票・進捗管理・クローズ連携されています。
+
+- **全Issue一覧**: [https://github.com/ikeda-haruka/protein/issues](https://github.com/ikeda-haruka/protein/issues)
+- **タスク自動同期スクリプト**: `scripts/task_sync.ps1`
+- **開発運用ガイドライン**: `AGENTS.md`
+
+---
+
+© BERRY MILK Inc. (A SANDY Group Company) All Rights Reserved.
