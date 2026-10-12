@@ -5851,6 +5851,9 @@ body.nav-open {
   flex: none;
 }
 
+.review-avatar--h {
+  background: linear-gradient(135deg, #FF7597, #E6285A);
+}
 .review-avatar--p {
   background: linear-gradient(135deg, #FFAAA6, #FF6584);
 }
