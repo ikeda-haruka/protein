@@ -7638,31 +7638,798 @@ body.nav-open {
   box-shadow: 0 14px 32px rgba(224, 62, 101, 0.45);
 }
 
-/* Mobile responsive */
+/* ==========================================================================
+   CORPORATE, RECRUITMENT & LEGAL STYLES
+   ========================================================================== */
+
+/* Corporate Sub-Navigation */
+.corp-nav {
+  position: sticky;
+  top: 70px;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 90, 130, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  padding: 10px 0;
+}
+
+.corp-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 4px 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.corp-nav__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #55444A;
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.corp-nav__link:hover,
+.corp-nav__link.is-active {
+  color: #E6285A;
+  background: #FFF2F6;
+  border-color: rgba(255, 90, 130, 0.25);
+}
+
+/* Corporate Section Styling */
+.corp-section {
+  padding: 70px 0;
+  border-bottom: 1px solid rgba(255, 90, 130, 0.1);
+}
+
+.corp-section:last-of-type {
+  border-bottom: none;
+}
+
+.corp-section__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.corp-section__sub {
+  font-family: var(--en);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #E6285A;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.corp-section__title {
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 900;
+  color: #2C1E23;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+/* President Message (池田遥香) */
+.corp-ceo {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 48px;
+  align-items: start;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.18);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 12px 36px rgba(181, 33, 69, 0.05);
+}
+
+.corp-ceo__visual {
+  position: relative;
+  text-align: center;
+}
+
+.corp-ceo__portrait {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #FFE8EE 0%, #FFD6E0 50%, #FFCCD8 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 1px solid rgba(255, 90, 130, 0.2);
+  box-shadow: 0 8px 24px rgba(230, 40, 90, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.corp-ceo__portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.4), transparent 60%);
+  pointer-events: none;
+}
+
+.corp-ceo__avatar-icon {
+  font-size: 64px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+}
+
+.corp-ceo__meta {
+  margin-top: 20px;
+}
+
+.corp-ceo__role {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8C6A75;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.corp-ceo__name {
+  font-size: 24px;
+  font-weight: 900;
+  color: #2C1E23;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.corp-ceo__name-en {
+  font-family: var(--en);
+  font-size: 13px;
+  font-weight: 600;
+  color: #A38590;
+  letter-spacing: 0.1em;
+}
+
+.corp-ceo__catch {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 900;
+  color: #2C1E23;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #FFF0F4;
+}
+
+.corp-ceo__text {
+  font-size: 15px;
+  line-height: 1.95;
+  color: #4A3A40;
+  margin-bottom: 20px;
+}
+
+.corp-ceo__signature {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(255, 90, 130, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.corp-ceo__sig-title {
+  font-size: 13px;
+  color: #7A636B;
+}
+
+.corp-ceo__sig-name {
+  font-size: 20px;
+  font-weight: 900;
+  color: #2C1E23;
+  letter-spacing: 0.1em;
+}
+
+/* Philosophy Cards (Mission / Vision / Values) */
+.corp-philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.corp-phil-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.18);
+  border-radius: 20px;
+  padding: 36px 28px;
+  box-shadow: 0 10px 28px rgba(181, 33, 69, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.corp-phil-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(181, 33, 69, 0.1);
+  border-color: rgba(255, 90, 130, 0.35);
+}
+
+.corp-phil-card__type {
+  font-family: var(--en);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #E6285A;
+  background: #FFF2F6;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.corp-phil-card__slogan {
+  font-size: 19px;
+  font-weight: 800;
+  color: #2C1E23;
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.corp-phil-card__desc {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #5C4A51;
+}
+
+/* History Timeline */
+.corp-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.corp-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 2px;
+  background: linear-gradient(180deg, #FF5B84 0%, #FFCAD6 100%);
+}
+
+.corp-timeline__item {
+  position: relative;
+  display: flex;
+  gap: 36px;
+  margin-bottom: 32px;
+  align-items: flex-start;
+}
+
+.corp-timeline__date {
+  width: 100px;
+  text-align: right;
+  flex-shrink: 0;
+  font-family: var(--en);
+  font-size: 15px;
+  font-weight: 800;
+  color: #E6285A;
+  line-height: 1.4;
+  padding-top: 2px;
+}
+
+.corp-timeline__dot {
+  position: absolute;
+  left: 115px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E6285A;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(230, 40, 90, 0.25);
+}
+
+.corp-timeline__content {
+  flex: 1;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.16);
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.corp-timeline__title {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: #2C1E23;
+  margin-bottom: 4px;
+}
+
+.corp-timeline__desc {
+  font-size: 13.5px;
+  color: #614F56;
+  line-height: 1.6;
+}
+
+/* Corporate Info Table */
+.corp-info-table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(181, 33, 69, 0.04);
+}
+
+.corp-info-table tr {
+  border-bottom: 1px solid rgba(255, 90, 130, 0.1);
+}
+
+.corp-info-table tr:last-child {
+  border-bottom: none;
+}
+
+.corp-info-table th {
+  width: 28%;
+  background: #FFF9FA;
+  padding: 18px 24px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #3D2D32;
+  text-align: left;
+  vertical-align: top;
+  border-right: 1px solid rgba(255, 90, 130, 0.1);
+}
+
+.corp-info-table td {
+  padding: 18px 24px;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #4A3A40;
+}
+
+/* Office Cards Grid (東京・大阪・京都・福岡) */
+.corp-offices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.corp-office-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(255, 90, 130, 0.2);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(181, 33, 69, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.corp-office-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(181, 33, 69, 0.1);
+  border-color: rgba(230, 40, 90, 0.35);
+}
+
+.corp-office-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--en);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #FF5B84 0%, #D8224F 100%);
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.corp-office-card__name {
+  font-size: 20px;
+  font-weight: 900;
+  color: #2C1E23;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.corp-office-card__name-en {
+  font-family: var(--en);
+  font-size: 12px;
+  font-weight: 600;
+  color: #9C838B;
+}
+
+.corp-office-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.corp-office-card__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4A3A40;
+}
+
+.corp-office-card__label {
+  font-weight: 800;
+  color: #7D616B;
+  flex-shrink: 0;
+  width: 70px;
+  font-size: 13px;
+}
+
+.corp-office-card__val {
+  flex: 1;
+}
+
+.corp-office-card__tag {
+  display: inline-block;
+  background: #FFF0F4;
+  color: #E6285A;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+/* Recruitment Banners / Cards */
+.corp-recruit-banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.corp-recruit-card {
+  background: linear-gradient(135deg, #FFF9FA 0%, #FFF0F4 100%);
+  border: 1.5px solid rgba(255, 90, 130, 0.25);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(181, 33, 69, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.corp-recruit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(255, 90, 130, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.corp-recruit-card:hover {
+  transform: translateY(-5px);
+  border-color: #E6285A;
+  box-shadow: 0 16px 36px rgba(230, 40, 90, 0.15);
+  background: #FFFFFF;
+}
+
+.corp-recruit-card__badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 800;
+  color: #E6285A;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.25);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.corp-recruit-card__title {
+  font-size: 22px;
+  font-weight: 900;
+  color: #2C1E23;
+  margin-bottom: 10px;
+}
+
+.corp-recruit-card__lead {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #55444A;
+  margin-bottom: 24px;
+}
+
+.corp-recruit-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #E6285A;
+}
+
+.corp-recruit-card:hover .corp-recruit-card__btn {
+  text-decoration: underline;
+}
+
+/* Recruitment Detail Pages (新卒・中途) */
+.recruit-hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.recruit-values-grid,
+.recruit-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.recruit-job-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(255, 90, 130, 0.2);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+.recruit-job-card__title {
+  font-size: 19px;
+  font-weight: 800;
+  color: #2C1E23;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #FFF0F4;
+}
+
+.recruit-job-card__desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #4A3A40;
+  margin-bottom: 16px;
+}
+
+.recruit-job-card__req {
+  background: #FFF9FA;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #5C4A51;
+  line-height: 1.6;
+}
+
+.recruit-spec-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.recruit-spec-table th {
+  width: 25%;
+  background: #FFF9FA;
+  padding: 16px 20px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #3D2D32;
+  border-bottom: 1px solid rgba(255, 90, 130, 0.1);
+  border-right: 1px solid rgba(255, 90, 130, 0.1);
+  vertical-align: top;
+}
+
+.recruit-spec-table td {
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #4A3A40;
+  border-bottom: 1px solid rgba(255, 90, 130, 0.1);
+}
+
+.recruit-spec-table tr:last-child th,
+.recruit-spec-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Steps / Flow */
+.recruit-flow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 32px 0;
+}
+
+.recruit-flow-step {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(255, 90, 130, 0.2);
+  border-radius: 14px;
+  padding: 18px 12px;
+  text-align: center;
+  position: relative;
+}
+
+.recruit-flow-step__no {
+  font-family: var(--en);
+  font-size: 11px;
+  font-weight: 800;
+  color: #E6285A;
+  background: #FFF0F4;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.recruit-flow-step__title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #2C1E23;
+  margin-bottom: 4px;
+}
+
+.recruit-flow-step__desc {
+  font-size: 11.5px;
+  color: #7A636B;
+  line-height: 1.4;
+}
+
+/* Legal Documents (特商法・プライバシー) */
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 90, 130, 0.18);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 8px 32px rgba(181, 33, 69, 0.04);
+}
+
+.legal-article {
+  margin-bottom: 36px;
+}
+
+.legal-article:last-child {
+  margin-bottom: 0;
+}
+
+.legal-article__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2C1E23;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid #FFF0F4;
+  margin-bottom: 14px;
+}
+
+.legal-article__body {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #4A3A40;
+}
+
+.legal-article__body p + p {
+  margin-top: 10px;
+}
+
+.legal-article__body ol,
+.legal-article__body ul {
+  padding-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.legal-article__body li {
+  margin-bottom: 6px;
+  line-height: 1.7;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgba(255, 90, 130, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.legal-table th {
+  width: 28%;
+  background: #FFF9FA;
+  padding: 16px 20px;
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #2C1E23;
+  border-bottom: 1px solid rgba(255, 90, 130, 0.1);
+  border-right: 1px solid rgba(255, 90, 130, 0.1);
+  vertical-align: top;
+}
+
+.legal-table td {
+  padding: 16px 20px;
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #4A3A40;
+  border-bottom: 1px solid rgba(255, 90, 130, 0.1);
+}
+
+.legal-table tr:last-child th,
+.legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
 @media (max-width: 900px) {
-  .pdp-hero-grid {
+  .corp-ceo {
     grid-template-columns: 1fr;
     gap: 32px;
+    padding: 28px 20px;
   }
-  .pdp-visual {
-    position: static;
-  }
-  .pdp-specs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .pdp-check-grid,
-  .pdp-features-grid,
-  .pdp-steps-grid,
-  .pdp-review-grid,
-  .pdp-lineup-grid {
+  .corp-philosophy-grid,
+  .corp-offices-grid,
+  .corp-recruit-banner,
+  .recruit-values-grid,
+  .recruit-jobs-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
-  .pdp-table th {
-    width: 35%;
+  .corp-timeline::before {
+    left: 80px;
+  }
+  .corp-timeline__date {
+    width: 70px;
     font-size: 13px;
   }
-  .pdp-table td {
+  .corp-timeline__dot {
+    left: 75px;
+  }
+  .corp-timeline__item {
+    gap: 24px;
+  }
+  .corp-info-table th,
+  .recruit-spec-table th,
+  .legal-table th {
+    width: 32%;
+    padding: 14px 14px;
+    font-size: 12.5px;
+  }
+  .corp-info-table td,
+  .recruit-spec-table td,
+  .legal-table td {
+    padding: 14px 14px;
     font-size: 13px;
+  }
+  .recruit-flow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .legal-container {
+    padding: 24px 16px;
   }
 }
+

@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企業情報・会社概要｜株式会社BERRY MILK コーポレートサイト</title>
+  <meta name="description" content="株式会社BERRY MILKのコーポレートサイトです。代表取締役社長 池田遥香のメッセージ、企業理念（Mission/Vision/Values）、会社概要、沿革、拠点案内（東京本社・大阪支社・京都支社・福岡支社）、採用情報などをご紹介します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20">
+</head>
+<body class="subpage">
+
+  <!-- ============ PORTFOLIO NOTICE BANNER ============ -->
+  <aside class="portfolio-banner" id="portfolioBanner" role="complementary" aria-label="ポートフォリオ実績サイトの免責事項">
+    <div class="portfolio-banner__inner">
+      <span class="portfolio-banner__badge">PORTFOLIO DEMO</span>
+      <p class="portfolio-banner__text">
+        本サイトはWeb制作ポートフォリオ実績用の<strong>架空のブランドサイト（デモ）</strong>です。実在する製品・サービスの販売やご注文受付は行っておりません。
+      </p>
+    </div>
+  </aside>
+
+  <!-- ============ HEADER ============ -->
+  <header class="hd px" id="hd">
+    <a class="hd__logo" href="index.html#top" aria-label="BERRY MILK">
+      <img src="images/logo-white.svg" alt="BERRY MILK オンラインショップ" width="200" height="50">
+      <img src="images/logo.svg" alt="" width="200" height="50">
+    </a>
+    <nav class="hd__nav">
+      <a href="index.html#concern">こんなお悩み</a>
+      <a href="index.html#why">選ばれる理由</a>
+      <a href="index.html#supervision">専門家監修</a>
+      <a href="index.html#protein">プロテイン</a>
+      <a href="index.html#slimtea">内臓脂肪ケアティー</a>
+      <a href="index.html#smoothie">生酵素スムージー</a>
+      <a href="story.html">開発秘話</a>
+      <a href="quality.html">品質基準</a>
+      <a href="company.html" class="is-active" style="color: var(--strawberry);">会社概要</a>
+      <a href="index.html#faq">Q&amp;A</a>
+    </nav>
+    <div class="hd__actions">
+      <a class="hd__shop js-shop" href="offer.html">
+        初回特別オファー <span class="arw"></span>
+      </a>
+      <button class="hd__burger" id="burgerBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE DRAWER MENU ============ -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="モバイルナビゲーションメニュー">
+      <div class="mobile-drawer__header">
+        <a class="mobile-drawer__logo" href="index.html#top" aria-label="BERRY MILK">
+          <img src="images/logo.svg" alt="BERRY MILK" width="140" height="35">
+        </a>
+        <button class="mobile-drawer__close" id="drawerCloseBtn" aria-label="メニューを閉じる">
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-drawer__cta-box">
+        <span class="mobile-drawer__cta-badge">WEB限定 特典付き</span>
+        <p class="mobile-drawer__cta-text">全額返金保証・定期縛りなし・送料無料</p>
+        <a class="mobile-drawer__cta-btn js-shop" href="offer.html">
+          初回特別オファーを見る <span class="arw"></span>
+        </a>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-drawer__list">
+          <li><a href="index.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🏠</span>トップページ</a></li>
+          <li><a href="company.html" class="mobile-drawer__link is-active"><span class="mobile-drawer__link-icon">🏢</span>会社概要・企業情報</a></li>
+          <li><a href="recruit-newgrad.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🎓</span>新卒採用情報</a></li>
+          <li><a href="recruit-midcareer.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">💼</span>中途採用情報</a></li>
+          <li><a href="story.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">📖</span>開発秘話・ストーリー</a></li>
+          <li><a href="quality.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🛡️</span>品質基準・安心へのこだわり</a></li>
+          <li><a href="tokushoho.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">📜</span>特定商取引法に基づく表記</a></li>
+          <li><a href="privacy.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🔒</span>プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ SUBPAGE HERO ============ -->
+    <section class="subpage-hero" aria-labelledby="companyHeroTitle">
+      <div class="subpage-hero__glow" aria-hidden="true"></div>
+      <div class="subpage-hero__inner px">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb__separator" aria-hidden="true">/</li>
+            <li class="breadcrumb__item" aria-current="page">企業情報・会社概要</li>
+          </ol>
+        </nav>
+        <span class="subpage-hero__badge">CORPORATE INFORMATION</span>
+        <h1 class="subpage-hero__title" id="companyHeroTitle">
+          女性の毎日に、心とカラダが歓ぶ<br>
+          <span style="color: var(--strawberry);">新しい美の選択肢</span>を。
+        </h1>
+        <p class="subpage-hero__lead">
+          株式会社BERRY MILKは、厳選された自然素材と機能性サイエンスの融合により、<br class="pc-only">
+          現代を前向きにしなやかに生きるすべての女性のインナービューティーを支えます。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ CORPORATE SUB-NAVIGATION ============ -->
+    <nav class="corp-nav" aria-label="企業情報サブナビゲーション">
+      <div class="corp-nav__inner">
+        <a href="#message" class="corp-nav__link is-active">代表あいさつ</a>
+        <a href="#philosophy" class="corp-nav__link">企業理念</a>
+        <a href="#profile" class="corp-nav__link">会社概要</a>
+        <a href="#history" class="corp-nav__link">沿革</a>
+        <a href="#offices" class="corp-nav__link">拠点・所在地</a>
+        <a href="#recruit" class="corp-nav__link">採用情報</a>
+      </div>
+    </nav>
+
+    <div class="subpage-container px">
+
+      <!-- ============ 1. 代表取締役社長 あいさつ ============ -->
+      <section class="corp-section" id="message">
+        <div class="corp-section__header">
+          <span class="corp-section__sub">MESSAGE FROM CEO</span>
+          <h2 class="corp-section__title">代表取締役社長あいさつ</h2>
+        </div>
+
+        <div class="corp-ceo">
+          <div class="corp-ceo__visual">
+            <div class="corp-ceo__portrait">
+              <span class="corp-ceo__avatar-icon">👩‍💼</span>
+              <p style="font-size: 13px; font-weight: 700; color: #8C6A75; margin: 0;">株式会社BERRY MILK</p>
+              <p style="font-size: 11px; color: #B38F9B; margin: 2px 0 0;">Representative Director &amp; CEO</p>
+            </div>
+            <div class="corp-ceo__meta">
+              <p class="corp-ceo__role">代表取締役社長</p>
+              <h3 class="corp-ceo__name">池田 遥香</h3>
+              <p class="corp-ceo__name-en">HARUKA IKEDA</p>
+            </div>
+          </div>
+
+          <div class="corp-ceo__body">
+            <h3 class="corp-ceo__catch">
+              「我慢して飲む時代は終わり。<br>
+              自分を愛せる毎日の習慣を、すべての女性へ。」
+            </h3>
+            <p class="corp-ceo__text">
+              現代の女性は、仕事、家事、育児、そして自己実現と、日々目まぐるしいスケジュールの中で全力で生きています。しかしその一方で、ふと鏡を見たときの体型の変化、慢性的な疲れ、お肌の乾燥、そして年齢とともにつきやすくなる内臓脂肪の悩みに、密かに心を痛めている方が少なくありません。
+            </p>
+            <p class="corp-ceo__text">
+              かつての私自身もそうでした。健康や体型維持のためにとプロテインを手に取っても、人工甘味料特有のケミカルな後味や独特の粉っぽさ、お腹の張りに耐えられず、結局最後まで飲みきれずに捨ててしまうことの繰り返し。「健康や美しさを手に入れるためには、美味しくないものを無理して我慢しなければいけないのか」という深い挫折感を味わいました。
+            </p>
+            <p class="corp-ceo__text">
+              だからこそ、私は決意しました。「本当に美味しくて、飲む時間が一日の中で一番のご褒美になり、それでいて女性のカラダに必要な栄養と美の成分がすべて詰まった製品をつくろう」と。
+            </p>
+            <p class="corp-ceo__text">
+              福岡県産の完熟あまおう苺のフリーズドライ果汁にこだわり、人工甘味料や白砂糖、保存料を一切使わない6つの無添加処方。さらに、女性の悩みに寄り添う飲む美容液成分や、内臓脂肪にダイレクトにアプローチする機能性表示食品まで、私たちは一切の妥協なく開発を続けてまいりました。
+            </p>
+            <p class="corp-ceo__text">
+              BERRY MILKは、単なるサプリメントやプロテインを販売する会社ではありません。私たちがお客様にお届けしたいのは、「今日のわたし、ちょっと好きかも」と思える確かな自信と、心地よく満たされるライフスタイルそのものです。
+            </p>
+            <p class="corp-ceo__text">
+              これからも私たちは、お客様一人ひとりの声に真摯に耳を傾け、エビデンスに基づいた誠実なものづくりを通じて、女性の人生をしなやかに輝かせるパートナーであり続けることをお約束いたします。
+            </p>
+
+            <div class="corp-ceo__signature">
+              <span class="corp-ceo__sig-title">代表取締役社長</span>
+              <span class="corp-ceo__sig-name">池田 遥香</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2. 企業理念 ============ -->
+      <section class="corp-section" id="philosophy">
+        <div class="corp-section__header">
+          <span class="corp-section__sub">CORPORATE PHILOSOPHY</span>
+          <h2 class="corp-section__title">企業理念</h2>
+        </div>
+
+        <div class="corp-philosophy-grid">
+          <div class="corp-phil-card">
+            <span class="corp-phil-card__type">MISSION / 使命</span>
+            <h3 class="corp-phil-card__slogan">自分を愛せるカラダと心を、すべての女性に。</h3>
+            <p class="corp-phil-card__desc">
+              無理な我慢や自己犠牲ではなく、毎日の心地よい習慣を通じて、すべての女性が本来持っている生命力としなやかな美しさを開花させます。
+            </p>
+          </div>
+
+          <div class="corp-phil-card">
+            <span class="corp-phil-card__type">VISION / 目指す未来</span>
+            <h3 class="corp-phil-card__slogan">インナービューティーと科学の融合で、アジアを代表するウェルネスD2Cへ。</h3>
+            <p class="corp-phil-card__desc">
+              確かなエビデンス（機能性表示）と極上の美味しさを両立し、日本発のプレミアム・フェムテック＆ウェルネスブランドとして世界へ笑顔を広げます。
+            </p>
+          </div>
+
+          <div class="corp-phil-card">
+            <span class="corp-phil-card__type">VALUES / 行動指針</span>
+            <h3 class="corp-phil-card__slogan">01. Quality First（妥協なき品質）<br>02. Empathy（共感と誠実）<br>03. Sustainable Wellness</h3>
+            <p class="corp-phil-card__desc">
+              お客様の安全を第一に国内GMP認定工場で一貫製造。女性のリアルな悩みに真摯に寄り添い、毎日続けられる本質的な価値を追求します。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3. 会社概要 ============ -->
+      <section class="corp-section" id="profile">
+        <div class="corp-section__header">
+          <span class="corp-section__sub">COMPANY PROFILE</span>
+          <h2 class="corp-section__title">会社概要</h2>
+        </div>
+
+        <table class="corp-info-table">
+          <tbody>
+            <tr>
+              <th>会社名</th>
+              <td>株式会社BERRY MILK（英語表記：BERRY MILK Inc.）</td>
+            </tr>
+            <tr>
+              <th>設立</th>
+              <td>2024年4月12日</td>
+            </tr>
+            <tr>
+              <th>資本金</th>
+              <td>5,000万円（資本準備金含む）</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>代表取締役社長 池田 遥香</td>
+            </tr>
+            <tr>
+              <th>役員構成</th>
+              <td>
+                代表取締役社長：池田 遥香<br>
+                取締役（開発・R&amp;D管掌）：佐藤 健太郎<br>
+                取締役（マーケティング管掌）：佐々木 結衣<br>
+                常勤監査役：中村 雅彦
+              </td>
+            </tr>
+            <tr>
+              <th>事業内容</th>
+              <td>
+                1. プレミアム・インナービューティーブランド「BERRY MILK」の企画・開発・販売<br>
+                2. 機能性表示食品、栄養補助食品、サプリメントのD2C通信販売事業<br>
+                3. フェムテック及び女性のウェルネスに関するデジタルメディア運営・コンサルティング
+              </td>
+            </tr>
+            <tr>
+              <th>主要取引銀行</th>
+              <td>三菱UFJ銀行 六本木支店、三井住友銀行 渋谷支店、みずほ銀行 虎ノ門支店</td>
+            </tr>
+            <tr>
+              <th>顧問弁護士</th>
+              <td>ベリーベスト法律事務所</td>
+            </tr>
+            <tr>
+              <th>加盟団体</th>
+              <td>
+                公益社団法人 日本通信販売協会（JADMA）正会員<br>
+                一般社団法人 日本フェムテック協会 会員<br>
+                一般社団法人 日本健康食品規格協会（JIHFS）
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============ 4. 沿革 ============ -->
+      <section class="corp-section" id="history">
+        <div class="corp-section__header">
+          <span class="corp-section__sub">CORPORATE HISTORY</span>
+          <h2 class="corp-section__title">沿革</h2>
+        </div>
+
+        <div class="corp-timeline">
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2024.04</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">株式会社BERRY MILKを東京都港区に設立</h3>
+              <p class="corp-timeline__desc">女性のウェルネスとインナーケアに特化したD2Cブランド立ち上げのため、代表 池田遥香により創業。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2024.08</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">初代「BERRY MILK PROTEIN」クラウドファンディングで大反響</h3>
+              <p class="corp-timeline__desc">あまおう苺果汁贅沢使用の女性専用プロテインが目標達成率1,850%を記録し、予約数1万食を突破。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2024.11</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">自社公式オンラインショップをグランドオープン</h3>
+              <p class="corp-timeline__desc">定期購入コースの提供を開始。永久全額返金保証と継続しやすいサポート体制を構築。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2025.02</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">西日本営業統括のため「大阪支社」を開設</h3>
+              <p class="corp-timeline__desc">関西エリアの提携フィットネスサロンや流通ネットワーク拡大に伴い、大阪市北区梅田に支社を設立。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2025.06</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">機能性表示食品「BERRY SLIM TEA」発売＆累計5万食突破</h3>
+              <p class="corp-timeline__desc">葛の花由来イソフラボン配合のお腹の内臓脂肪を減らすスティックティーをリリース。ブランド累計50,000食を達成。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2025.09</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">素材研究・R&amp;D拠点として「京都支社」を開設</h3>
+              <p class="corp-timeline__desc">伝統発酵素材や植物性ポリフェノールの機能性研究を加速させるため、京都市中京区烏丸に研究開発拠点を設立。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2025.12</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">楽天市場プロテイン部門にて第1位を獲得（3冠達成）</h3>
+              <p class="corp-timeline__desc">大手ECモールでの展開を本格化。総合評価4.87の高評価を獲得し、累計販売数100,000食を突破。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2026.03</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">九州契約農家・原料調達拠点として「福岡支社」を開設</h3>
+              <p class="corp-timeline__desc">福岡県産あまおう苺の契約農家との直接連携および西日本ロジスティクス強化のため、福岡市中央区天神に支社を開設。</p>
+            </div>
+          </div>
+
+          <div class="corp-timeline__item">
+            <div class="corp-timeline__date">2026.07</div>
+            <div class="corp-timeline__dot"></div>
+            <div class="corp-timeline__content">
+              <h3 class="corp-timeline__title">「生酵素スムージー」「ナイトリセット」投入＆累計15万食突破</h3>
+              <p class="corp-timeline__desc">チアシード満腹スムージーおよび夜用プロテインを同時リリース。ブランド累計販売数150,000食を突破。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. 会社所在地・4拠点案内 ============ -->
+      <section class="corp-section" id="offices">
+        <div class="corp-section__header">
+          <span class="corp-section__sub">DOMESTIC OFFICES</span>
+          <h2 class="corp-section__title">会社所在地・拠点案内</h2>
+          <p style="color: #614F56; font-size: 14px; margin-top: 8px;">全国4拠点のネットワークで、最高品質のものづくりとお客様サポートを展開しています。</p>
+        </div>
+
+        <div class="corp-offices-grid">
+          <!-- 東京本社 -->
+          <div class="corp-office-card">
+            <span class="corp-office-card__badge">HEADQUARTERS</span>
+            <div class="corp-office-card__name">
+              <span>東京本社</span>
+              <span class="corp-office-card__name-en">TOKYO HEAD OFFICE</span>
+            </div>
+            <div class="corp-office-card__detail">
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">所在地</span>
+                <span class="corp-office-card__val">〒106-0032 東京都港区六本木6-10-1 六本木ヒルズ森タワー 28F</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">アクセス</span>
+                <span class="corp-office-card__val">東京メトロ日比谷線「六本木駅」1C出口直結 / 都営地下鉄大江戸線「六本木駅」3出口より徒歩4分</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">連絡先</span>
+                <span class="corp-office-card__val">TEL: 03-6820-XXXX / FAX: 03-6820-XXXX</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">主要機能</span>
+                <span class="corp-office-card__val">
+                  経営戦略本部、ブランドマネジメント室、デジタルマーケティング統括、全社法務・財務
+                  <span class="corp-office-card__tag">全社統括拠点</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 大阪支社 -->
+          <div class="corp-office-card">
+            <span class="corp-office-card__badge" style="background: linear-gradient(135deg, #FF6B8B 0%, #D8224F 100%);">WEST JAPAN BRANCH</span>
+            <div class="corp-office-card__name">
+              <span>大阪支社</span>
+              <span class="corp-office-card__name-en">OSAKA OFFICE</span>
+            </div>
+            <div class="corp-office-card__detail">
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">所在地</span>
+                <span class="corp-office-card__val">〒530-0001 大阪府大阪市北区梅田2-2-22 ハービスENTオフィスタワー 16F</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">アクセス</span>
+                <span class="corp-office-card__val">JR「大阪駅」桜橋口より徒歩2分 / 阪神本線「大阪梅田駅」西改札より直結</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">連絡先</span>
+                <span class="corp-office-card__val">TEL: 06-6345-XXXX / FAX: 06-6345-XXXX</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">主要機能</span>
+                <span class="corp-office-card__val">
+                  西日本営業統括部、フィットネス・リテール提携推進、関西エリアアライアンス開発
+                  <span class="corp-office-card__tag">西日本営業拠点</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 京都支社 -->
+          <div class="corp-office-card">
+            <span class="corp-office-card__badge" style="background: linear-gradient(135deg, #7C5295 0%, #5C3275 100%);">R&amp;D INNOVATION CENTER</span>
+            <div class="corp-office-card__name">
+              <span>京都支社</span>
+              <span class="corp-office-card__name-en">KYOTO R&amp;D OFFICE</span>
+            </div>
+            <div class="corp-office-card__detail">
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">所在地</span>
+                <span class="corp-office-card__val">〒604-8152 京都府京都市中京区烏丸通蛸薬師南入手洗水町647 烏丸サウスビル 7F</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">アクセス</span>
+                <span class="corp-office-card__val">京都市営地下鉄烏丸線「四条駅」・阪急京都線「烏丸駅」21番出口より徒歩1分</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">連絡先</span>
+                <span class="corp-office-card__val">TEL: 075-254-XXXX / FAX: 075-254-XXXX</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">主要機能</span>
+                <span class="corp-office-card__val">
+                  機能性素材・発酵バイオ研究開発、品質管理・処方設計ラボ、ブランドクリエイティブスタジオ
+                  <span class="corp-office-card__tag">研究開発・R&amp;D</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 福岡支社 -->
+          <div class="corp-office-card">
+            <span class="corp-office-card__badge" style="background: linear-gradient(135deg, #E6285A 0%, #B51B42 100%);">SOURCING &amp; LOGISTICS</span>
+            <div class="corp-office-card__name">
+              <span>福岡支社</span>
+              <span class="corp-office-card__name-en">FUKUOKA OFFICE</span>
+            </div>
+            <div class="corp-office-card__detail">
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">所在地</span>
+                <span class="corp-office-card__val">〒810-0001 福岡県福岡市中央区天神1-1-1 アクロス福岡 12F</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">アクセス</span>
+                <span class="corp-office-card__val">福岡市営地下鉄空港線「天神駅」16番出口直結 / 西鉄「西鉄福岡（天神）駅」より徒歩3分</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">連絡先</span>
+                <span class="corp-office-card__val">TEL: 092-725-XXXX / FAX: 092-725-XXXX</span>
+              </div>
+              <div class="corp-office-card__row">
+                <span class="corp-office-card__label">主要機能</span>
+                <span class="corp-office-card__val">
+                  九州契約農家連携室（あまおう苺調達）、西日本物流ハブ管理、カスタマーサクセスセンター
+                  <span class="corp-office-card__tag">原料調達・CS拠点</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6. 採用情報セクション ============ -->
+      <section class="corp-section" id="recruit">
+        <div class="corp-section__header">
+          <span class="corp-section__sub">JOIN OUR TEAM</span>
+          <h2 class="corp-section__title">採用情報</h2>
+          <p style="color: #614F56; font-size: 14px; margin-top: 8px;">
+            私たちは、女性のライフスタイルを変革する熱い情熱を持った仲間を募集しています。
+          </p>
+        </div>
+
+        <div class="corp-recruit-banner">
+          <!-- 新卒採用バナー -->
+          <a href="recruit-newgrad.html" class="corp-recruit-card">
+            <div>
+              <span class="corp-recruit-card__badge">NEW GRADUATE / 新卒採用</span>
+              <h3 class="corp-recruit-card__title">2027年・2028年卒 新卒採用情報</h3>
+              <p class="corp-recruit-card__lead">
+                「美と健康の新しい当たり前を創る」。ブランドマーケティング、商品企画開発、ECグロースなど、初期フェーズから主役として挑戦したい新卒メンバーを募集しています。
+              </p>
+            </div>
+            <span class="corp-recruit-card__btn">
+              新卒採用の詳細・募集要項を見る <span class="arw">→</span>
+            </span>
+          </a>
+
+          <!-- 中途採用バナー -->
+          <a href="recruit-midcareer.html" class="corp-recruit-card">
+            <div>
+              <span class="corp-recruit-card__badge" style="color: #7C5295; border-color: rgba(124, 82, 149, 0.3);">CAREER RECRUIT / 中途採用</span>
+              <h3 class="corp-recruit-card__title">キャリア採用（中途採用情報）</h3>
+              <p class="corp-recruit-card__lead">
+                あなたのプロフェッショナリズムが、女性の毎日を輝かせる。D2Cブランドマネージャー、マーケティングリード、サプライチェーン統括など即戦力ポジションを積極採用中。
+              </p>
+            </div>
+            <span class="corp-recruit-card__btn" style="color: #7C5295;">
+              中途採用の詳細・募集職種を見る <span class="arw">→</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============ BOTTOM CTA ============ -->
+      <section class="subpage-cta" style="margin-top: 60px;">
+        <div class="subpage-cta__inner">
+          <span class="subpage-cta__badge">ONLINE SHOP</span>
+          <h2 class="subpage-cta__title">製品のご購入・特別オファーはこちら</h2>
+          <p class="subpage-cta__text">
+            株式会社BERRY MILKが自信を持ってお届けする、女性専用プレミアム・インナーケアシリーズ。<br>
+            定期初回特別オファーにて、全額返金保証付きでお気軽にお試しいただけます。
+          </p>
+          <div class="subpage-cta__actions">
+            <a href="index.html" class="subpage-cta__btn-back">
+              ← ブランドトップページ
+            </a>
+            <a href="offer.html" class="subpage-cta__btn-primary">
+              初回特別オファーを見る <span class="arw"></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="ft px" id="footer">
+    <div class="ft__in">
+      <div class="ft__brand">
+        <img src="images/logo.svg" alt="BERRY MILK" width="180" height="45">
+        <p class="ft__tagline">整える、満たす、愛せるわたしへ。<br>女性専用プレミアム・インナービューティー</p>
+      </div>
+      <ul class="ft__notes">
+        <li>※ 本サイトはWeb制作ポートフォリオ実績用の架空ブランドデモサイトです。実在の取引・注文は行われません。</li>
+        <li>※ BERRY MILK PROTEIN および BERRY SLIM TEA は健康食品・機能性表示食品です。医薬品ではありません。</li>
+      </ul>
+      <nav class="ft__links">
+        <a href="index.html">トップページ</a>
+        <a href="offer.html" style="color: var(--strawberry); font-weight: 700;">初回特別オファー</a>
+        <a href="company.html" style="color: var(--strawberry); font-weight: 700;">会社概要・企業情報</a>
+        <a href="recruit-newgrad.html">新卒採用</a>
+        <a href="recruit-midcareer.html">中途採用</a>
+        <a href="story.html">開発秘話</a>
+        <a href="quality.html">品質基準</a>
+        <a href="tokushoho.html">特定商取引法に基づく表記</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="index.html#faq">よくある質問</a>
+      </nav>
+    </div>
+    <p class="ft__copy">&copy; BERRY MILK Inc. All Rights Reserved.</p>
+  </footer>
+
+  <script src="main.js?v=17"></script>
+</body>
+</html>
