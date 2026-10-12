@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=18">
+  <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 
@@ -321,23 +321,120 @@
       </div>
     </section>
 
-    <!-- ============ MARQUEE BAND ============ -->
-    <div class="band" aria-hidden="true">
-      <div class="band__in">
-        <span class="band__dot">👑</span><span>累計販売数 150,000食突破※2</span>
-        <span class="band__dot">🍓</span><span>福岡県産あまおう苺果汁贅沢使用</span>
-        <span class="band__dot">🍵</span><span>内臓脂肪レベルを下げるスティックティー新登場</span>
-        <span class="band__dot">⭐</span><span>愛用者満足度 96.8%※3</span>
-        <span class="band__dot">🌿</span><span>人工甘味料・白砂糖・保存料不使用</span>
-        <span class="band__dot">🇯🇵</span><span>国内GMP認定工場製造</span>
-        <span class="band__dot">👑</span><span>累計販売数 150,000食突破※2</span>
-        <span class="band__dot">🍓</span><span>福岡県産あまおう苺果汁贅沢使用</span>
-        <span class="band__dot">🍵</span><span>内臓脂肪レベルを下げるスティックティー新登場</span>
-        <span class="band__dot">⭐</span><span>愛用者満足度 96.8%※3</span>
-        <span class="band__dot">🌿</span><span>人工甘味料・白砂糖・保存料不使用</span>
-        <span class="band__dot">🇯🇵</span><span>国内GMP認定工場製造</span>
+    <!-- ============ PROOF STREAM (HERO下 実績・こだわりデュアルフロー) ============ -->
+    <section class="proof-stream" aria-label="実績とこだわりハイライト">
+      <!-- 上段: 左へ流れる（実績・評価・機能性） -->
+      <div class="proof-stream__track proof-stream__track--left">
+        <div class="proof-stream__group">
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">👑</span>
+            <span class="proof-stream__text">累計販売数 <strong>150,000食</strong> 突破<small>※2</small></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">⭐</span>
+            <span class="proof-stream__text">愛用者満足度 <strong>96.8%</strong><small>※3</small></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🍵</span>
+            <span class="proof-stream__text">内臓脂肪を減らす <strong>機能性表示食品</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🏆</span>
+            <span class="proof-stream__text">楽天市場 <strong>第1位</strong> 3冠獲得</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🩺</span>
+            <span class="proof-stream__text">医師・管理栄養士 <strong>W監修</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">💖</span>
+            <span class="proof-stream__text">リピート率 <strong>92.4%</strong> の実感力<small>※1</small></span>
+          </div>
+        </div>
+        <div class="proof-stream__group" aria-hidden="true">
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">👑</span>
+            <span class="proof-stream__text">累計販売数 <strong>150,000食</strong> 突破<small>※2</small></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">⭐</span>
+            <span class="proof-stream__text">愛用者満足度 <strong>96.8%</strong><small>※3</small></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🍵</span>
+            <span class="proof-stream__text">内臓脂肪を減らす <strong>機能性表示食品</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🏆</span>
+            <span class="proof-stream__text">楽天市場 <strong>第1位</strong> 3冠獲得</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🩺</span>
+            <span class="proof-stream__text">医師・管理栄養士 <strong>W監修</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">💖</span>
+            <span class="proof-stream__text">リピート率 <strong>92.4%</strong> の実感力<small>※1</small></span>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <!-- 下段: 右へ流れる（素材・品質・安心） -->
+      <div class="proof-stream__track proof-stream__track--right">
+        <div class="proof-stream__group proof-stream__group--reverse">
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🍓</span>
+            <span class="proof-stream__text">福岡県産 <strong>あまおう苺果汁</strong> 贅沢使用</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🌿</span>
+            <span class="proof-stream__text">人工甘味料・白砂糖・保存料 <strong>不使用</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🇯🇵</span>
+            <span class="proof-stream__text">国内 <strong>GMP認定工場</strong> で製造</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">💧</span>
+            <span class="proof-stream__text">ヒアルロン酸・コラーゲン <strong>飲む美容液設計</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🥛</span>
+            <span class="proof-stream__text">ホエイ＆ソイ <strong>Wプロテイン20g</strong> 配合</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">☕</span>
+            <span class="proof-stream__text">1杯あたり <strong>わずか約78kcal</strong> ヘルシー設計</span>
+          </div>
+        </div>
+        <div class="proof-stream__group proof-stream__group--reverse" aria-hidden="true">
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🍓</span>
+            <span class="proof-stream__text">福岡県産 <strong>あまおう苺果汁</strong> 贅沢使用</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🌿</span>
+            <span class="proof-stream__text">人工甘味料・白砂糖・保存料 <strong>不使用</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🇯🇵</span>
+            <span class="proof-stream__text">国内 <strong>GMP認定工場</strong> で製造</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">💧</span>
+            <span class="proof-stream__text">ヒアルロン酸・コラーゲン <strong>飲む美容液設計</strong></span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">🥛</span>
+            <span class="proof-stream__text">ホエイ＆ソイ <strong>Wプロテイン20g</strong> 配合</span>
+          </div>
+          <div class="proof-stream__item">
+            <span class="proof-stream__icon">☕</span>
+            <span class="proof-stream__text">1杯あたり <strong>わずか約78kcal</strong> ヘルシー設計</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ============ CONCERN SECTION（お悩み共感） ============ -->
     <section class="concern px" id="concern">
