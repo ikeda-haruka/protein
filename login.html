@@ -1,0 +1,487 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>会員ログイン・定期購入マイページ｜BERRY MILK 公式オンラインショップ</title>
+  <meta name="description" content="株式会社BERRY MILKの定期購入会員様専用ログイン・マイページです。次回お届け日やサイクルの変更、お届けスキップ・休止のお手続き、ご注文履歴の確認などを24時間オンラインで行えます。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=22">
+</head>
+<body class="subpage">
+
+  <!-- ============ PORTFOLIO NOTICE BANNER ============ -->
+  <aside class="portfolio-banner" id="portfolioBanner" role="complementary" aria-label="ポートフォリオ実績サイトの免責事項">
+    <div class="portfolio-banner__inner">
+      <span class="portfolio-banner__badge">PORTFOLIO DEMO</span>
+      <p class="portfolio-banner__text">
+        本サイトはWeb制作ポートフォリオ実績用の<strong>架空のブランドサイト（デモ）</strong>です。実在する個人情報の管理や課金は行われません。
+      </p>
+    </div>
+  </aside>
+
+  <!-- ============ HEADER ============ -->
+  <header class="hd px" id="hd">
+    <a class="hd__logo" href="index.html#top" aria-label="BERRY MILK">
+      <img src="images/logo-white.svg" alt="BERRY MILK オンラインショップ" width="200" height="50">
+      <img src="images/logo.svg" alt="" width="200" height="50">
+    </a>
+    <nav class="hd__nav">
+      <a href="index.html#concern">こんなお悩み</a>
+      <a href="index.html#why">選ばれる理由</a>
+      <a href="index.html#supervision">専門家監修</a>
+      <a href="index.html#protein">プロテイン</a>
+      <a href="index.html#slimtea">内臓脂肪ケアティー</a>
+      <a href="index.html#smoothie">生酵素スムージー</a>
+      <a href="company.html">会社概要</a>
+      <a href="story.html">開発秘話</a>
+      <a href="quality.html">品質基準</a>
+      <a href="index.html#faq">Q&amp;A</a>
+    </nav>
+    <div class="hd__actions">
+      <a class="hd__login is-active" href="login.html" style="background: #FFF0F4; border-color: #E6285A; color: #E6285A !important;" aria-label="会員ログイン・マイページ">
+        <svg class="hd__login-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>ログイン</span>
+      </a>
+      <a class="hd__shop js-shop" href="offer.html">
+        初回特別オファー <span class="arw"></span>
+      </a>
+      <button class="hd__burger" id="burgerBtn" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE DRAWER MENU ============ -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer__backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="モバイルナビゲーションメニュー">
+      <div class="mobile-drawer__header">
+        <a class="mobile-drawer__logo" href="index.html#top" aria-label="BERRY MILK">
+          <img src="images/logo.svg" alt="BERRY MILK" width="140" height="35">
+        </a>
+        <button class="mobile-drawer__close" id="drawerCloseBtn" aria-label="メニューを閉じる">
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-drawer__cta-box">
+        <span class="mobile-drawer__cta-badge">定期購入者様専用</span>
+        <p class="mobile-drawer__cta-text">次回お届け日・サイクルの変更・スキップはこちら</p>
+        <a class="mobile-drawer__cta-btn" href="login.html" style="background: linear-gradient(135deg, #3D2D32 0%, #1A1215 100%);">
+          会員ログイン・マイページ <span class="arw">→</span>
+        </a>
+      </div>
+
+      <nav class="mobile-drawer__nav">
+        <ul class="mobile-drawer__list">
+          <li><a href="index.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🏠</span>トップページ</a></li>
+          <li><a href="offer.html" class="mobile-drawer__link" style="color: var(--strawberry);"><span class="mobile-drawer__link-icon">🎁</span>初回特別オファー（新規注文）</a></li>
+          <li><a href="login.html" class="mobile-drawer__link is-active"><span class="mobile-drawer__link-icon">👤</span>会員ログイン・定期マイページ</a></li>
+          <li><a href="company.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🏢</span>会社概要・企業情報</a></li>
+          <li><a href="recruit-newgrad.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🎓</span>新卒採用情報</a></li>
+          <li><a href="recruit-midcareer.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">💼</span>中途採用情報</a></li>
+          <li><a href="story.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">📖</span>開発秘話・ストーリー</a></li>
+          <li><a href="quality.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🛡️</span>品質基準・安心へのこだわり</a></li>
+          <li><a href="tokushoho.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">📜</span>特定商取引法に基づく表記</a></li>
+          <li><a href="privacy.html" class="mobile-drawer__link"><span class="mobile-drawer__link-icon">🔒</span>プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="subpage-hero">
+      <div class="subpage-hero__glow" aria-hidden="true"></div>
+      <div class="subpage-hero__inner px">
+        <nav class="breadcrumb" aria-label="パンくずリスト">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb__separator" aria-hidden="true">/</li>
+            <li class="breadcrumb__item" aria-current="page">会員ログイン・マイページ</li>
+          </ol>
+        </nav>
+        <span class="subpage-hero__badge">MEMBERS MY PAGE</span>
+        <h1 class="subpage-hero__title">
+          会員ログイン<br>
+          <span style="color: var(--strawberry);">定期購入マイページ</span>
+        </h1>
+        <p class="subpage-hero__lead">
+          ご愛用者様専用マイページへようこそ。<br class="pc-only">
+          次回お届け日の変更、サイクルのご調整、お届けのスキップ・休止手続きなどを24時間承っております。
+        </p>
+      </div>
+    </section>
+
+    <div class="subpage-container px">
+
+      <!-- ============ 1. LOGIN FORM CONTAINER ============ -->
+      <div class="login-container" id="loginFormSection">
+        <div class="login-card">
+          <div class="login-card__head">
+            <span class="login-card__badge">BERRY MILK MEMBER</span>
+            <h2 class="login-card__title">マイページにログイン</h2>
+            <p class="login-card__lead">
+              ご登録のメールアドレス（会員ID）とパスワードを入力してください。
+            </p>
+          </div>
+
+          <form class="login-form" id="loginForm" onsubmit="handleLoginSubmit(event)">
+            <!-- メールアドレス -->
+            <div class="login-field">
+              <label class="login-label" for="loginEmail">
+                メールアドレス（会員ID）
+              </label>
+              <div class="login-input-wrap">
+                <input type="email" id="loginEmail" class="login-input" placeholder="example@berrymilk.jp" value="haruka.ikeda@example.com" required>
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- パスワード -->
+            <div class="login-field">
+              <label class="login-label" for="loginPw">
+                パスワード
+              </label>
+              <div class="login-input-wrap">
+                <input type="password" id="loginPw" class="login-input" placeholder="8文字以上の半角英数" value="berrymilk2026" required>
+                <svg class="login-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <button type="button" class="login-pw-toggle" id="pwToggleBtn" aria-label="パスワードの表示切替" onclick="togglePasswordVisibility()">
+                  👁️
+                </button>
+              </div>
+            </div>
+
+            <!-- オプション（自動ログイン・PW忘れ） -->
+            <div class="login-options">
+              <label class="login-remember">
+                <input type="checkbox" id="rememberMe" checked>
+                <span>ログイン状態を保持する</span>
+              </label>
+              <a href="#" class="login-forgot-link" onclick="alert('パスワード再設定（デモ）：ご登録のメールアドレスに再設定用URLを送信いたします。'); return false;">
+                パスワードをお忘れの方
+              </a>
+            </div>
+
+            <!-- 送信ボタン -->
+            <button type="submit" class="login-submit-btn" id="loginSubmitBtn">
+              <span>マイページにログイン</span>
+              <span class="arw">→</span>
+            </button>
+
+            <div class="login-divider">または外部アカウントでログイン</div>
+
+            <!-- ソーシャルログイン -->
+            <div class="login-social-buttons">
+              <button type="button" class="login-social-btn login-social-btn--line" onclick="handleSocialLogin('LINE')">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 5.92 2 10.75c0 3.03 1.77 5.71 4.5 7.23-.2.74-.72 2.7-.82 3.12-.13.52.19.51.4.37.16-.1 2.22-1.5 3.13-2.12.58.08 1.18.12 1.79.12 5.52 0 10-3.92 10-8.75S17.52 2 12 2z"/>
+                </svg>
+                LINEでログイン（定期通知と連携）
+              </button>
+              <button type="button" class="login-social-btn login-social-btn--amazon" onclick="handleSocialLogin('Amazon')">
+                <span>🛒 Amazon アカウントでログイン</span>
+              </button>
+              <button type="button" class="login-social-btn login-social-btn--apple" onclick="handleSocialLogin('Apple')">
+                <span>🍎 Apple ID でログイン</span>
+              </button>
+            </div>
+
+            <!-- 定期サポート案内 -->
+            <div class="login-help-box">
+              <p class="login-help-box__title">
+                <span>💡</span> マイページでお手続きいただける内容
+              </p>
+              <ul class="login-help-box__list">
+                <li>次回お届け予定日の前倒し・後ろ倒し（日付指定）</li>
+                <li>お届けサイクル（30日／45日／60日ごと）の変更</li>
+                <li>次回お届けの1回スキップ（旅行・飲みきれなかった時）</li>
+                <li>お届け先住所・お支払いクレジットカード情報の変更</li>
+                <li>定期コースの休止・再開および解約申請</li>
+              </ul>
+            </div>
+          </form>
+        </div>
+
+        <!-- 初めての方への誘導 -->
+        <div style="margin-top: 36px; text-align: center; background: #FFF9FA; border: 1.5px dashed rgba(255, 90, 130, 0.3); border-radius: 18px; padding: 24px;">
+          <h3 style="font-size: 16px; font-weight: 800; color: #2C1E23; margin-bottom: 8px;">まだ会員登録をされていないお客様</h3>
+          <p style="font-size: 13.5px; color: #6E5B62; margin-bottom: 16px; line-height: 1.6;">
+            定期初回特別オファーからご注文いただくと、自動的に会員アカウントが作成されます。<br>
+            最大28%OFF・送料無料・全額返金保証付きでお得にお求めいただけます。
+          </p>
+          <a href="offer.html" class="subpage-cta__btn-primary" style="display: inline-flex; padding: 12px 28px; font-size: 14px;">
+            初回特別オファーを見る <span class="arw">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ============ 2. DEMO MYPAGE DASHBOARD (ログイン成功時に表示) ============ -->
+      <div class="mypage-dashboard" id="mypageSection" style="display: none;">
+        
+        <!-- ウェルカムバナー -->
+        <div class="mypage-welcome">
+          <div class="mypage-welcome__user">
+            <span class="mypage-welcome__rank">👑 GOLD MEMBER（会員ランク：ゴールド）</span>
+            <h3>池田 遥香 様のマイページ</h3>
+            <p style="font-size: 13px; color: #6E5B62; margin: 0;">会員番号: BM-8829410 / 保有ポイント: <strong>1,480 pt</strong>（次回購入で利用可能）</p>
+          </div>
+          <button type="button" class="mypage-logout-btn" onclick="handleLogout()">
+            ログアウト
+          </button>
+        </div>
+
+        <!-- 契約中の定期コース詳細 -->
+        <div class="mypage-order-card">
+          <div class="mypage-order-card__head">
+            <div>
+              <span style="font-size: 12px; font-weight: 800; color: #E6285A; font-family: var(--en);">SUBSCRIPTION PLAN</span>
+              <h3 style="font-size: 20px; font-weight: 900; color: #2C1E23; margin-top: 2px;">ご契約中の定期コース</h3>
+            </div>
+            <span class="mypage-order-card__status">● 継続中（定期第4回目お届け予定）</span>
+          </div>
+
+          <div class="mypage-order-card__grid">
+            <img src="images/berry-protein-hero.webp" alt="BERRY MILK PROTEIN" class="mypage-prod-img">
+            <div class="mypage-prod-info">
+              <h4>BERRY MILK PROTEIN 900g（あまおう苺ミルク味）</h4>
+              <p style="font-size: 13px; color: #8C6A75; margin-bottom: 12px;">Wプロテイン20g配合＋飲む美容液成分＋6つの無添加処方</p>
+              
+              <div class="mypage-meta-row">
+                <span class="mypage-meta-label">次回お届け日：</span>
+                <span class="mypage-meta-val" id="dispNextDate" style="color: #E6285A; font-size: 16px;">2026年10月28日（水）</span>
+              </div>
+              <div class="mypage-meta-row">
+                <span class="mypage-meta-label">お届けサイクル：</span>
+                <span class="mypage-meta-val" id="dispCycle">30日ごと（1ヶ月サイクル）</span>
+              </div>
+              <div class="mypage-meta-row">
+                <span class="mypage-meta-label">定期継続価格：</span>
+                <span class="mypage-meta-val">¥3,980（税込・送料無料 / 20%OFF継続適用中）</span>
+              </div>
+              <div class="mypage-meta-row">
+                <span class="mypage-meta-label">お支払い方法：</span>
+                <span class="mypage-meta-val">クレジットカード（VISA ****-****-****-4242）</span>
+              </div>
+              <div class="mypage-meta-row">
+                <span class="mypage-meta-label">お届け先：</span>
+                <span class="mypage-meta-val">〒106-0032 東京都港区六本木6-10-1 六本木ヒルズ森タワー 28F</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- アクションボタン群 -->
+          <div class="mypage-actions-grid">
+            <button type="button" class="mypage-action-btn" onclick="openDateModal()">
+              <span class="mypage-action-btn__icon">📅</span>
+              <span class="mypage-action-btn__text">お届け日変更</span>
+            </button>
+            <button type="button" class="mypage-action-btn" onclick="handleSkipNext()">
+              <span class="mypage-action-btn__icon">⏭️</span>
+              <span class="mypage-action-btn__text">次回をスキップ</span>
+            </button>
+            <button type="button" class="mypage-action-btn" onclick="openCycleModal()">
+              <span class="mypage-action-btn__icon">🔄</span>
+              <span class="mypage-action-btn__text">サイクル変更</span>
+            </button>
+            <button type="button" class="mypage-action-btn" onclick="openPauseModal()">
+              <span class="mypage-action-btn__icon">⏸️</span>
+              <span class="mypage-action-btn__text">コース休止・解約</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 過去のご注文履歴 -->
+        <div class="mypage-order-card">
+          <h3 style="font-size: 18px; font-weight: 800; color: #2C1E23; margin-bottom: 16px;">過去のご注文履歴</h3>
+          <table class="recruit-spec-table" style="margin-bottom: 0;">
+            <thead>
+              <tr style="background: #FFF9FA;">
+                <th style="font-size: 12.5px;">注文番号</th>
+                <th style="font-size: 12.5px;">注文日</th>
+                <th style="font-size: 12.5px;">商品名</th>
+                <th style="font-size: 12.5px;">合計金額</th>
+                <th style="font-size: 12.5px;">ステータス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BM-20260928</td>
+                <td>2026/09/28</td>
+                <td>BERRY MILK PROTEIN 900g</td>
+                <td>¥3,980（税込）</td>
+                <td><span style="color: #15803D; font-weight: 700;">配達完了</span></td>
+              </tr>
+              <tr>
+                <td>BM-20260828</td>
+                <td>2026/08/28</td>
+                <td>BERRY MILK PROTEIN 900g</td>
+                <td>¥3,980（税込）</td>
+                <td><span style="color: #15803D; font-weight: 700;">配達完了</span></td>
+              </tr>
+              <tr>
+                <td>BM-20260728</td>
+                <td>2026/07/28</td>
+                <td>BERRY MILK 初回特別セット</td>
+                <td>¥3,580（税込）</td>
+                <td><span style="color: #15803D; font-weight: 700;">配達完了</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============ TOAST NOTIFICATION ============ -->
+  <div class="mypage-toast" id="mypageToast">
+    <span id="toastIcon">✨</span>
+    <span id="toastMsg">変更が完了いたしました</span>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="ft px" id="footer">
+    <div class="ft__in">
+      <div class="ft__brand">
+        <img src="images/logo.svg" alt="BERRY MILK" width="180" height="45">
+        <p class="ft__tagline">整える、満たす、愛せるわたしへ。<br>女性専用プレミアム・インナービューティー</p>
+      </div>
+      <ul class="ft__notes">
+        <li>※ 本サイトはWeb制作ポートフォリオ実績用の架空ブランドデモサイトです。実在の取引・注文は行われません。</li>
+      </ul>
+      <nav class="ft__links">
+        <a href="index.html">トップページ</a>
+        <a href="offer.html" style="color: var(--strawberry); font-weight: 700;">初回特別オファー</a>
+        <a href="login.html" style="color: var(--strawberry); font-weight: 700;">会員ログイン・マイページ</a>
+        <a href="company.html">会社概要・企業情報</a>
+        <a href="recruit-newgrad.html">新卒採用</a>
+        <a href="recruit-midcareer.html">中途採用</a>
+        <a href="story.html">開発秘話</a>
+        <a href="quality.html">品質基準</a>
+        <a href="tokushoho.html">特定商取引法に基づく表記</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="index.html#faq">よくある質問</a>
+      </nav>
+    </div>
+    <p class="ft__copy">&copy; BERRY MILK Inc. All Rights Reserved.</p>
+  </footer>
+
+  <script src="main.js?v=17"></script>
+  
+  <!-- ============ LOGIN & MYPAGE INTERACTIVE SCRIPT ============ -->
+  <script>
+    function togglePasswordVisibility() {
+      const pw = document.getElementById('loginPw');
+      const btn = document.getElementById('pwToggleBtn');
+      if (pw.type === 'password') {
+        pw.type = 'text';
+        btn.textContent = '🔒';
+      } else {
+        pw.type = 'password';
+        btn.textContent = '👁️';
+      }
+    }
+
+    function showToast(msg, icon = '✨') {
+      const toast = document.getElementById('mypageToast');
+      const toastMsg = document.getElementById('toastMsg');
+      const toastIcon = document.getElementById('toastIcon');
+      toastMsg.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.add('is-show');
+      setTimeout(() => {
+        toast.classList.remove('is-show');
+      }, 3500);
+    }
+
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('loginSubmitBtn');
+      btn.innerHTML = '<span>認証中...</span>';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        document.getElementById('loginFormSection').style.display = 'none';
+        document.getElementById('mypageSection').style.display = 'block';
+        window.scrollTo({ top: 300, behavior: 'smooth' });
+        showToast('池田 遥香 様、おかえりなさいませ。ログインしました。', '🌸');
+      }, 700);
+    }
+
+    function handleSocialLogin(service) {
+      showToast(`${service}アカウントで認証しました。マイページを開きます。`, '📲');
+      setTimeout(() => {
+        document.getElementById('loginFormSection').style.display = 'none';
+        document.getElementById('mypageSection').style.display = 'block';
+        window.scrollTo({ top: 300, behavior: 'smooth' });
+      }, 600);
+    }
+
+    function handleLogout() {
+      if (confirm('マイページからログアウトしますか？')) {
+        document.getElementById('mypageSection').style.display = 'none';
+        document.getElementById('loginFormSection').style.display = 'block';
+        const btn = document.getElementById('loginSubmitBtn');
+        btn.innerHTML = '<span>マイページにログイン</span><span class="arw">→</span>';
+        btn.disabled = false;
+        showToast('ログアウトいたしました。', '👋');
+      }
+    }
+
+    function openDateModal() {
+      const nextDate = prompt('【お届け日変更】次回お届けのご希望日を入力してください（例: 2026/11/15）', '2026/11/10');
+      if (nextDate) {
+        document.getElementById('dispNextDate').textContent = `${nextDate}（変更済）`;
+        showToast(`次回お届け日を【${nextDate}】に変更いたしました。`, '📅');
+      }
+    }
+
+    function handleSkipNext() {
+      if (confirm('次回（10月28日お届け分）を1回スキップしますか？\nその次の発送予定日は【2026年11月28日】となります。')) {
+        document.getElementById('dispNextDate').textContent = '2026年11月28日（スキップ適用中）';
+        showToast('次回お届け分をスキップいたしました。次回は11月28日に届きます。', '⏭️');
+      }
+    }
+
+    function openCycleModal() {
+      const cycle = prompt('【お届けサイクル変更】\nご希望のサイクルを番号で選んでください：\n1: 30日ごと\n2: 45日ごと\n3: 60日ごと', '2');
+      if (cycle === '1') {
+        document.getElementById('dispCycle').textContent = '30日ごと（1ヶ月サイクル）';
+        showToast('お届けサイクルを【30日ごと】に変更しました。', '🔄');
+      } else if (cycle === '2') {
+        document.getElementById('dispCycle').textContent = '45日ごと（1.5ヶ月サイクル）';
+        showToast('お届けサイクルを【45日ごと】に変更しました。', '🔄');
+      } else if (cycle === '3') {
+        document.getElementById('dispCycle').textContent = '60日ごと（2ヶ月サイクル）';
+        showToast('お届けサイクルを【60日ごと】に変更しました。', '🔄');
+      }
+    }
+
+    function openPauseModal() {
+      if (confirm('【定期コースの休止申請】\n定期コースを一時休止いたしますか？\nいつでもマイページまたはお電話・公式LINEから再開いただけます。')) {
+        const status = document.querySelector('.mypage-order-card__status');
+        status.textContent = '⏸️ 一時休止中（いつでも再開可能）';
+        status.style.background = '#FEF3C7';
+        status.style.color = '#B45309';
+        showToast('定期コースを一時休止いたしました。再開はマイページからいつでも可能です。', '⏸️');
+      }
+    }
+  </script>
+</body>
+</html>
